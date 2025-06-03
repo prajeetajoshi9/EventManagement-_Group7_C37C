@@ -1,4 +1,4 @@
-/*
+/*\
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
@@ -52,6 +52,7 @@ public class AdminPersonalInfo extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         HeadingLabel = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -230,7 +231,7 @@ public class AdminPersonalInfo extends javax.swing.JFrame {
         getContentPane().add(adminusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 200, 210, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bng.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 83, 980, 580));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 93, 980, 570));
 
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 980, 630));
@@ -240,17 +241,23 @@ public class AdminPersonalInfo extends javax.swing.JFrame {
         HeadingLabel.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
         HeadingLabel.setText("Personal Information");
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screenshot 2025-05-22 at 20.45.48.png"))); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(372, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(262, 262, 262)
                 .addComponent(HeadingLabel)
-                .addGap(368, 368, 368))
+                .addContainerGap(388, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(HeadingLabel)
@@ -294,7 +301,7 @@ public class AdminPersonalInfo extends javax.swing.JFrame {
             firstname.setForeground(new java.awt.Color(216,216,216));
         
            
-        }
+        } 
     }//GEN-LAST:event_firstnameFocusLost
 
     private void firstnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstnameActionPerformed
@@ -498,6 +505,7 @@ public class AdminPersonalInfo extends javax.swing.JFrame {
     private javax.swing.JTextField idnum;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField lastname;
     private javax.swing.JButton savebutton;
