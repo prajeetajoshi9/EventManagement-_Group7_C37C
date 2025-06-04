@@ -14,7 +14,16 @@ public class EventManagementSystemProject {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+
         // TODO code application logic here
+
+        SignUp signupForm = new SignUp();
+        SignupController controller = new SignupController(signupForm);
+        controller.open();
     }
-    
 }
+
+        // TODO code application logic here
+  
+    
+

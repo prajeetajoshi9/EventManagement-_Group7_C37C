@@ -3,13 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/eventmanagementsystemproject/EventManagementSystemProject.java</file>
-            <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/View/New.java</file>
-            <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/Databse/Database.java</file>
-            <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/Databse/MyDatabase.java</file>
-            <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/Model/New.java</file>
-            <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/Controller/New.java</file>
-            <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/Dao/New.java</file>
+            <file>file:/Users/prasmshachapagain/Desktop/Event-Management/EventManagement-_Group7_C37C/src/Databse/Database.java</file>
+            <file>file:/Users/prasmshachapagain/Desktop/Event-Management/EventManagement-_Group7_C37C/src/View/AdminRegister.java</file>
+            <file>file:/Users/prasmshachapagain/Desktop/Event-Management/EventManagement-_Group7_C37C/src/View/AdminLogin.java</file>
+            <file>file:/Users/prasmshachapagain/Desktop/Event-Management/EventManagement-_Group7_C37C/src/Model/Login.java</file>
+            <file>file:/Users/prasmshachapagain/Desktop/Event-Management/EventManagement-_Group7_C37C/src/Model/Adminregister.java</file>
+            <file>file:/Users/prasmshachapagain/Desktop/Event-Management/EventManagement-_Group7_C37C/src/Login.java</file>
+            <file>file:/Users/prasmshachapagain/Desktop/Event-Management/EventManagement-_Group7_C37C/src/Dao/Register.java</file>
+            <file>file:/Users/prasmshachapagain/Desktop/Event-Management/EventManagement-_Group7_C37C/src/Databse/MyDatabase.java</file>
+            <file>file:/Users/prasmshachapagain/Desktop/Event-Management/EventManagement-_Group7_C37C/src/Dao/Login.java</file>
+            <file>file:/Users/prasmshachapagain/Desktop/Event-Management/EventManagement-_Group7_C37C/src/View/ChatGPT%20Image%20May%2024,%202025,%2011_51_35%20AM.png</file>
+            <file>file:/Users/prasmshachapagain/Desktop/Event-Management/EventManagement-_Group7_C37C/src/View/Search_Event.java</file>
+            <file>file:/Users/prasmshachapagain/Desktop/Event-Management/EventManagement-_Group7_C37C/src/eventmanagementsystemproject/EventManagementSystemProject.java</file>
+            <file>file:/Users/prasmshachapagain/Desktop/Event-Management/EventManagement-_Group7_C37C/src/Controller/New.java</file>
+            <file>file:/Users/prasmshachapagain/Desktop/Event-Management/EventManagement-_Group7_C37C/src/MySqlConnection.java</file>
+            <file>file:/Users/prasmshachapagain/Desktop/Event-Management/EventManagement-_Group7_C37C/src/eventmanagementsystemproject/SignUp.java</file>
+            <file>file:/Users/prasmshachapagain/Desktop/Event-Management/EventManagement-_Group7_C37C/src/eventmanagementsystemproject/SignupController.java</file>
         </group>
     </open-files>
 </project-private>
