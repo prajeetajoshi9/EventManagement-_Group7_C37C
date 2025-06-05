@@ -38,18 +38,33 @@ public class AdminDashboard extends javax.swing.JFrame {
         ContactUs = new javax.swing.JLabel();
         Events = new javax.swing.JLabel();
         More = new javax.swing.JLabel();
+        Signout = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        Ourteam = new javax.swing.JLabel();
+        Support = new javax.swing.JLabel();
+        CustomerReview = new javax.swing.JLabel();
+        PrivacyPolicy = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Hamro Events  ");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 411, 46));
 
         ViewEvent.setText("       View Event Status");
+        getContentPane().add(ViewEvent, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 210, 175, 40));
 
         EditEvent.setText("         Edit Event Status");
+        getContentPane().add(EditEvent, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 280, 175, 40));
 
         jTextField4.setText("       Booked Ticket List");
+        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 340, 175, 40));
 
         PersonalInformation.setText("    Personal Information");
         PersonalInformation.addActionListener(new java.awt.event.ActionListener() {
@@ -57,6 +72,9 @@ public class AdminDashboard extends javax.swing.JFrame {
                 PersonalInformationActionPerformed(evt);
             }
         });
+        getContentPane().add(PersonalInformation, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 175, 40));
+
+        jPanel1.setBackground(new java.awt.Color(248, 245, 221));
 
         Home.setText("Home");
 
@@ -70,107 +88,113 @@ public class AdminDashboard extends javax.swing.JFrame {
 
         More.setText("More");
 
+        Signout.setText("Sign Out");
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screenshot 2025-05-22 at 20.45.48.png"))); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(154, 154, 154)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel2)
+                .addGap(60, 60, 60)
                 .addComponent(Home)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(466, 466, 466)
-                    .addComponent(AboutUs)
-                    .addContainerGap(466, Short.MAX_VALUE)))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(468, 468, 468)
-                    .addComponent(Services)
-                    .addContainerGap(468, Short.MAX_VALUE)))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(460, 460, 460)
-                    .addComponent(ContactUs)
-                    .addContainerGap(461, Short.MAX_VALUE)))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(473, 473, 473)
-                    .addComponent(Events)
-                    .addContainerGap(473, Short.MAX_VALUE)))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(330, 330, 330)
-                    .addComponent(More, javax.swing.GroupLayout.DEFAULT_SIZE, 325, Short.MAX_VALUE)
-                    .addGap(331, 331, 331)))
+                .addGap(52, 52, 52)
+                .addComponent(AboutUs)
+                .addGap(35, 35, 35)
+                .addComponent(Services)
+                .addGap(36, 36, 36)
+                .addComponent(ContactUs)
+                .addGap(44, 44, 44)
+                .addComponent(Events)
+                .addGap(47, 47, 47)
+                .addComponent(More, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Signout))
+                .addGap(65, 65, 65))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 83, Short.MAX_VALUE)
-                .addComponent(Home))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(41, 41, 41)
-                    .addComponent(AboutUs)
-                    .addContainerGap(42, Short.MAX_VALUE)))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(41, 41, 41)
-                    .addComponent(Services)
-                    .addContainerGap(42, Short.MAX_VALUE)))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(41, 41, 41)
-                    .addComponent(ContactUs)
-                    .addContainerGap(42, Short.MAX_VALUE)))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(41, 41, 41)
-                    .addComponent(Events)
-                    .addContainerGap(42, Short.MAX_VALUE)))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(41, 41, 41)
-                    .addComponent(More)
-                    .addContainerGap(42, Short.MAX_VALUE)))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Signout)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(Home)
+                                .addComponent(AboutUs)
+                                .addComponent(Services)
+                                .addComponent(ContactUs)
+                                .addComponent(Events, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(More))
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(74, 74, 74)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 165, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(EditEvent, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ViewEvent, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PersonalInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(161, 161, 161))
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 827, 100));
+
+        jPanel2.setBackground(new java.awt.Color(248, 245, 221));
+
+        jLabel5.setText("Hamro Events, Nepal’s number one event management system.");
+
+        Ourteam.setText("Our Team");
+
+        Support.setText("Support");
+
+        CustomerReview.setText("Customer Review");
+
+        PrivacyPolicy.setText("Privacy Policy");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addGap(96, 96, 96)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Ourteam)
+                    .addComponent(Support))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(CustomerReview, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(PrivacyPolicy, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(64, 64, 64))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47)
-                .addComponent(PersonalInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(ViewEvent, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(EditEvent, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(48, 48, 48)
-                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(218, Short.MAX_VALUE))
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabel5))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(Ourteam)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Support))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(CustomerReview)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(PrivacyPolicy)))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 580, 830, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screenshot 2025-05-22 at 20.23.59.png"))); // NOI18N
+        jLabel3.setToolTipText("");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-330, -40, 1170, 620));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -217,15 +241,25 @@ public class AdminDashboard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AboutUs;
     private javax.swing.JLabel ContactUs;
+    private javax.swing.JLabel CustomerReview;
     private javax.swing.JTextField EditEvent;
     private javax.swing.JLabel Events;
     private javax.swing.JLabel Home;
     private javax.swing.JLabel More;
+    private javax.swing.JLabel Ourteam;
     private javax.swing.JTextField PersonalInformation;
+    private javax.swing.JLabel PrivacyPolicy;
     private javax.swing.JLabel Services;
+    private javax.swing.JLabel Signout;
+    private javax.swing.JLabel Support;
     private javax.swing.JTextField ViewEvent;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }
