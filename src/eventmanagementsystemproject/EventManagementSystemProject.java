@@ -3,27 +3,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package eventmanagementsystemproject;
+import View.Registration_form;
+import Controller.SignupController;
 
-import Database.Database;
-import Database.MySqlConnection;
-
-/**
- *
- * @author prajeetajoshi
- */
 public class EventManagementSystemProject {
      
     public static void main(String[] args) {
         
-        Database db = new MySqlConnection();
-        if (db.openConnection()!=null) {
-            System.out.println("Database connected successfully!");
-            } else 
-        {
-            System.out.println("Failed to connect to database."); 
-        } 
+        Registration_form SignUppForm = new Registration_form();                 
+        SignupController controller = new SignupController(SignUppForm);  
+        controller.open(); 
+        }
     }
-    
-    
-    
-} 
+ 
