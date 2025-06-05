@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 import Model.UserData;
 import Model.UserModel;
 import View.Customer_Login;
+import View.Registration_form;
 import model.Login;
 
 
@@ -27,6 +28,7 @@ public class logincontroller {
     public logincontroller(Customer_Login userView) {
         this.userView = userView;
         userView.addLoginUserListener(new AddLoginUserListener());
+        userView.addAddUserListener(new AddUserListener());
     }
 
     public void open() {
@@ -60,5 +62,17 @@ public class logincontroller {
                 System.out.println("Error adding user: " + ex.getMessage());
             }
         }
+    }
+    class AddUserListener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            Registration_form register = new Registration_form();
+            register.setVisible(true);
+            SignupController controller = new SignupController(register);
+            controller.open();
+            
+        }
+        
     }
 }

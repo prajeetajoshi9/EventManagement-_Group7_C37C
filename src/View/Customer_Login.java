@@ -247,6 +247,9 @@ public class Customer_Login extends javax.swing.JFrame {
 public void addLoginUserListener(ActionListener listener) {
         blogin.addActionListener(listener);
     }
+public void addAddUserListener(ActionListener listener) {
+        jButton2.addActionListener(listener);
+    }
     
     /**
      * @return the emailField
