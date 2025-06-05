@@ -26,11 +26,8 @@ public class AdminDashboard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        ViewEvent = new javax.swing.JTextField();
-        EditEvent = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        PersonalInformation = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         Home = new javax.swing.JLabel();
         AboutUs = new javax.swing.JLabel();
@@ -47,7 +44,13 @@ public class AdminDashboard extends javax.swing.JFrame {
         Support = new javax.swing.JLabel();
         CustomerReview = new javax.swing.JLabel();
         PrivacyPolicy = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jButtonPersonalInfo = new javax.swing.JButton();
+        jButtonView = new javax.swing.JButton();
+        jButtonEdit = new javax.swing.JButton();
+        jButtonBook = new javax.swing.JButton();
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screenshot 2025-05-22 at 20.23.59.png"))); // NOI18N
+        jLabel3.setToolTipText("");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -56,23 +59,6 @@ public class AdminDashboard extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Hamro Events  ");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 411, 46));
-
-        ViewEvent.setText("       View Event Status");
-        getContentPane().add(ViewEvent, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 210, 175, 40));
-
-        EditEvent.setText("         Edit Event Status");
-        getContentPane().add(EditEvent, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 280, 175, 40));
-
-        jTextField4.setText("       Booked Ticket List");
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 340, 175, 40));
-
-        PersonalInformation.setText("    Personal Information");
-        PersonalInformation.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PersonalInformationActionPerformed(evt);
-            }
-        });
-        getContentPane().add(PersonalInformation, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 175, 40));
 
         jPanel1.setBackground(new java.awt.Color(248, 245, 221));
 
@@ -89,6 +75,11 @@ public class AdminDashboard extends javax.swing.JFrame {
         More.setText("More");
 
         Signout.setText("Sign Out");
+        Signout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SignoutMouseClicked(evt);
+            }
+        });
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screenshot 2025-05-22 at 20.45.48.png"))); // NOI18N
 
@@ -192,17 +183,49 @@ public class AdminDashboard extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 580, 830, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screenshot 2025-05-22 at 20.23.59.png"))); // NOI18N
-        jLabel3.setToolTipText("");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-330, -40, 1170, 620));
+        jButtonPersonalInfo.setText("    Personal Information");
+        jButtonPersonalInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPersonalInfoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonPersonalInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 170, 180, 40));
+
+        jButtonView.setText("       View Event Status");
+        getContentPane().add(jButtonView, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 370, 180, 40));
+
+        jButtonEdit.setText("         Edit Event Status");
+        getContentPane().add(jButtonEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 240, 180, 40));
+
+        jButtonBook.setText("Booked Ticket List");
+        getContentPane().add(jButtonBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 300, 180, 40));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void PersonalInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PersonalInformationActionPerformed
+    private void jButtonPersonalInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPersonalInfoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_PersonalInformationActionPerformed
+        new AdminPersonalInfo().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButtonPersonalInfoActionPerformed
 
+    private void SignoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SignoutMouseClicked
+        // TODO add your handling code here:
+        int response = javax.swing.JOptionPane.showConfirmDialog(
+            this,
+            "Are you sure you want to sign out?", 
+            "Confirm Sign Out",
+            javax.swing.JOptionPane.YES_NO_OPTION
+    );
+    if (response == javax.swing.JOptionPane.YES_OPTION) {
+        System.exit(0); // This will close the entire application
+    }
+
+        
+        
+    }//GEN-LAST:event_SignoutMouseClicked
+
+    
     /**
      * @param args the command line arguments
      */
@@ -242,17 +265,18 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel AboutUs;
     private javax.swing.JLabel ContactUs;
     private javax.swing.JLabel CustomerReview;
-    private javax.swing.JTextField EditEvent;
     private javax.swing.JLabel Events;
     private javax.swing.JLabel Home;
     private javax.swing.JLabel More;
     private javax.swing.JLabel Ourteam;
-    private javax.swing.JTextField PersonalInformation;
     private javax.swing.JLabel PrivacyPolicy;
     private javax.swing.JLabel Services;
     private javax.swing.JLabel Signout;
     private javax.swing.JLabel Support;
-    private javax.swing.JTextField ViewEvent;
+    private javax.swing.JButton jButtonBook;
+    private javax.swing.JButton jButtonEdit;
+    private javax.swing.JButton jButtonPersonalInfo;
+    private javax.swing.JButton jButtonView;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -260,6 +284,5 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }

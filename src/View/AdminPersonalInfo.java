@@ -433,21 +433,23 @@ public class AdminPersonalInfo extends javax.swing.JFrame {
     }//GEN-LAST:event_adminusernameFocusLost
 
     private void EditButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditButtonActionPerformed
-        // TODO add your handling code here:
-        String f_name = firstname.getText().trim();   //trim removes the unnecessary spaces
-        String s_name = lastname.getText().trim();
-        String email = emailaddress.getText().trim();
-        String admin_username = adminusername.getText().trim();
-        String contact_number = contactno.getText().trim();
-        String admin_id = adminid.getText().trim();
-        String admin_address = address.getText().trim();
-        String id_number = idnum.getText().trim();
+        // TODO add your handling code here:                              
+    // Get values from fields
+    String f_name = firstname.getText().trim();
+    String s_name = lastname.getText().trim();
+    String email = emailaddress.getText().trim();
+    String admin_username = adminusername.getText().trim();
+    String contact_number = contactno.getText().trim();
+    String admin_id = adminid.getText().trim();
+    String admin_address = address.getText().trim();
+    String id_number = idnum.getText().trim();
 
-        UserController controller = new UserController();
-    String result = controller.register(f_name, s_name, email, admin_username, contact_number, admin_id, admin_address, id_number);
-    JOptionPane.showMessageDialog(this, result);
-                                       
-
+    // Send data to controller
+    UserController controller = new UserController();
+    String result = controller.updateAdminInfo(f_name, s_name, email, admin_username, contact_number, admin_id, admin_address, id_number);
+    
+    // Show result message
+    JOptionPane.showMessageDialog(this, result);                               
     }//GEN-LAST:event_EditButtonActionPerformed
 
     /**
