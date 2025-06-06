@@ -19,21 +19,21 @@ public class MySqlConnection implements Database {
     public Connection openConnection() {
         try{
                 String username ="root";
-                String password ="12345678";
-                String database ="File"; 
+                String password ="rrrsss30@1203";
+                String database ="eventmanagementsystem"; 
                 Connection connection;
                 connection = DriverManager.getConnection(
                 "jdbc:mysql://127.0.0.1:3306/" + database,username,password 
                 ); 
                 if (connection == null ){ 
-                    System.out.println("Databse connection fail");
+                    System.out.println("Database connection fail");
                 } else{
-                    System.out.println("Databse connection success"); 
+                    System.out.println("Database connection success"); 
                 }
                 return connection; 
                 
         } catch (Exception e){ 
-            System.out.println(e);
+            System.out.println(e); 
             return  null;
         }
     } 
