@@ -5,14 +5,18 @@
 package eventmanagementsystemproject;
 import View.Registration_form;
 import Controller.SignupController;
+<<<<<<< HEAD
 import Controller.SignupController;
 import Database.Database;
 import Database.MySqlConnection;
 import View.Registration_form;
+=======
+>>>>>>> c9ba1214272a4ff36654d35046790f22b457d3c7
 
 public class EventManagementSystemProject {
      
     public static void main(String[] args) {
+<<<<<<< HEAD
      
 
         // TODO code application logic here
@@ -33,4 +37,12 @@ public class EventManagementSystemProject {
 }
 
     
+=======
+        
+        Registration_form SignUppForm = new Registration_form();                 
+        SignupController controller = new SignupController(SignUppForm);  
+        controller.open(); 
+        }
+    }
+>>>>>>> c9ba1214272a4ff36654d35046790f22b457d3c7
  

@@ -4,8 +4,11 @@
  */
 package View;
 
+<<<<<<< HEAD
 import java.awt.Color;
 
+=======
+>>>>>>> c9ba1214272a4ff36654d35046790f22b457d3c7
 /**
  *
  * @author Asus Zenbook
@@ -74,9 +77,12 @@ public class Bookmark extends javax.swing.JFrame {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 chooseeventFocusGained(evt);
             }
+<<<<<<< HEAD
             public void focusLost(java.awt.event.FocusEvent evt) {
                 chooseeventFocusLost(evt);
             }
+=======
+>>>>>>> c9ba1214272a4ff36654d35046790f22b457d3c7
         });
         getContentPane().add(chooseevent, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 286, 30));
 
@@ -163,11 +169,14 @@ public class Bookmark extends javax.swing.JFrame {
     
     }//GEN-LAST:event_chooseeventFocusGained
 
+<<<<<<< HEAD
     private void chooseeventFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_chooseeventFocusLost
         // TODO add your handling code here:
         
     }//GEN-LAST:event_chooseeventFocusLost
 
+=======
+>>>>>>> c9ba1214272a4ff36654d35046790f22b457d3c7
     /**
      * @param args the command line arguments
      */

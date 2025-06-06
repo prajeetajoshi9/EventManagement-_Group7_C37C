@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/Bookmark.java</file>
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/Customerdashboard.java</file>
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/AdminPersonalInfo.java</file>
@@ -22,6 +23,9 @@
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Controller/UserController.java</file>
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Controller/logincontroller.java</file>
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/Registration_form.java</file>
+=======
+            <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/View/CreateEvent.java</file>
+>>>>>>> c9ba1214272a4ff36654d35046790f22b457d3c7
         </group>
     </open-files>
 </project-private>

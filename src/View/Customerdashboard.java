@@ -1,3 +1,5 @@
+package View;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -468,9 +470,10 @@ public class Customerdashboard extends javax.swing.JFrame {
 
     private static class JOptionPane {
 
-        private static void showMessageDialog(Object object, String new_Button_Clicked) {
+        private static void showMessageDialog(String new_Button_Clicked) {
             throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
         }
+
 
         public JOptionPane() {
         }

@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 
+=======
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+>>>>>>> c9ba1214272a4ff36654d35046790f22b457d3c7
 package Database;
 
 import java.sql.Connection;
@@ -17,12 +24,20 @@ public class MySqlConnection implements Database {
         try{
                 String username ="root";
                 String password ="12345678";
+<<<<<<< HEAD
                 String database ="file"; 
+=======
+                String database ="File"; 
+>>>>>>> c9ba1214272a4ff36654d35046790f22b457d3c7
                 Connection connection;
                 connection = DriverManager.getConnection(
                 "jdbc:mysql://127.0.0.1:3306/" + database,username,password 
                 ); 
+<<<<<<< HEAD
                 if (connection ==null ){
+=======
+                if (connection == null ){ 
+>>>>>>> c9ba1214272a4ff36654d35046790f22b457d3c7
                     System.out.println("Databse connection fail");
                 } else{
                     System.out.println("Databse connection success"); 
@@ -76,4 +91,8 @@ public class MySqlConnection implements Database {
     }
     
     } 
+<<<<<<< HEAD
 }  
+=======
+} 
+>>>>>>> c9ba1214272a4ff36654d35046790f22b457d3c7

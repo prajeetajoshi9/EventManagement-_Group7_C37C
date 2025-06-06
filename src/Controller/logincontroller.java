@@ -4,7 +4,10 @@
  */
 package Controller;
 
+<<<<<<< HEAD
 import Dao.LoginDao;
+=======
+>>>>>>> c9ba1214272a4ff36654d35046790f22b457d3c7
 import Dao.User;
 import model.Login;
 import java.awt.event.ActionEvent;
@@ -23,7 +26,11 @@ import model.Login;
  */
 public class logincontroller {
 
+<<<<<<< HEAD
     private final LoginDao loginDao = new LoginDao();
+=======
+    private final User userdao = new User();
+>>>>>>> c9ba1214272a4ff36654d35046790f22b457d3c7
     private final Customer_Login userView;
 
     public logincontroller(Customer_Login userView) {
@@ -48,6 +55,7 @@ public class logincontroller {
                 String password = userView.getPasswordField().getText();
                 Login user = new Login(email,password);
                 
+<<<<<<< HEAD
                 boolean check = loginDao.validateUser(user);
                 if(check){
                     JOptionPane.showMessageDialog(userView,"Login Successful");
@@ -67,6 +75,19 @@ public class logincontroller {
 //                    dashboard.setVisible(true);
 //                    close();
 //                }
+=======
+                UserModel loginUser = userdao.signIn(user);
+                
+                if (loginUser == null) {
+                    JOptionPane.showMessageDialog(userView, "Invalid Credentials");
+                } else {
+                    // success
+                    JOptionPane.showMessageDialog(userView, "Login Successful");
+//                    Dashboard dashboard = new Dashboard();
+//                    dashboard.setVisible(true);
+//                    close();
+                }
+>>>>>>> c9ba1214272a4ff36654d35046790f22b457d3c7
             } catch (Exception ex) {
                 System.out.println("Error adding user: " + ex.getMessage());
             }
