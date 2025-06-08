@@ -5,14 +5,32 @@
 package eventmanagementsystemproject;
 import View.Registration_form;
 import Controller.SignupController;
+import Controller.SignupController;
+import Database.Database;
+import Database.MySqlConnection;
+import View.Registration_form;
 
 public class EventManagementSystemProject {
      
     public static void main(String[] args) {
-        
-        Registration_form SignUppForm = new Registration_form();                 
-        SignupController controller = new SignupController(SignUppForm);  
-        controller.open(); 
+     
+
+        // TODO code application logic here
+//       Database db=new MySqlConnection();
+//       if(db.openConnection()!=null){
+//        System.out.print("Database connected successfully!");
+//    }else{
+//           System.out.print("Failed to connect to database");
+//       }
+           
+//       }  
+        Registration_form register = new Registration_form();
+        register.setVisible(true);
+        SignupController controller = new SignupController(register);
+//        SignupController controller = new SignupController(SignUppForm);  
+        controller.open();
         }
-    }
+}
+
+    
  
