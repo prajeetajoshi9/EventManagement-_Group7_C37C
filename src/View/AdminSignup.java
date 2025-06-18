@@ -4,19 +4,23 @@
  */
 package View;
 
+import javax.swing.JButton;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
 /**
  *
  * @author prasmshachapagain
  */
-public class AdminRegister extends javax.swing.JFrame {
+public class AdminSignup extends javax.swing.JFrame {
+public AdminSignup() {
+    initComponents(); // 🛠️ This initializes all Swing components including jsignup
+}
 
     /**
      * Creates new form AdminRegister
      */
-    public AdminRegister() {
-        initComponents();
-    }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -47,6 +51,7 @@ public class AdminRegister extends javax.swing.JFrame {
         jconfirm = new javax.swing.JPasswordField();
         jLabel11 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -94,6 +99,11 @@ public class AdminRegister extends javax.swing.JFrame {
 
         jalready.setForeground(new java.awt.Color(0, 0, 255));
         jalready.setText("Already have an account ? Login");
+        jalready.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jalreadyActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -131,11 +141,13 @@ public class AdminRegister extends javax.swing.JFrame {
                                     .addComponent(jLabel8))
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                        .addGap(68, 68, 68)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jalready)
-                            .addComponent(jsignup, javax.swing.GroupLayout.PREFERRED_SIZE, 428, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(276, 276, 276)
+                        .addComponent(jalready)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jsignup, javax.swing.GroupLayout.PREFERRED_SIZE, 428, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -188,11 +200,14 @@ public class AdminRegister extends javax.swing.JFrame {
         jLabel9.setText("Sign Up");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 20, -1, -1));
 
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Screenshot 2025-06-08 at 14.34.16.png"))); // NOI18N
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, 70));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jsignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jsignupActionPerformed
-
+       new Controller.SignupController(this); // call controller to handle signup logic
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jsignupActionPerformed
@@ -200,6 +215,13 @@ public class AdminRegister extends javax.swing.JFrame {
     private void jnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jnameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jnameActionPerformed
+
+    private void jalreadyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jalreadyActionPerformed
+        // TODO add your handling code here:
+         new LoginAdmin().setVisible(true);
+    dispose(); // Close current signup window
+
+    }//GEN-LAST:event_jalreadyActionPerformed
 
     /**
      * @param args the command line arguments
@@ -218,19 +240,21 @@ public class AdminRegister extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AdminRegister.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminSignup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AdminRegister.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminSignup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AdminRegister.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminSignup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AdminRegister.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminSignup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -241,15 +265,21 @@ public class AdminRegister extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPassword;
-    private javax.swing.JTextField jadmin;
+    public javax.swing.JPasswordField jPassword;
+    public javax.swing.JTextField jadmin;
     private javax.swing.JButton jalready;
-    private javax.swing.JPasswordField jconfirm;
-    private javax.swing.JTextField jemail;
-    private javax.swing.JTextField jlast;
-    private javax.swing.JTextField jname;
-    private javax.swing.JTextField jphone;
+    public javax.swing.JPasswordField jconfirm;
+    public javax.swing.JTextField jemail;
+    public javax.swing.JTextField jlast;
+    public javax.swing.JTextField jname;
+    public javax.swing.JTextField jphone;
     private javax.swing.JButton jsignup;
-    private javax.swing.JTextField jusername;
+    public javax.swing.JTextField jusername;
     // End of variables declaration//GEN-END:variables
+
+    public javax.swing.JButton getSignupButton() {
+    return jsignup;
 }
+   
+}
+
