@@ -205,7 +205,7 @@ public class AdminDashboard extends javax.swing.JFrame {
 
     private void jButtonPersonalInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPersonalInfoActionPerformed
         // TODO add your handling code here:
-        new AdminPersonalInfo().setVisible(true);
+        new AdminPersonalInfo().setVisible(true); 
         this.dispose();
     }//GEN-LAST:event_jButtonPersonalInfoActionPerformed
 
@@ -220,11 +220,8 @@ public class AdminDashboard extends javax.swing.JFrame {
     if (response == javax.swing.JOptionPane.YES_OPTION) {
         System.exit(0); // This will close the entire application
     }
-
-        
-        
+    
     }//GEN-LAST:event_SignoutMouseClicked
-
     
     /**
      * @param args the command line arguments
@@ -255,7 +252,7 @@ public class AdminDashboard extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
+            public void run() { 
                 new AdminDashboard().setVisible(true);
             }
         });

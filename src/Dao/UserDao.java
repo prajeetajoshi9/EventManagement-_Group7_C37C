@@ -64,29 +64,7 @@ public boolean isAdminIdExists(String adminId) {
     }
 }
 // Update admin information
-public boolean updateUser(String f_name, String s_name, String email, String admin_username, String contact_number, String admin_id, String admin_address, String id_number) {
-    String sql = "UPDATE admin SET first_name = ?, last_name = ?, email = ?, admin_username = ?, contact_number = ?, address = ?, id_number = ? WHERE admin_id = ?";
-    
-    try (Connection conn = getConnection();
-         PreparedStatement stmt = conn.prepareStatement(sql)) {
-        
-        stmt.setString(1, f_name);
-        stmt.setString(2, s_name);
-        stmt.setString(3, email);
-        stmt.setString(4, admin_username);
-        stmt.setString(5, contact_number);
-        stmt.setString(6, admin_address);
-        stmt.setString(7, id_number);
-        stmt.setString(8, admin_id);  // WHERE condition
-        
-        int affectedRows = stmt.executeUpdate();
-        return affectedRows > 0;
-        
-    } catch (SQLException e) {
-        e.printStackTrace();
-        return false;
-    }
-}
+
 
     private Connection getConnection() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody

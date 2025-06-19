@@ -26,21 +26,5 @@ public class UserController {
     } 
     
     
-    public String updateAdminInfo(String f_name, String s_name, String email, String admin_username, String contact_number, String admin_id, String admin_address, String id_number) {
-    // Validate email
-    boolean isValid = email.matches("^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,}$");
-    if (!isValid) {
-        return "Enter a valid email";
-    }
-
-    // Check if the user with this ID exists (optional safety check)
-    if (!userDAO.isAdminIdExists(admin_id)) {
-        return "Admin ID does not exist!";
-    }
-
-    // Update in the database
-    boolean success = userDAO.updateUser(f_name, s_name, email, admin_username, contact_number, admin_id, admin_address, id_number);
-    return success ? "Information updated successfully!" : "Failed to update information!";
-}
-
+    
 } 

@@ -251,7 +251,7 @@ public class Registration_form extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jloginActionPerformed
 
-    /**
+    /** 
      * @param args the command line arguments
      */
     public static void main(String args[]) {
