@@ -11,18 +11,31 @@ import java.sql.Statement;
 
 public class MySqlConnection {
 
+    // ✅ Fixed getConnection method
     public static Connection getConnection() {
+        return new MySqlConnection().openConnection();
+    }
+
+    public Connection openConnection() {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/admin";
             String username = "root";
             String password = "12345678";
+            String database = "admin";
 
-            Connection conn = DriverManager.getConnection(url, username, password);
-            System.out.println("Database connection success");
-            return conn;
+            Connection connection = DriverManager.getConnection(
+                "jdbc:mysql://127.0.0.1:3306/" + database, username, password
+            );
+
+            if (connection == null) {
+                System.out.println("Database connection fail");
+            } else {
+                System.out.println("Database connection success");
+            }
+
+            return connection;
+
         } catch (Exception e) {
-            System.out.println("Database connection failed: " + e);
+            System.out.println(e);
             return null;
         }
     }
