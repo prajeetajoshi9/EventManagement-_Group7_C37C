@@ -36,7 +36,6 @@ public class AdminPersonalInfo extends javax.swing.JFrame {
         Email = new javax.swing.JLabel();
         LastName = new javax.swing.JLabel();
         Address = new javax.swing.JLabel();
-        EditButton = new javax.swing.JButton();
         savebutton = new javax.swing.JButton();
         firstname = new javax.swing.JTextField();
         contactno = new javax.swing.JTextField();
@@ -81,17 +80,6 @@ public class AdminPersonalInfo extends javax.swing.JFrame {
         Address.setText("Address:");
         getContentPane().add(Address, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 470, -1, -1));
 
-        EditButton.setBackground(new java.awt.Color(38, 79, 201));
-        EditButton.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        EditButton.setForeground(new java.awt.Color(255, 255, 255));
-        EditButton.setText("Edit");
-        EditButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EditButtonActionPerformed(evt);
-            }
-        });
-        getContentPane().add(EditButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 580, 120, 40));
-
         savebutton.setBackground(new java.awt.Color(38, 79, 201));
         savebutton.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         savebutton.setForeground(new java.awt.Color(255, 255, 255));
@@ -101,7 +89,7 @@ public class AdminPersonalInfo extends javax.swing.JFrame {
                 savebuttonActionPerformed(evt);
             }
         });
-        getContentPane().add(savebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 580, 120, 40));
+        getContentPane().add(savebutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 560, 120, 40));
 
         firstname.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         firstname.setForeground(new java.awt.Color(216, 216, 216));
@@ -231,10 +219,10 @@ public class AdminPersonalInfo extends javax.swing.JFrame {
         getContentPane().add(adminusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 200, 210, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bng.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 93, 980, 570));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 93, 980, 590));
 
         jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 980, 630));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 980, 580));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -291,7 +279,7 @@ public class AdminPersonalInfo extends javax.swing.JFrame {
             firstname.setText("");
             firstname.setForeground(Color.BLACK);
        
-        }
+        } 
     }//GEN-LAST:event_firstnameFocusGained
 
     private void firstnameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_firstnameFocusLost
@@ -433,21 +421,8 @@ public class AdminPersonalInfo extends javax.swing.JFrame {
     }//GEN-LAST:event_adminusernameFocusLost
 
     private void EditButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditButtonActionPerformed
-        // TODO add your handling code here:
-        String f_name = firstname.getText().trim();   //trim removes the unnecessary spaces
-        String s_name = lastname.getText().trim();
-        String email = emailaddress.getText().trim();
-        String admin_username = adminusername.getText().trim();
-        String contact_number = contactno.getText().trim();
-        String admin_id = adminid.getText().trim();
-        String admin_address = address.getText().trim();
-        String id_number = idnum.getText().trim();
-
-        UserController controller = new UserController();
-    String result = controller.register(f_name, s_name, email, admin_username, contact_number, admin_id, admin_address, id_number);
-    JOptionPane.showMessageDialog(this, result);
-                                       
-
+    
+                            
     }//GEN-LAST:event_EditButtonActionPerformed
 
     /**
@@ -489,7 +464,6 @@ public class AdminPersonalInfo extends javax.swing.JFrame {
     private javax.swing.JLabel Address;
     private javax.swing.JLabel AdminIdLabel;
     private javax.swing.JLabel ContactNumber;
-    private javax.swing.JButton EditButton;
     private javax.swing.JLabel Email;
     private javax.swing.JLabel FirstName;
     private javax.swing.JLabel HeadingLabel;

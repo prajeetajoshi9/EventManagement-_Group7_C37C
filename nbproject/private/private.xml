@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/Bookmark.java</file>
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Model/TicketBooking.java</file>
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Dao/TicketBookingDAO.java</file>
@@ -14,6 +15,11 @@
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/eventmanagementsystemproject/EventManagementSystemProject.java</file>
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Controller/UserController.java</file>
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/BookTicketList.java</file>
+=======
+            <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/View/AdminDashboard.java</file>
+            <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/View/AdminPersonalInfo.java</file>
+            <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/Controller/UserController.java</file>
+>>>>>>> b13661da3f957943a62b52e1637a5e1c199e0b5f
         </group>
     </open-files>
 </project-private>
