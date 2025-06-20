@@ -16,7 +16,7 @@ import java.sql.ResultSet;
 public class Login {
 
     public static boolean registerUser(Adminregister user) {
-        Connection conn = new MySqlConnection().openConnection(); // ✅ Fixed here
+        Connection conn = new MySqlConnection().openConnection(); 
 
         try {
             if (conn == null) {
@@ -24,7 +24,6 @@ public class Login {
                 return false;
             }
 
-            // Check if adminId already exists
             String checkSql = "SELECT * FROM admin WHERE adminId = ?";
             PreparedStatement checkStmt = conn.prepareStatement(checkSql);
             checkStmt.setString(1, user.getAdminId());
@@ -35,7 +34,7 @@ public class Login {
                 return false;
             }
 
-            // Check if email already exists
+
             String emailCheckSql = "SELECT * FROM admin WHERE email = ?";
             PreparedStatement emailCheckStmt = conn.prepareStatement(emailCheckSql);
             emailCheckStmt.setString(1, user.getEmail());
@@ -46,7 +45,6 @@ public class Login {
                 return false;
             }
 
-            // Insert new admin
             String sql = "INSERT INTO admin(adminId, username, firstName, lastName, email, phone, password) VALUES (?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement stmt = conn.prepareStatement(sql);
 
@@ -76,7 +74,7 @@ public class Login {
     }
 
     public static boolean loginAdmin(String email, String password) {
-        Connection conn = new MySqlConnection().openConnection(); // ✅ Fixed here
+        Connection conn = new MySqlConnection().openConnection(); 
 
         try {
             if (conn == null) {
@@ -91,7 +89,7 @@ public class Login {
 
             ResultSet rs = stmt.executeQuery();
 
-            return rs.next(); // ✅ Login successful if a record is found
+            return rs.next(); 
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Login failed: " + e.getMessage());

@@ -17,7 +17,7 @@ public class UserDao {
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1, email);
             ResultSet rs = ps.executeQuery();
-            return rs.next(); // email found
+            return rs.next(); 
         } catch (Exception e) {
             System.out.println(e);
             return false;
