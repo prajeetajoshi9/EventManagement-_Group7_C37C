@@ -8,7 +8,9 @@ import Controller.SignupController;
 import Controller.SignupController;
 import Database.Database;
 import Database.MySqlConnection;
+import View.Bookmark;
 import View.Registration_form;
+import controller.TicketBookingController;
 
 public class EventManagementSystemProject {
      
@@ -24,12 +26,18 @@ public class EventManagementSystemProject {
 //       }
            
 //       }  
-        Registration_form register = new Registration_form();
-        register.setVisible(true);
-        SignupController controller = new SignupController(register);
-//        SignupController controller = new SignupController(SignUppForm);  
-        controller.open();
-        }
+//        Registration_form register = new Registration_form();
+//        register.setVisible(true);
+//        SignupController controller = new SignupController(register);
+////        SignupController controller = new SignupController(SignUppForm);  
+//        controller.open();
+//        }
+
+Bookmark bookmark = new Bookmark();
+bookmark.setVisible(true);
+TicketBookingController controller = new TicketBookingController(bookmark);
+controller.open();
+}
 }
 
     

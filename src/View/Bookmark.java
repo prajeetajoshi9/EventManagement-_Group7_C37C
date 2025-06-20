@@ -4,6 +4,11 @@
  */
 package View;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Asus Zenbook
@@ -29,9 +34,7 @@ public class Bookmark extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
         buttonGroup3 = new javax.swing.ButtonGroup();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        chooseevent = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
@@ -44,53 +47,45 @@ public class Bookmark extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        btnBook = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
         jRadioButton3 = new javax.swing.JRadioButton();
         jRadioButton4 = new javax.swing.JRadioButton();
-        jTextField7 = new javax.swing.JTextField();
         jComboBox2 = new javax.swing.JComboBox<>();
         jComboBox3 = new javax.swing.JComboBox<>();
         jComboBox4 = new javax.swing.JComboBox<>();
         jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setText("Book Ticket");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, 103, -1));
-
         jLabel3.setText("Choose Event:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, -1));
 
-        chooseevent.setText("choose event");
-        chooseevent.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                chooseeventFocusGained(evt);
-            }
-        });
-        getContentPane().add(chooseevent, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 286, 30));
-
         jLabel4.setText("Booker's Name:");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 286, 30));
+        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 220, 30));
 
         jLabel5.setText("Booker's Id");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, 30));
 
         jLabel6.setText("Number of ");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 290, 30));
+        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 220, 30));
 
         jLabel7.setText("Number:");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, 20));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, -1, 30));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bratabandha", "Marriage Ceremony", "Chaurasi Puja", "Nwaran", "Rice Feeding ceremony", "Gunyo Cholo Ceremony ", "Bel Bibaha" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(142, 90, 220, 30));
 
         jLabel8.setText("Tickets");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 60, 20));
@@ -105,58 +100,57 @@ public class Bookmark extends javax.swing.JFrame {
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, -1, -1));
 
         jLabel14.setText("Ticket Type: ");
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, -1, -1));
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 70, -1));
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 250, -1, -1));
         getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 70, -1));
 
-        jButton2.setText("Book Ticket");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 460, -1, -1));
+        btnBook.setText("Book Ticket");
+        getContentPane().add(btnBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 460, -1, -1));
 
         jLabel15.setText("Confirm Ticket? ");
         getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 410, -1, -1));
-
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 330, 70, -1));
 
         jRadioButton3.setText("Yes");
         getContentPane().add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 410, -1, -1));
 
         jRadioButton4.setText("No");
         getContentPane().add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 410, -1, -1));
-        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 110, -1));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, -1, -1));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, -1, -1));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 250, -1, -1));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "General", "VIP" }));
+        getContentPane().add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, -1, -1));
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, -1, -1));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Esewa", "Khalti" }));
+        getContentPane().add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, -1, -1));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 70));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setText("Book Ticket");
+        jPanel1.add(jLabel2);
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 70));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/494574320_597322936170871_3710706709161285347_n.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, 70, 630, 430));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
-    private void chooseeventFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_chooseeventFocusGained
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
-               if (chooseevent.getText().equals("Choose event")){
-            chooseevent.setText("");
-            chooseevent.setForeground(Color.BLACK);
-       
-        }
-    
-    }//GEN-LAST:event_chooseeventFocusGained
+    }//GEN-LAST:event_jComboBox2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -194,15 +188,15 @@ public class Bookmark extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBook;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
-    private javax.swing.JTextField chooseevent;
-    private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel14;
@@ -220,9 +214,40 @@ public class Bookmark extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
     // End of variables declaration//GEN-END:variables
+public void BookTicketListener(ActionListener listener){
+    btnBook.addActionListener(listener);
+}
+
+public JButton getBookButton(){
+   return btnBook; 
+}
+
+//public JTextField getChooseEvent(){
+//    return chooseevent; 
+//}
+public JTextField getBookerName(){
+    return jTextField2;
+    
+}
+public JTextField getBookerId(){
+    return jTextField3;
+    
+}
+public JComboBox<String> getTicketQuantity(){
+  return jComboBox2;  
+}
+public JComboBox<String> getTicketType(){
+  return jComboBox3;  
+}
+public JComboBox<String> getPaymentMethod(){
+  return jComboBox4;  
+}
+public boolean isConfirmed(){
+    return jRadioButton3.isSelected();
+}
+public String getSelectedEvent(){
+    return (String) jComboBox1.getSelectedItem();
+}
 }
