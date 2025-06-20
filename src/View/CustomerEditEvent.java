@@ -56,6 +56,8 @@ public class CustomerEditEvent extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
+        SetPriceButton = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
 
         jLabel7.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
@@ -162,11 +164,11 @@ public class CustomerEditEvent extends javax.swing.JFrame {
                 DescriptionTextFocusLost(evt);
             }
         });
-        getContentPane().add(DescriptionText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 298, 569, 59));
+        getContentPane().add(DescriptionText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 298, 569, 50));
 
         jLabel10.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel10.setText("Number of Guests:");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 382, -1, -1));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, -1, -1));
 
         GuestText.setForeground(new java.awt.Color(224, 224, 224));
         GuestText.setText("Provide total attendees");
@@ -183,18 +185,18 @@ public class CustomerEditEvent extends javax.swing.JFrame {
                 GuestTextActionPerformed(evt);
             }
         });
-        getContentPane().add(GuestText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 376, 246, 40));
+        getContentPane().add(GuestText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 360, 246, 40));
 
         jLabel11.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel11.setText("Venue:");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 380, -1, -1));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 370, -1, -1));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(553, 375, 245, 40));
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 360, 245, 40));
 
         jLabel12.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel12.setText("Budget:");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 454, -1, -1));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, -1, -1));
 
         BudgetText.setForeground(new java.awt.Color(224, 224, 224));
         BudgetText.setText("NRs.");
@@ -206,35 +208,42 @@ public class CustomerEditEvent extends javax.swing.JFrame {
                 BudgetTextFocusLost(evt);
             }
         });
-        getContentPane().add(BudgetText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 448, 246, 40));
+        getContentPane().add(BudgetText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 420, 246, 40));
 
         jLabel13.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel13.setText("Event Privacy: ");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 450, -1, -1));
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 430, -1, -1));
 
         jRadioButton1.setText("Public");
-        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 450, -1, -1));
+        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 430, -1, -1));
 
         jRadioButton2.setText("Private");
-        getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 450, -1, -1));
+        getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 430, -1, -1));
 
         jButton3.setBackground(new java.awt.Color(38, 78, 201));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Confirm");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(271, 547, 100, 40));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 560, 100, 40));
 
         jButton1.setBackground(new java.awt.Color(38, 78, 201));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Cancel");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(437, 547, 100, 40));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 560, 100, 40));
 
         jButton2.setBackground(new java.awt.Color(38, 78, 201));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Edit");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(615, 547, 100, 40));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 560, 100, 40));
+
+        jLabel15.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel15.setText("Set  Ticket Price: ");
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 480, -1, -1));
+
+        SetPriceButton.setText("NRs.");
+        getContentPane().add(SetPriceButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 470, 150, 40));
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CustomerEditEvent.png"))); // NOI18N
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 920, 540));
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 910, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -378,6 +387,7 @@ public class CustomerEditEvent extends javax.swing.JFrame {
     private javax.swing.JTextField DescriptionText;
     private javax.swing.JTextField EventText;
     private javax.swing.JTextField GuestText;
+    private javax.swing.JButton SetPriceButton;
     private javax.swing.JComboBox<String> TimeText;
     private javax.swing.JTextField TypeText;
     private javax.swing.JButton jButton1;
@@ -392,6 +402,7 @@ public class CustomerEditEvent extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

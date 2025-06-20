@@ -56,7 +56,9 @@ public class CreateEvent extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        SetPriceButton = new javax.swing.JButton();
+        jLabel16 = new javax.swing.JLabel();
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/create.png"))); // NOI18N
 
@@ -77,21 +79,17 @@ public class CreateEvent extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 860, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(349, 349, 349)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(432, Short.MAX_VALUE)))
+                .addGap(271, 271, 271)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 421, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(29, 29, 29)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(30, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, -1));
@@ -110,15 +108,15 @@ public class CreateEvent extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel6.setText("Description:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 298, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel7.setText("Number of Guests:");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 382, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel8.setText("Budget:");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 454, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 440, -1, -1));
 
         EventText.setForeground(new java.awt.Color(224, 224, 224));
         EventText.setText("Provide name for the event (e.g. Happy Halloween)");
@@ -154,7 +152,7 @@ public class CreateEvent extends javax.swing.JFrame {
                 DescriptionTextFocusLost(evt);
             }
         });
-        getContentPane().add(DescriptionText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 298, 569, 59));
+        getContentPane().add(DescriptionText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 298, 569, 50));
 
         GuestText.setForeground(new java.awt.Color(224, 224, 224));
         GuestText.setText("Provide total attendees");
@@ -171,7 +169,7 @@ public class CreateEvent extends javax.swing.JFrame {
                 GuestTextActionPerformed(evt);
             }
         });
-        getContentPane().add(GuestText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 376, 246, 40));
+        getContentPane().add(GuestText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, 246, 40));
 
         BudgetText.setForeground(new java.awt.Color(224, 224, 224));
         BudgetText.setText("NRs.");
@@ -183,10 +181,10 @@ public class CreateEvent extends javax.swing.JFrame {
                 BudgetTextFocusLost(evt);
             }
         });
-        getContentPane().add(BudgetText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 448, 246, 40));
+        getContentPane().add(BudgetText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 430, 246, 40));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(553, 375, 245, 40));
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 370, 245, 40));
 
         jLabel9.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel9.setText("Date:");
@@ -205,20 +203,20 @@ public class CreateEvent extends javax.swing.JFrame {
 
         jLabel10.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel10.setText("Venue:");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 380, -1, -1));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 370, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel11.setText("Event Privacy: ");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 450, -1, -1));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 430, -1, -1));
 
         TimeText.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(TimeText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 242, 40));
 
         jRadioButton1.setText("Public");
-        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 450, -1, -1));
+        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 430, -1, -1));
 
         jRadioButton2.setText("Private");
-        getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 450, -1, -1));
+        getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 430, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(38, 78, 201));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -238,8 +236,15 @@ public class CreateEvent extends javax.swing.JFrame {
         jLabel12.setText("_");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(504, 252, 21, -1));
 
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/create.png"))); // NOI18N
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 950, 560));
+        jLabel15.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel15.setText("Set  Ticket Price: ");
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 480, -1, -1));
+
+        SetPriceButton.setText("NRs.");
+        getContentPane().add(SetPriceButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 470, 150, 40));
+
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/create.png"))); // NOI18N
+        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 920, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -388,6 +393,7 @@ public class CreateEvent extends javax.swing.JFrame {
     private javax.swing.JTextField DescriptionText;
     private javax.swing.JTextField EventText;
     private javax.swing.JTextField GuestText;
+    private javax.swing.JButton SetPriceButton;
     private javax.swing.JComboBox<String> TimeText;
     private javax.swing.JTextField TypeText;
     private javax.swing.JButton jButton1;
@@ -401,7 +407,8 @@ public class CreateEvent extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
