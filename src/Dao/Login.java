@@ -16,7 +16,7 @@ import java.sql.ResultSet;
 public class Login {
 
     public static boolean registerUser(Adminregister user) {
-        Connection conn = MySqlConnection.getConnection();
+        Connection conn = new MySqlConnection().openConnection(); // ✅ Fixed here
 
         try {
             if (conn == null) {
@@ -76,7 +76,7 @@ public class Login {
     }
 
     public static boolean loginAdmin(String email, String password) {
-        Connection conn = MySqlConnection.getConnection();
+        Connection conn = new MySqlConnection().openConnection(); // ✅ Fixed here
 
         try {
             if (conn == null) {
@@ -91,7 +91,7 @@ public class Login {
 
             ResultSet rs = stmt.executeQuery();
 
-            return rs.next(); // returns true if credentials match
+            return rs.next(); // ✅ Login successful if a record is found
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Login failed: " + e.getMessage());

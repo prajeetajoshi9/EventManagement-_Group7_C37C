@@ -10,7 +10,7 @@ public class User {
 
     public Login AdminLogin(String username, String password) {
         MySqlConnection mysql = new MySqlConnection();
-        Connection conn = mysql.getConnection();
+        Connection conn = mysql.openConnection();
         String sql = "SELECT * FROM admin WHERE username = ? AND password = ?";
 
         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {

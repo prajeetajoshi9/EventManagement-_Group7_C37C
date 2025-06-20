@@ -11,7 +11,7 @@ public class UserDao {
     
 
     public boolean isEmailExists(String email) {
-        Connection conn = db.getConnection();
+        Connection conn = db.openConnection();
         try {
             String sql = "SELECT * FROM users WHERE email=?";
             PreparedStatement ps = conn.prepareStatement(sql);
@@ -27,7 +27,7 @@ public class UserDao {
     }
 
     public boolean registerUser(String f_name, String s_name, String email, String admin_username, String phone_number, String admin_id, String admin_address, String id_number) {
-        Connection conn = db.getConnection();
+        Connection conn = db.openConnection();
         try {
             String sql = "INSERT INTO admin_details(first_name, last_name, email, admin_username, phone_number, admin_id,  id_number) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement ps = conn.prepareStatement(sql);
@@ -50,7 +50,7 @@ public class UserDao {
         }
     }
     public boolean UpdateUser(String f_name, String s_name, String email, String admin_username, String contact_number, String admin_id, String admin_address, String id_number) {
-        Connection conn = db.getConnection();
+        Connection conn = db.openConnection();
         try {
             String sql = "UPDATE admin_details SET first_name=?, last_name=?, admin_username=?, contact_number=?, admin_id=?, admin_address=?, id_number=? WHERE email =?";
             PreparedStatement ps = conn.prepareStatement(sql);
