@@ -3,7 +3,7 @@ package Controller;
 import Dao.UserDao;
   
 public class UserController {
-    private UserDao userDAO = new UserDao();
+    private final UserDao userDAO = new UserDao();
 
     public String register(String f_name, String s_name, String email, String admin_username, String contact_number, String admin_id, String admin_address, String id_number) {
         Boolean isverified = false;

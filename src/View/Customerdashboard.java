@@ -1,14 +1,8 @@
-package View;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
-
-import Controller.NewClass;
-import java.awt.event.ActionListener;
-import javax.swing.JButton;
+package View;
 
 /**
  *
@@ -32,357 +26,231 @@ public class Customerdashboard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jLabel12 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jLabel9 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        jButton10 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
+        jToggleButton1 = new javax.swing.JToggleButton();
+        jToggleButton2 = new javax.swing.JToggleButton();
+        jToggleButton3 = new javax.swing.JToggleButton();
+        jToggleButton4 = new javax.swing.JToggleButton();
+        jToggleButton5 = new javax.swing.JToggleButton();
+        jToggleButton6 = new javax.swing.JToggleButton();
+        jToggleButton7 = new javax.swing.JToggleButton();
+        jToggleButton8 = new javax.swing.JToggleButton();
+        jToggleButton9 = new javax.swing.JToggleButton();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
-        jButton11 = new javax.swing.JButton();
-        jPanel7 = new javax.swing.JPanel();
-        jPanel8 = new javax.swing.JPanel();
-
-        jLabel1.setText("jLabel1");
-
-        jToggleButton1.setText("jToggleButton1");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
-            }
-        });
-
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication5/Screenshot_2025-05-10_192545-removebg-preview 5.png"))); // NOI18N
-        jLabel12.setText("jLabel12");
+        jLabel11 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 102));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication5/WhatsApp Image 2025-05-22 at 9.27.29 PM.jpeg"))); // NOI18N
-        jLabel11.setText("jLabel11");
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screenshot 2025-05-22 at 20.45.48.png"))); // NOI18N
+        jLabel7.setText("jLabel7");
 
-        jPanel2.setBackground(new java.awt.Color(255, 204, 153));
-
-        jLabel15.setText("jLabel15");
-        jPanel2.add(jLabel15);
-
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javaapplication5/images.png"))); // NOI18N
-        jLabel19.setText("jLabel10");
-        jLabel19.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jLabel19FocusGained(evt);
-            }
-        });
-
-        jPasswordField1.setText("jPasswordField1");
-
-        jLabel9.setText("Sign Out");
-
-        jPanel4.setBackground(new java.awt.Color(255, 204, 153));
-
-        jButton10.setText("jButton10");
-        jPanel4.add(jButton10);
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 600, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(459, 23, 0, 39);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setText("Home");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(80, 40, 34, 17);
+        jLabel1.setText("Home");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 39, -1, -1));
 
-        jLabel4.setText("About Us");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(130, 40, 54, 17);
+        jLabel2.setText("About Us");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(203, 39, -1, -1));
 
-        jLabel5.setText("Services");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(190, 40, 50, 17);
+        jLabel3.setText("Services");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(287, 39, -1, -1));
 
-        jLabel6.setText("Contact Us");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(250, 40, 65, 17);
+        jLabel4.setText("Contact Us");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(355, 39, -1, -1));
 
-        jLabel7.setText("Event");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(330, 40, 33, 17);
+        jLabel5.setText("Events");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(448, 39, -1, -1));
 
-        jLabel8.setText("More");
-        jLabel8.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
-                jLabel8AncestorAdded(evt);
-            }
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
-            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
-            }
-        });
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(380, 40, 29, 17);
+        jLabel6.setText("More");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(517, 39, -1, -1));
 
-        jButton1.setText("Personal Information");
+        jButton1.setBackground(new java.awt.Color(255, 204, 102));
+        jButton1.setText("Sign Out");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(340, 90, 149, 23);
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(601, 36, -1, -1));
 
-        jButton2.setText("Search Event");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jToggleButton1.setText("Personal Information");
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                PersonalInformation(evt);
             }
         });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(340, 130, 149, 23);
+        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(491, 106, -1, -1));
 
-        jButton3.setText("Create Event");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jToggleButton2.setText("Search Event");
+        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jToggleButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3);
-        jButton3.setBounds(340, 160, 149, 20);
+        getContentPane().add(jToggleButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(491, 141, 148, -1));
 
-        jButton4.setText("Edit Event");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        jToggleButton3.setText("Create Event");
+        jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                jToggleButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4);
-        jButton4.setBounds(340, 190, 149, 22);
+        getContentPane().add(jToggleButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(491, 176, 148, -1));
 
-        jButton5.setText("View Event");
-        getContentPane().add(jButton5);
-        jButton5.setBounds(340, 230, 149, 23);
+        jToggleButton4.setText("Edit Event");
+        getContentPane().add(jToggleButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(491, 217, 148, -1));
 
-        jButton6.setText("Delete Event");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        jToggleButton5.setText("View Event");
+        getContentPane().add(jToggleButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(491, 258, 148, -1));
+
+        jToggleButton6.setText("Delete Event");
+        getContentPane().add(jToggleButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(491, 293, 148, -1));
+
+        jToggleButton7.setText("Book Ticket");
+        jToggleButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                jToggleButton7ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton6);
-        jButton6.setBounds(340, 260, 149, 23);
+        getContentPane().add(jToggleButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(491, 328, 148, -1));
 
-        jButton7.setText("Book Ticket");
-        getContentPane().add(jButton7);
-        jButton7.setBounds(340, 290, 149, 23);
-
-        jButton8.setText("Ticket Details");
-        getContentPane().add(jButton8);
-        jButton8.setBounds(340, 330, 149, 23);
-
-        jButton9.setText("Payment Information");
-        getContentPane().add(jButton9);
-        jButton9.setBounds(340, 360, 149, 23);
-        getContentPane().add(jPanel3);
-        jPanel3.setBounds(0, -30, 10, 10);
-
-        jLabel13.setFont(new java.awt.Font("Hoefler Text", 1, 24)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("Hamro Event");
-        getContentPane().add(jLabel13);
-        jLabel13.setBounds(19, 157, 170, 100);
-
-        jLabel14.setIcon(new javax.swing.ImageIcon("/Users/sumitshah/Developer/NewFolder.1/EventManagement-_Group7_C37C/src/View/Assets/WhatsApp Image 2025-05-22 at 9.27.29 PM.jpeg")); // NOI18N
-        getContentPane().add(jLabel14);
-        jLabel14.setBounds(0, 70, 540, 330);
-
-        jLabel16.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
-        jLabel16.setText("Hamro Events, Nepals Number one");
-        getContentPane().add(jLabel16);
-        jLabel16.setBounds(20, 440, 150, 12);
-
-        jLabel17.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
-        jLabel17.setText("event management system");
-        getContentPane().add(jLabel17);
-        jLabel17.setBounds(20, 450, 120, 17);
-
-        jLabel18.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
-        jLabel18.setText("Follow us:");
-        getContentPane().add(jLabel18);
-        jLabel18.setBounds(170, 420, 70, 12);
-
-        jLabel10.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
-        jLabel10.setText("jLabel10");
-        getContentPane().add(jLabel10);
-        jLabel10.setBounds(180, 440, 30, 30);
-
-        jLabel20.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
-        jLabel20.setText("Our Team");
-        getContentPane().add(jLabel20);
-        jLabel20.setBounds(250, 420, 60, 12);
-
-        jLabel21.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
-        jLabel21.setText("Support");
-        getContentPane().add(jLabel21);
-        jLabel21.setBounds(250, 450, 49, 12);
-
-        jLabel22.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
-        jLabel22.setText("Customer Review");
-        getContentPane().add(jLabel22);
-        jLabel22.setBounds(300, 420, 80, 17);
-
-        jLabel23.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
-        jLabel23.setText("Blogs");
-        getContentPane().add(jLabel23);
-        jLabel23.setBounds(320, 440, 49, 17);
-
-        jLabel24.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
-        jLabel24.setText("Privacy Policy");
-        getContentPane().add(jLabel24);
-        jLabel24.setBounds(390, 420, 59, 12);
-
-        jLabel25.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
-        jLabel25.setText("Cookies Policy");
-        getContentPane().add(jLabel25);
-        jLabel25.setBounds(390, 440, 70, 17);
-
-        jLabel26.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
-        jLabel26.setText("@2025 Hamro Events");
-        getContentPane().add(jLabel26);
-        jLabel26.setBounds(460, 450, 80, 17);
-
-        jLabel27.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
-        jLabel27.setText("All rights reserved");
-        getContentPane().add(jLabel27);
-        jLabel27.setBounds(460, 460, 70, 17);
-
-        jPanel5.setBackground(new java.awt.Color(255, 204, 153));
-        getContentPane().add(jPanel5);
-        jPanel5.setBounds(0, 400, 540, 90);
-
-        jButton11.setText("Sign Out");
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
+        jToggleButton8.setText("Ticket Details");
+        jToggleButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                jToggleButton8ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton11);
-        jButton11.setBounds(450, 40, 85, 23);
-        getContentPane().add(jPanel7);
-        jPanel7.setBounds(-10, -40, 10, 10);
+        getContentPane().add(jToggleButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(491, 363, 148, -1));
 
-        jPanel8.setBackground(new java.awt.Color(255, 204, 102));
-        getContentPane().add(jPanel8);
-        jPanel8.setBounds(0, 0, 540, 70);
+        jToggleButton9.setText("Payment Information");
+        getContentPane().add(jToggleButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(491, 398, -1, -1));
+
+        jLabel8.setText("Our Team");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 464, -1, -1));
+
+        jLabel9.setText("Support");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(225, 464, -1, -1));
+
+        jLabel10.setText("Customer Review");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(373, 464, 130, -1));
+
+        jLabel11.setText("Blogs");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(559, 464, -1, -1));
+
+        jPanel2.setBackground(new java.awt.Color(255, 204, 102));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 690, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 690, 70));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/WhatsApp Image 2025-05-22 at 9.27.29 PM.jpeg"))); // NOI18N
+        jLabel12.setText("jLabel12");
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 690, 330));
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screenshot 2025-05-22 at 20.45.48.png"))); // NOI18N
+        jLabel13.setText("jLabel13");
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 90, 100));
+
+        jPanel3.setBackground(new java.awt.Color(255, 204, 102));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 690, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+    private void PersonalInformation(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PersonalInformation
         // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+         // Open the target frame
+    CustomerPersonalInformation personalInfo = new CustomerPersonalInformation();
+    personalInfo.setVisible(true);
+
+    // Close the current frame
+    this.dispose();
+        
+      
+    }//GEN-LAST:event_PersonalInformation
+
+    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jToggleButton2ActionPerformed
+
+    private void jToggleButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jToggleButton8ActionPerformed
+
+    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
+        // TODO add your handling code here:
+        // Close the Customer Dashboard frame
+    this.dispose(); 
+    
+    // Open the Create Event frame
+    CreateEvent createEventFrame = new CreateEvent();
+    createEventFrame.setVisible(true);
+    }//GEN-LAST:event_jToggleButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-     // TODO add your handling code here:
-     //open customerdashboard
-        NewClass.CustomerPersonalInformation CPI = new NewClass.CustomerPersonalInformation();
-     CPI.show();// display CustomerPersonalInformation here CustomerPersonalInformation
-     
-     dispose(); // close current after open 
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jLabel19FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jLabel19FocusGained
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel19FocusGained
-
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        // TODO add your handling code here:
-            // Dispose the current window
+        // Close the dashboard
     this.dispose();
 
-    // Show the login form
-    LoginForm login = new LoginForm();
+    // Open the login form
+    Customer_Login login = new Customer_Login();
     login.setVisible(true);
-    login.setLocationRelativeTo(null); 
-    }//GEN-LAST:event_jButton11ActionPerformed
+    }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jLabel8AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jLabel8AncestorAdded
+    private void jToggleButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton7ActionPerformed
         // TODO add your handling code here:
-         JButton newButton = new JButton("Click Me");
-
-    // Set button properties
-    newButton.setBounds(50, 100, 100, 30); // x, y, width, height
-
-    // Add action listener
-    newButton.addActionListener(new ActionListener() {
-             public void actionPerformed(ActionEvent e) {
-                 JOptionPane.showMessageDialog(null, "New Button Clicked!");
-             }
-
-             @Override
-             public void actionPerformed(java.awt.event.ActionEvent e) {
-                 throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-             }
-         });
-
-    // Add the button to your JFrame or JPanel
-    this.add(newButton);
-
-    // Refresh the frame layout
-    this.revalidate();
-    this.repaint();
-    }//GEN-LAST:event_jLabel8AncestorAdded
+    }//GEN-LAST:event_jToggleButton7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -419,36 +287,12 @@ public class Customerdashboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -459,25 +303,14 @@ public class Customerdashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JToggleButton jToggleButton2;
+    private javax.swing.JToggleButton jToggleButton3;
+    private javax.swing.JToggleButton jToggleButton4;
+    private javax.swing.JToggleButton jToggleButton5;
+    private javax.swing.JToggleButton jToggleButton6;
+    private javax.swing.JToggleButton jToggleButton7;
+    private javax.swing.JToggleButton jToggleButton8;
+    private javax.swing.JToggleButton jToggleButton9;
     // End of variables declaration//GEN-END:variables
-
-    private static class JOptionPane {
-
-        private static void showMessageDialog(String new_Button_Clicked) {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-
-        public JOptionPane() {
-        }
-    }
-
-
 }
