@@ -56,7 +56,7 @@ public class CustomerEditEvent extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jLabel15 = new javax.swing.JLabel();
+        SetPrice = new javax.swing.JLabel();
         SetPriceButton = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
 
@@ -235,9 +235,9 @@ public class CustomerEditEvent extends javax.swing.JFrame {
         jButton2.setText("Edit");
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 560, 100, 40));
 
-        jLabel15.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        jLabel15.setText("Set  Ticket Price: ");
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 480, -1, -1));
+        SetPrice.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        SetPrice.setText("Set  Ticket Price: ");
+        getContentPane().add(SetPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 480, -1, -1));
 
         SetPriceButton.setText("NRs.");
         getContentPane().add(SetPriceButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 470, 150, 40));
@@ -387,6 +387,7 @@ public class CustomerEditEvent extends javax.swing.JFrame {
     private javax.swing.JTextField DescriptionText;
     private javax.swing.JTextField EventText;
     private javax.swing.JTextField GuestText;
+    private javax.swing.JLabel SetPrice;
     private javax.swing.JButton SetPriceButton;
     private javax.swing.JComboBox<String> TimeText;
     private javax.swing.JTextField TypeText;
@@ -402,7 +403,6 @@ public class CustomerEditEvent extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
