@@ -243,7 +243,7 @@ public class CustomerEditEvent extends javax.swing.JFrame {
         getContentPane().add(SetPriceButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 470, 150, 40));
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/CustomerEditEvent.png"))); // NOI18N
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 910, 540));
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 910, 550));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
