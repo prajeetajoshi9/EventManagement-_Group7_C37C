@@ -50,6 +50,7 @@ public class UserDao {
             db.closeConnection(conn);
         }
     }
+//    }
     
     // Checks if admin ID exists
 public boolean isAdminIdExists(String adminId) {

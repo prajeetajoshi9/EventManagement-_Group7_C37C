@@ -1,12 +1,13 @@
 package Controller;
 
 import Dao.UserDao;
+
   
 public class UserController {
     private UserDao userDAO = new UserDao();
 
     public String register(String f_name, String s_name, String email, String admin_username, String contact_number, String admin_id, String admin_address, String id_number) {
-        Boolean isverified = false;
+        Boolean isVerified = false;
         // Validate email format
         boolean isValid = email.matches("^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,}$");
         if (!isValid) {

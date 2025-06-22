@@ -5,7 +5,7 @@
 package Controller;
 
 import Dao.User;
-import model.Login;
+import Model.Login;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
@@ -13,7 +13,7 @@ import Model.UserData;
 import Model.UserModel;
 import View.Customer_Login;
 import View.Registration_form;
-import model.Login;
+import Model.Login;
 
 
 /**

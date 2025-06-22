@@ -206,7 +206,7 @@ public class AdminDashboard extends javax.swing.JFrame {
     private void jButtonPersonalInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPersonalInfoActionPerformed
         // TODO add your handling code here:
         new AdminPersonalInfo().setVisible(true); 
-        this.dispose();
+        this.dispose(); 
     }//GEN-LAST:event_jButtonPersonalInfoActionPerformed
 
     private void SignoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SignoutMouseClicked

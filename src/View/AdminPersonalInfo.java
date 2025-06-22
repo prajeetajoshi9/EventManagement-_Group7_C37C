@@ -317,7 +317,7 @@ public class AdminPersonalInfo extends javax.swing.JFrame {
         if (idnum.getText().equals("Provide your citizenship/National Id")){
             idnum.setText("");
             idnum.setForeground(Color.BLACK);
-        }
+        } 
     }//GEN-LAST:event_idnumFocusGained
 
     private void idnumFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_idnumFocusLost
