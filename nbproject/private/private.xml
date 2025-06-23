@@ -5,10 +5,8 @@
         <group>
             <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/View/ResetPassword.java</file>
             <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/View/NewPassword.java</file>
-            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/eventmanagementsystemproject/EventManagementSystemProject.java</file>
             <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Database/MySqlConnection.java</file>
             <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Controller/UserController.java</file>
-            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Controller/NewClass.java</file>
             <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Model/OTP.java</file>
             <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Controller/NewPasswordController.java</file>
             <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Controller/OTPEntryController.java</file>
@@ -18,6 +16,7 @@
             <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Model/UserData.java</file>
             <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Model/User.java</file>
             <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/View/OTPEntry.java</file>
+            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/View/DeleteEvents.java</file>
         </group>
     </open-files>
 </project-private>

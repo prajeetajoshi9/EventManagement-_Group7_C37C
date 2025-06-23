@@ -67,10 +67,34 @@ public class UserDao {
            return true;
         } catch (SQLException ex) {
             Logger.getLogger(UserDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         return false;
+    }
+     
+    
+    public boolean registerUser(String f_name, String s_name, String email, String admin_username, String phone_number, String admin_id, String admin_address, String id_number) {
+        Connection conn = mysql.openConnection();
+        try {
+            String sql = "INSERT INTO admin_details(first_name, last_name, email, admin_username, phone_number, admin_id,  id_number) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, f_name);
+            ps.setString(2, s_name);
+            ps.setString(3, email);
+            ps.setString(4, admin_username);
+            ps.setString(5, phone_number);
+            ps.setString(6, admin_id);
+            ps.setString(7, admin_address); 
+            ps.setString(8, id_number);
+            
+            int result = ps.executeUpdate();
+            return result > 0;
+        } catch (Exception e) {
+            System.out.println(e);
+            return false;
         } finally {
             mysql.closeConnection(conn);
         }
-        return false;
+       
     }
 
     public Timestamp otpCreatedAt(OTP otp) {
@@ -105,5 +129,9 @@ public class UserDao {
             mysql.closeConnection(conn);
         }
         return false;
+    }
+
+    public boolean isEmailExists(String email) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
