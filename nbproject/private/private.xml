@@ -3,14 +3,24 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/View/CustomerPersonalInformation.java</file>
             <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/View/CreateEvent.java</file>
-            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Controller/EventController.java</file>
-            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Controller/CustomerController.java</file>
-            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/View/Customerdashboard.java</file>
-            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Model/Customer.java</file>
-            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Dao/Customer.java</file>
-            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Dashboard/CustomerPersonalInformation.java</file>
+            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/View/AdminViewEventStatus.java</file>
+            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/View/AdminEditEventStatus.java</file>
+            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/View/CustomerPersonalInformation.java</file>
+            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/eventmanagementsystemproject/CreateEventController.java</file>
+            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/eventmanagementsystemproject/EventManagementSystemProject.java</file>
+            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/View/yourTable.java</file>
+            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/View/AdminViewEventDetails.java</file>
+            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/View/EventDatabase.java</file>
+            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/View/eventTable.java</file>
+            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Dao/DBTest.java</file>
+            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Dao/MySQLConnection.java</file>
+            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Controller/PreparedStatement.java</file>
+            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Model/Event.java</file>
+            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Dao/EventDAO.java</file>
+            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Database/MySQLConnection1.java</file>
+            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Database/MySqlConnection.java</file>
+            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Database/MySQLConnection2.java</file>
         </group>
     </open-files>
 </project-private>

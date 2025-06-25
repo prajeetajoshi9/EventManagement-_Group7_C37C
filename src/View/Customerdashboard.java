@@ -232,9 +232,10 @@ public class Customerdashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
         // Close the Customer Dashboard frame
     this.dispose(); 
+        CreateEvent controller = null;
     
     // Open the Create Event frame
-    CreateEvent createEventFrame = new CreateEvent();
+    CreateEvent createEventFrame = new CreateEvent(controller);
     createEventFrame.setVisible(true);
     }//GEN-LAST:event_jToggleButton3ActionPerformed
 
