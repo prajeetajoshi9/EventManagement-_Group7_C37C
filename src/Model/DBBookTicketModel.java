@@ -10,8 +10,8 @@ import java.util.Date;
  *
  * @author Asus Zenbook
  */
-public class TicketBooking {
-    private int id;
+public class DBBookTicketModel {
+       private int id;
     
     public int getId(){
         return id;
@@ -86,8 +86,15 @@ public class TicketBooking {
     public void setBookingDate(Date bookingDate){
         this.bookingDate = bookingDate;
     }
+    private String CustomerName;
+    public String getCustomerName(){
+        return CustomerName;
+    }
+    public void setCustomerName(String CustomerName){
+        this.CustomerName=CustomerName;
+    }
     
-    public TicketBooking(int id, String eventName, String bookerName, String bookerIdNumber, int numberofTickets, String ticketType, double totalPrice, String paymentService, boolean confirmTicket, Date bookingDate)
+    public DBBookTicketModel(int id, String eventName, String bookerName, String bookerIdNumber, int numberofTickets, String ticketType, double totalPrice, String paymentService, boolean confirmTicket, Date bookingDate, String CustomerName)
     {
         this.id = id;
     this.eventName = eventName;
@@ -99,9 +106,7 @@ public class TicketBooking {
     this.paymentService = paymentService;
     this.confirmTicket = confirmTicket;
     this.bookingDate = bookingDate;
+    this.CustomerName=CustomerName;
     }   
     
-    public TicketBooking(){
-        
-    }
 }

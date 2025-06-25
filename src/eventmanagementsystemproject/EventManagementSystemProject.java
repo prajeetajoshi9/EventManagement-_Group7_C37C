@@ -3,17 +3,27 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package eventmanagementsystemproject;
+import Controller.CreateEventController;
+import Controller.DBBookingsController;
 import View.Registration_form;
 import Controller.SignupController;
 import Controller.SignupController;
 import Database.Database;
 import Database.MySqlConnection;
+import View.BookTicketList;
 import View.Bookmark;
+import View.CreateEvent;
+import View.DBBookTicket;
 import View.Registration_form;
 import controller.TicketBookingController;
 
 public class EventManagementSystemProject {
-     
+   void open(){
+       
+   }  
+   void close(){
+       
+   }
     public static void main(String[] args) {
      
 
@@ -33,12 +43,27 @@ public class EventManagementSystemProject {
 //        controller.open();
 //        }
 
-Bookmark bookmark = new Bookmark();
-bookmark.setVisible(true);
-TicketBookingController controller = new TicketBookingController(bookmark);
-controller.open();
+//Bookmark bookmark = new Bookmark();
+//bookmark.setVisible(true);
+//TicketBookingController controller = new TicketBookingController(bookmark);
+//controller.open();
+
+
+//CreateEvent event = new CreateEvent();
+//event.setVisible(true);
+//CreateEventController controlle= new CreateEventController(event);
+//controlle.open();       }
+
+//BookTicketList book= new BookTicketList();
+//book.setVisible(true);
+
+DBBookTicket book = new DBBookTicket();
+book.setVisible(true);
+new DBBookingsController(book);
+//controll.open();
+    }
 }
-}
+
 
     
  

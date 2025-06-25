@@ -22,11 +22,11 @@ public class MySqlConnection implements Database {
                 connection = DriverManager.getConnection(
                 "jdbc:mysql://127.0.0.1:3306/" + database,username,password 
                 ); 
-                if (connection ==null ){
-                    System.out.println("Databse connection fail");
-                } else{
+//                if (connection ==null ){
+//                    System.out.println("Databse connection fail");
+//                } else{
                     System.out.println("Databse connection success"); 
-                }
+//                }
                 return connection; 
                 
         } catch (Exception e){ 

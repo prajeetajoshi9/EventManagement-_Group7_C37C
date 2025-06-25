@@ -39,26 +39,23 @@ public class CreateEvent extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         EventText = new javax.swing.JTextField();
-        TypeText = new javax.swing.JTextField();
+        TimeText = new javax.swing.JTextField();
         DescriptionText = new javax.swing.JTextField();
         GuestText = new javax.swing.JTextField();
         BudgetText = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel9 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        TimeText = new javax.swing.JComboBox<>();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jLabel12 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         SetPriceButton = new javax.swing.JButton();
-        jLabel16 = new javax.swing.JLabel();
+        TypeText1 = new javax.swing.JTextField();
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/create.png"))); // NOI18N
 
@@ -130,17 +127,17 @@ public class CreateEvent extends javax.swing.JFrame {
         });
         getContentPane().add(EventText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 124, 569, 40));
 
-        TypeText.setForeground(new java.awt.Color(224, 224, 224));
-        TypeText.setText("Choose Type");
-        TypeText.addFocusListener(new java.awt.event.FocusAdapter() {
+        TimeText.setForeground(new java.awt.Color(224, 224, 224));
+        TimeText.setText("Choose Time");
+        TimeText.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                TypeTextFocusGained(evt);
+                TimeTextFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                TypeTextFocusLost(evt);
+                TimeTextFocusLost(evt);
             }
         });
-        getContentPane().add(TypeText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 182, 242, 40));
+        getContentPane().add(TimeText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 242, 40));
 
         DescriptionText.setForeground(new java.awt.Color(224, 224, 224));
         DescriptionText.setText("Provide short description of event");
@@ -183,23 +180,20 @@ public class CreateEvent extends javax.swing.JFrame {
         });
         getContentPane().add(BudgetText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 430, 246, 40));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "BhirkutiMandap", "Hotel Diyo" }));
         getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 370, 245, 40));
 
         jLabel9.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel9.setText("Date:");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(504, 194, -1, -1));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2025-06-21", "2025-06-22", "2025-06-23", "2025-06-24" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
             }
         });
         getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(553, 182, 246, 40));
-
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(553, 240, 246, 40));
 
         jLabel10.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel10.setText("Venue:");
@@ -208,9 +202,6 @@ public class CreateEvent extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel11.setText("Event Privacy: ");
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 430, -1, -1));
-
-        TimeText.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(TimeText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 242, 40));
 
         jRadioButton1.setText("Public");
         getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 430, -1, -1));
@@ -233,9 +224,6 @@ public class CreateEvent extends javax.swing.JFrame {
         jButton3.setText("Confirm");
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(271, 547, 100, 40));
 
-        jLabel12.setText("_");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(504, 252, 21, -1));
-
         jLabel15.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel15.setText("Set  Ticket Price: ");
         getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 480, -1, -1));
@@ -243,8 +231,17 @@ public class CreateEvent extends javax.swing.JFrame {
         SetPriceButton.setText("NRs.");
         getContentPane().add(SetPriceButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 470, 150, 40));
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/create.png"))); // NOI18N
-        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 920, 540));
+        TypeText1.setForeground(new java.awt.Color(224, 224, 224));
+        TypeText1.setText("Choose Type");
+        TypeText1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                TypeText1FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                TypeText1FocusLost(evt);
+            }
+        });
+        getContentPane().add(TypeText1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 182, 242, 40));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -272,25 +269,25 @@ public class CreateEvent extends javax.swing.JFrame {
         } 
     }//GEN-LAST:event_EventTextFocusLost
 
-    private void TypeTextFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TypeTextFocusGained
+    private void TimeTextFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TimeTextFocusGained
         // TODO add your handling code here:
-        if ( TypeText.getText().equals("Choose Type")){
-             TypeText.setText("");
-             TypeText.setForeground(Color.BLACK);
+        if ( TimeText.getText().equals("Choose Type")){
+             TimeText.setText("");
+             TimeText.setForeground(Color.BLACK);
        
         }
         
-    }//GEN-LAST:event_TypeTextFocusGained
+    }//GEN-LAST:event_TimeTextFocusGained
 
-    private void TypeTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TypeTextFocusLost
+    private void TimeTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TimeTextFocusLost
         // TODO add your handling code here:
-        if( TypeText.getText().isEmpty()){
-             TypeText.setText("Choose Type");
-             TypeText.setForeground(new java.awt.Color(216,216,216));
+        if( TimeText.getText().isEmpty()){
+             TimeText.setText("Choose Type");
+             TimeText.setForeground(new java.awt.Color(216,216,216));
         
            
         } 
-    }//GEN-LAST:event_TypeTextFocusLost
+    }//GEN-LAST:event_TimeTextFocusLost
 
     private void DescriptionTextFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DescriptionTextFocusGained
         // TODO add your handling code here:
@@ -353,6 +350,14 @@ public class CreateEvent extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_GuestTextActionPerformed
 
+    private void TypeText1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TypeText1FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TypeText1FocusGained
+
+    private void TypeText1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TypeText1FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TypeText1FocusLost
+
     /**
      * @param args the command line arguments
      */
@@ -394,21 +399,18 @@ public class CreateEvent extends javax.swing.JFrame {
     private javax.swing.JTextField EventText;
     private javax.swing.JTextField GuestText;
     private javax.swing.JButton SetPriceButton;
-    private javax.swing.JComboBox<String> TimeText;
-    private javax.swing.JTextField TypeText;
+    private javax.swing.JTextField TimeText;
+    private javax.swing.JTextField TypeText1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -421,4 +423,27 @@ public class CreateEvent extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     // End of variables declaration//GEN-END:variables
+
+public javax.swing.JTextField getEventText() { return EventText; }
+public javax.swing.JTextField getTypeText() { return TimeText; }
+public javax.swing.JTextField getDescriptionText() { return DescriptionText; }
+public javax.swing.JTextField getGuestText() { return GuestText; }
+public javax.swing.JTextField getBudgetText() { return BudgetText; }
+public javax.swing.JTextField getTimeText() { return TimeText; }
+public javax.swing.JComboBox<String> getDateCombo() { return jComboBox2; }
+public javax.swing.JComboBox<String> getVenueCombo() { return jComboBox1; }
+public javax.swing.JButton getConfirmButton() { return jButton3; }
+public javax.swing.JRadioButton getPublicRadio() { return jRadioButton1; }
+public javax.swing.JRadioButton getPrivateRadio() { return jRadioButton2; }
+public javax.swing.JButton getTicketPriceButton() { return SetPriceButton; }
+
+    public Object JTextField() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public Object getTimeCombo() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+
 }

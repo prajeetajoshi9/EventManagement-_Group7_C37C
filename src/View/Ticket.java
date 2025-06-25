@@ -4,6 +4,9 @@
  */
 package View;
 
+import Database.MySqlConnection;
+import Model.TicketBooking;
+
 /**
  *
  * @author Asus Zenbook
@@ -16,6 +19,56 @@ public class Ticket extends javax.swing.JFrame {
     public Ticket() {
         initComponents();
     }
+    public Ticket(TicketBooking ticket){
+        initComponents();
+
+        // Import the model class at the top if not already
+    // Now fill the UI fields with values from ticket
+    jTextField1.setText("Auto-generated or set Ticket ID"); // or leave blank
+    jTextField4.setText(ticket.getEventName());
+    jTextField5.setText("Set Event Date if available");
+    jTextField6.setText(ticket.getBookerName());
+    jTextField7.setText(ticket.getBookerIdNumber());
+    jTextField8.setText(String.valueOf(ticket.getNumberOfTickets()));
+    jTextField3.setText(ticket.getTicketType());
+    jTextField2.setText(ticket.getPaymentService());
+    jTextField9.setText(String.valueOf(ticket.getTotalPrice()));
+    jTextField10.setText("Set Time if available");
+    jTextField11.setText("Set Venue if available");
+}
+public Ticket(int ticketId){
+    initComponents();
+
+
+//    try (Connection conn = new MySqlConnection().openConnection()) {
+//        String query = "SELECT * FROM ticket_booking WHERE id = ?";
+//        PreparedStatement stmt = conn.prepareStatement(query);
+//        stmt.setInt(1, ticketId);
+//        ResultSet rs = stmt.executeQuery();
+//
+//        if (rs.next()) {
+//            // Example: assuming you have JLabels or JTextFields to show this
+//            lblEventName.setText(rs.getString("event_name"));
+//            lblBookerName.setText(rs.getString("booker_name"));
+//            lblBookerId.setText(rs.getString("booker_id_number"));
+//            lblNumTickets.setText(String.valueOf(rs.getInt("number_of_tickets")));
+//            lblTicketType.setText(rs.getString("ticket_type"));
+//            lblTotalPrice.setText(String.valueOf(rs.getDouble("total_price")));
+//            lblPaymentService.setText(rs.getString("payment_service"));
+//            lblConfirm.setText(rs.getBoolean("confirm_ticket") ? "Yes" : "No");
+//        } else {
+//            JOptionPane.showMessageDialog(this, "Ticket not found!");
+//        }
+//
+//    } catch (Exception ex) {
+//        JOptionPane.showMessageDialog(this, "Error fetching ticket: " + ex.getMessage());
+//        ex.printStackTrace();
+//    }
+//}
+
+}
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -160,7 +213,6 @@ public class Ticket extends javax.swing.JFrame {
         jPanel1.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(426, 355, 156, -1));
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/494574320_597322936170871_3710706709161285347_n.png"))); // NOI18N
-        jLabel16.setText("jLabel16");
         jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, 68, 1100, 400));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 744, 470));
@@ -259,3 +311,4 @@ public class Ticket extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
+
