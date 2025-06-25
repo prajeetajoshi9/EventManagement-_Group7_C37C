@@ -173,6 +173,7 @@ public class CreateEvent extends javax.swing.JFrame {
         jTextField5.setForeground(new java.awt.Color(224, 224, 224));
         jTextField5.setText("NRs.");
 
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\t•\tSolti Grand Party Palace, Kalanki", "\t•\tRudra Banquet & Events, Banasthali", "\t•\tUtsav Banquet, Tripureshwor", "\t•\tRoyal Empire Party Palace, Baneshwor", "\t•\tDurbar Banquet, Lazimpat", "\t•\tSubha Griha Banquet, Chabahil", "\t•\tGolden Palace Banquet, Gwarko", "\t•\tParadise Party Venue, Koteshwor", "\t•\tEverest Party Palace, Gongabu", "\t•\tDream Garden Banquet, Bhaktapur" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -218,14 +219,14 @@ public class CreateEvent extends javax.swing.JFrame {
 
         jLabel12.setText("_");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10:00AM", "05:00PM", "06:30PM", "12:00PM" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
             }
         });
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sunday", "Monday", "Tuesday", "Wensday", "Thrusday", "Friday", "Saturday" }));
         jComboBox4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox4ActionPerformed(evt);
@@ -468,41 +469,19 @@ group.add(jRadioButton2); // Private
     // Default party palace
     String eventPlace = "";
 
-        switch (selectedItem) {
-            case "Wedding Ceremony":
-                eventPlace = "Solti Grand Party Palace, Kalanki";
-                break;
-            case "Birthday Bash":
-                eventPlace = "Rudra Banquet & Events, Banasthali";
-                break;
-            case "Corporate Meetup":
-                eventPlace = "Utsav Banquet, Tripureshwor";
-                break;
-            case "Engagement Party":
-                eventPlace = "Royal Empire Party Palace, Baneshwor";
-                break;
-            case "Farewell Program":
-                eventPlace = "Durbar Banquet, Lazimpat";
-                break;
-            case "Anniversary Celebration":
-                eventPlace = "Subha Griha Banquet, Chabahil";
-                break;
-            case "Graduation Party":
-                eventPlace = "Golden Palace Banquet, Gwarko";
-                break;
-            case "Baby Shower":
-                eventPlace = "Paradise Party Venue, Koteshwor";
-                break;
-            case "Reception":
-                eventPlace = "Everest Party Palace, Gongabu";
-                break;
-            case "Cultural Program":
-                eventPlace = "Dream Garden Banquet, Bhaktapur";
-                break;
-            default:
-                eventPlace = "Venue to be announced";
-                break;
-        }
+    eventPlace = switch (selectedItem) {
+            case "Wedding Ceremony" -> "Solti Grand Party Palace, Kalanki";
+            case "Birthday Bash" -> "Rudra Banquet & Events, Banasthali";
+            case "Corporate Meetup" -> "Utsav Banquet, Tripureshwor";
+            case "Engagement Party" -> "Royal Empire Party Palace, Baneshwor";
+            case "Farewell Program" -> "Durbar Banquet, Lazimpat";
+            case "Anniversary Celebration" -> "Subha Griha Banquet, Chabahil";
+            case "Graduation Party" -> "Golden Palace Banquet, Gwarko";
+            case "Baby Shower" -> "Paradise Party Venue, Koteshwor";
+            case "Reception" -> "Everest Party Palace, Gongabu";
+            case "Cultural Program" -> "Dream Garden Banquet, Bhaktapur";
+            default -> "Venue to be announced";
+        };
 
     System.out.println("Selected Event: " + selectedItem);
     System.out.println("Event Place: " + eventPlace);

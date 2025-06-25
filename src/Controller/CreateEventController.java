@@ -4,10 +4,20 @@
  */
 package Controller;
 
+import View.CreateEventForm;
+
 /**
  *
  * @author sumitshah
  */
 public class CreateEventController {
+
+    public CreateEventController(CreateEventForm createEventForm) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public void open() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }

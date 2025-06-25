@@ -20,4 +20,4 @@ public class EventManagementSystemProject {
         // CreateEventController controller = new CreateEventController(createEventForm);
         // controller.open();
     }
-}
+} 

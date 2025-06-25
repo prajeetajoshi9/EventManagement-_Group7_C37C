@@ -41,4 +41,18 @@ public class AdminViewEventDetails extends JFrame {
         // Your method to get event details from DB or list
         return EventDatabase.getEventById(id); // example placeholder
     }
+
+    private static class EventDatabase {
+
+        private static Event getEventById() {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+
+        private static Event getEventById(int id) {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+
+        public EventDatabase() {
+        }
+    }
 }

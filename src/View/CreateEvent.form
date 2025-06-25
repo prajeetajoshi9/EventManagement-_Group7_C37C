@@ -402,6 +402,22 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="jComboBox1">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="10">
+            <StringItem index="0" value="&#x9;&#x2022;&#x9;Solti Grand Party Palace, Kalanki"/>
+            <StringItem index="1" value="&#x9;&#x2022;&#x9;Rudra Banquet &amp; Events, Banasthali"/>
+            <StringItem index="2" value="&#x9;&#x2022;&#x9;Utsav Banquet, Tripureshwor"/>
+            <StringItem index="3" value="&#x9;&#x2022;&#x9;Royal Empire Party Palace, Baneshwor"/>
+            <StringItem index="4" value="&#x9;&#x2022;&#x9;Durbar Banquet, Lazimpat"/>
+            <StringItem index="5" value="&#x9;&#x2022;&#x9;Subha Griha Banquet, Chabahil"/>
+            <StringItem index="6" value="&#x9;&#x2022;&#x9;Golden Palace Banquet, Gwarko"/>
+            <StringItem index="7" value="&#x9;&#x2022;&#x9;Paradise Party Venue, Koteshwor"/>
+            <StringItem index="8" value="&#x9;&#x2022;&#x9;Everest Party Palace, Gongabu"/>
+            <StringItem index="9" value="&#x9;&#x2022;&#x9;Dream Garden Banquet, Bhaktapur"/>
+          </StringArray>
+        </Property>
+      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox1ActionPerformed"/>
       </Events>
@@ -487,10 +503,10 @@
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+            <StringItem index="0" value="10:00AM"/>
+            <StringItem index="1" value="05:00PM"/>
+            <StringItem index="2" value="06:30PM"/>
+            <StringItem index="3" value="12:00PM"/>
           </StringArray>
         </Property>
       </Properties>
@@ -504,11 +520,14 @@
     <Component class="javax.swing.JComboBox" name="jComboBox4">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+          <StringArray count="7">
+            <StringItem index="0" value="Sunday"/>
+            <StringItem index="1" value="Monday"/>
+            <StringItem index="2" value="Tuesday"/>
+            <StringItem index="3" value="Wensday"/>
+            <StringItem index="4" value="Thrusday"/>
+            <StringItem index="5" value="Friday"/>
+            <StringItem index="6" value="Saturday"/>
           </StringArray>
         </Property>
       </Properties>
