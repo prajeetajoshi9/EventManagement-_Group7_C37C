@@ -38,16 +38,16 @@ public class Payment extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(109, 109, 109)
+                .addGap(130, 130, 130)
                 .addComponent(jLabel1)
-                .addContainerGap(159, Short.MAX_VALUE))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(14, 14, 14)
                 .addComponent(jLabel1)
-                .addContainerGap(364, Short.MAX_VALUE))
+                .addContainerGap(356, Short.MAX_VALUE))
         );
 
         pack();

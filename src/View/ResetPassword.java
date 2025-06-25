@@ -58,6 +58,11 @@ public class ResetPassword extends javax.swing.JFrame {
 
         sendbutton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         sendbutton.setText("Send Code");
+        sendbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sendbuttonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -112,6 +117,10 @@ public class ResetPassword extends javax.swing.JFrame {
             emailText.setText("Enter your email");
         }
     }//GEN-LAST:event_emailTextFocusLost
+
+    private void sendbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendbuttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sendbuttonActionPerformed
 
     /**
      * @param args the command line arguments

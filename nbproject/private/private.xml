@@ -6,17 +6,11 @@
             <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/View/ResetPassword.java</file>
             <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/View/NewPassword.java</file>
             <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Database/MySqlConnection.java</file>
-            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Controller/UserController.java</file>
-            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Model/OTP.java</file>
-            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Controller/NewPasswordController.java</file>
-            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Controller/OTPEntryController.java</file>
-            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Controller/EmailUtil.java</file>
-            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Dao/UserDao.java</file>
-            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Database/Database.java</file>
-            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Model/UserData.java</file>
-            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Model/User.java</file>
-            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/View/OTPEntry.java</file>
-            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/View/DeleteEvents.java</file>
+            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/View/DeleteEventView.java</file>
+            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Model/Event.java</file>
+            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Controller/DeleteEventController.java</file>
+            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Dao/EventDao.java</file>
+            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Controller/ForgotPasswordController.java</file>
         </group>
     </open-files>
 </project-private>
