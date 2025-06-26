@@ -26,12 +26,14 @@ public class DeleteEventView extends javax.swing.JFrame {
         initComponents();
         Type.setModel(new javax.swing.DefaultComboBoxModel<>(
                 new String[]{
-                    "Haldi",
-                    "Mehendi",
-                    "Wedding",
+                    "Cultural Program",
+                    "Baby Shower",
+                    "Wedding Ceremony",
                     "Reception",
-                    "Halloween Party",
-                    "Birthday Party"
+                    "Engagement Party",
+                    "Birthday Bash",
+                    "Farewell Program",
+                    "Anniversary Celebration"
                 }
         ));
         dateChooser  = new JDateChooser();
