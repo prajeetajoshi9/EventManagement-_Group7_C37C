@@ -8,15 +8,16 @@ import java.awt.Color;
 import Controller.DeleteEventController;
 import com.toedter.calendar.JDateChooser;
 import java.awt.event.ActionListener;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import javax.swing.*;
+import org.netbeans.lib.awtextra.AbsoluteConstraints;
 
 /**
  *
  * @author Rashmi Jha
  */
 public class DeleteEventView extends javax.swing.JFrame {
+    private JDateChooser dateChooser;
+    private JTable eventTable;
 
     /**
      * Creates new form DeleteEvents
@@ -33,10 +34,10 @@ public class DeleteEventView extends javax.swing.JFrame {
                     "Birthday Party"
                 }
         ));
-        JDateChooser dateChooser = new JDateChooser();
+        dateChooser  = new JDateChooser();
         dateChooser.setDateFormatString("yyyy-MM-dd"); // optional format
-        add(new JLabel("EventDate:"));
-        getContentPane().add(dateChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, 180, 30));
+       
+        getContentPane().add(dateChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 185, 150, 30));
 
     }
 
@@ -50,6 +51,7 @@ public class DeleteEventView extends javax.swing.JFrame {
     private void initComponents() {
 
         jToggleButton1 = new javax.swing.JToggleButton();
+        jLabel9 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -65,14 +67,17 @@ public class DeleteEventView extends javax.swing.JFrame {
         EventTitle = new javax.swing.JTextField();
         EditeventId = new javax.swing.JTextField();
         Type = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
         cancelButton = new javax.swing.JButton();
         deleteButton = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
 
         jToggleButton1.setText("jToggleButton1");
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Delete.png"))); // NOI18N
+        jLabel9.setText("jLabel9");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -83,34 +88,34 @@ public class DeleteEventView extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("Edit Event ");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 86, 86, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 86, 86, 30));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setText("Event Tittle");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 134, 86, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 86, 30));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setText("Event Type");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 185, 77, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 77, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setText("Reason for deletion?");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 239, 144, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 144, 30));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel6.setText("Any feedback for us?");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 297, 157, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 157, 30));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel7.setText("Are you sure?");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 352, 90, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 90, -1));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel8.setText("Date");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(351, 185, 37, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, 37, 20));
 
         jRadioButton1.setText("Yes, I want to delete the event");
-        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 353, -1, -1));
+        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 370, -1, -1));
 
         jRadioButton2.setText("No, I don't want to delete th event ");
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -118,7 +123,7 @@ public class DeleteEventView extends javax.swing.JFrame {
                 jRadioButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(358, 353, 216, -1));
+        getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 370, 216, -1));
 
         Reason.setForeground(new java.awt.Color(204, 204, 204));
         Reason.setText("Provide short description for the reason to delete event");
@@ -127,7 +132,7 @@ public class DeleteEventView extends javax.swing.JFrame {
                 ReasonFocusGained(evt);
             }
         });
-        getContentPane().add(Reason, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 235, 319, 30));
+        getContentPane().add(Reason, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 319, 40));
 
         Feedback.setForeground(new java.awt.Color(204, 204, 204));
         Feedback.setText("Help us improve by giving feedback");
@@ -136,7 +141,7 @@ public class DeleteEventView extends javax.swing.JFrame {
                 FeedbackFocusGained(evt);
             }
         });
-        getContentPane().add(Feedback, new org.netbeans.lib.awtextra.AbsoluteConstraints(193, 293, 318, 30));
+        getContentPane().add(Feedback, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 318, 40));
 
         EventTitle.setForeground(new java.awt.Color(204, 204, 204));
         EventTitle.setText("Provide name for the event(e.g Happy Halloween)");
@@ -150,7 +155,7 @@ public class DeleteEventView extends javax.swing.JFrame {
                 EventTitleActionPerformed(evt);
             }
         });
-        getContentPane().add(EventTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 130, 319, 30));
+        getContentPane().add(EventTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 319, 30));
 
         EditeventId.setForeground(new java.awt.Color(204, 204, 204));
         EditeventId.setText("Provide your event id");
@@ -159,7 +164,7 @@ public class DeleteEventView extends javax.swing.JFrame {
                 EditeventIdFocusGained(evt);
             }
         });
-        getContentPane().add(EditeventId, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 82, 319, 30));
+        getContentPane().add(EditeventId, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, 319, 30));
 
         Type.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         Type.addActionListener(new java.awt.event.ActionListener() {
@@ -167,16 +172,13 @@ public class DeleteEventView extends javax.swing.JFrame {
                 TypeActionPerformed(evt);
             }
         });
-        getContentPane().add(Type, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 185, 141, 30));
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(394, 185, 117, 30));
+        getContentPane().add(Type, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 141, 30));
 
         cancelButton.setBackground(new java.awt.Color(51, 51, 255));
         cancelButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         cancelButton.setForeground(new java.awt.Color(255, 255, 255));
         cancelButton.setText("Cancel");
-        getContentPane().add(cancelButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(253, 406, -1, 35));
+        getContentPane().add(cancelButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 420, -1, 35));
 
         deleteButton.setBackground(new java.awt.Color(0, 0, 255));
         deleteButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -187,7 +189,7 @@ public class DeleteEventView extends javax.swing.JFrame {
                 deleteButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(deleteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(358, 406, -1, 35));
+        getContentPane().add(deleteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 420, -1, 35));
 
         jButton3.setBackground(new java.awt.Color(51, 51, 255));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
@@ -199,13 +201,23 @@ public class DeleteEventView extends javax.swing.JFrame {
         });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(432, 31, -1, -1));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Delete.png"))); // NOI18N
-        jLabel9.setText("jLabel9");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 590, 420));
-
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/logo1.png"))); // NOI18N
         jLabel10.setText("jLabel10");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 60));
+
+        jButton1.setBackground(new java.awt.Color(51, 51, 255));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Search");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, 20));
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Backdelete.jpg"))); // NOI18N
+        jLabel11.setText("jLabel11");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 580, 420));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -264,6 +276,11 @@ public class DeleteEventView extends javax.swing.JFrame {
 
     }//GEN-LAST:event_TypeActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -313,10 +330,11 @@ public class DeleteEventView extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> Type;
     private javax.swing.JButton cancelButton;
     private javax.swing.JButton deleteButton;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -338,11 +356,16 @@ public class DeleteEventView extends javax.swing.JFrame {
         deleteButton.addActionListener(listener);
     }
 
-    public javax.swing.JTextField gettextEditEventId() {  // Add this method
+    public JTextField gettextEditEventId() {  // Add this method
         return EditeventId;
     }
 
-    private JDateChooser dateChooser;
+    public JComboBox<String>geteventTypeCombo(){
+        return Type;
+    }
+    public JButton getDeleteButoo(){
+        return deleteButton;
+    }
 
     public JDateChooser getDateChooser() {
         return dateChooser;
