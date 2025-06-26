@@ -1,14 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Database;
 
-/**
- *
- * @author sumitshah
- */
-// package Database;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -17,9 +8,16 @@ public class DbConnection {
     public static Connection getConnection() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            return DriverManager.getConnection("jdbc:mysql://localhost:3306/event_db", "root", "12345678");
-        } catch (ClassNotFoundException | SQLException e) {
-            return null;
+            String url = "jdbc:mysql://localhost:3306/Event management?useSSL=false&serverTimezone=UTC";
+            String user = "root";
+            String password = "12345678";
+
+            return DriverManager.getConnection(url, user, password);
+        } catch (ClassNotFoundException e) {
+            System.err.println("MySQL JDBC Driver not found: " + e.getMessage());
+        } catch (SQLException e) {
+            System.err.println("Connection to database failed: " + e.getMessage());
         }
+        return null;
     }
 }

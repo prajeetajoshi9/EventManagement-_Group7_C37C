@@ -1,26 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Model;
 
-/**
- *
- * @author sumitshah
- */
-
+import java.util.Date;
 
 public class Event {
     private int eventId;
     private String title;
     private String type;
     private String venue;
-    private String date;
+    private Date date;
     private String time;
     private double budget;
     private int guests;
     private String privacy;
     private String status;
+    private String description;
 
     // Getters and Setters
     public int getEventId() { return eventId; }
@@ -35,8 +28,8 @@ public class Event {
     public String getVenue() { return venue; }
     public void setVenue(String venue) { this.venue = venue; }
 
-    public String getDate() { return date; }
-    public void setDate(String date) { this.date = date; }
+    public Date getDate() { return date; }
+    public void setDate(Date date) { this.date = date; }
 
     public String getTime() { return time; }
     public void setTime(String time) { this.time = time; }
@@ -53,15 +46,6 @@ public class Event {
     public String getStatus() { return status; }
     public void setStatus(String status) { this.status = status; }
 
-    public String getId() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getName() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getDescription() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
 }

@@ -1,30 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Dao;
 
-/**
- *
- * @author sumitshah
- */
-
-
-
 import Model.Event;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import Database.DbConnection;
 
 public class EventDAO {
 
     public List<Event> getAllEvents() {
         List<Event> events = new ArrayList<>();
-
         String query = "SELECT * FROM events";
 
-        try (Connection conn = MySQLConnection.getConnection();
+        try (Connection conn = DbConnection.getConnection();
              PreparedStatement ps = conn.prepareStatement(query);
              ResultSet rs = ps.executeQuery()) {
 
@@ -34,17 +22,23 @@ public class EventDAO {
                 event.setTitle(rs.getString("title"));
                 event.setType(rs.getString("type"));
                 event.setVenue(rs.getString("venue"));
-                event.setDate(rs.getString("date"));
+
+                // Convert SQL date to java.util.Date
+                java.sql.Date sqlDate = rs.getDate("date");
+                event.setDate(new java.util.Date(sqlDate.getTime()));
+
                 event.setTime(rs.getString("time"));
                 event.setBudget(rs.getDouble("budget"));
                 event.setGuests(rs.getInt("guests"));
                 event.setPrivacy(rs.getString("privacy"));
                 event.setStatus(rs.getString("status"));
+                event.setDescription(rs.getString("description")); // ✅ Description support
 
                 events.add(event);
             }
 
         } catch (SQLException e) {
+            System.err.println("SQL Error: " + e.getMessage());
             e.printStackTrace();
         }
 
@@ -54,7 +48,7 @@ public class EventDAO {
     public boolean updateStatus(int eventId, String newStatus) {
         String query = "UPDATE events SET status = ? WHERE event_id = ?";
 
-        try (Connection conn = MySQLConnection.getConnection();
+        try (Connection conn = DbConnection.getConnection();
              PreparedStatement ps = conn.prepareStatement(query)) {
 
             ps.setString(1, newStatus);
@@ -63,9 +57,14 @@ public class EventDAO {
             return ps.executeUpdate() > 0;
 
         } catch (SQLException e) {
+            System.err.println("SQL Error (updateStatus): " + e.getMessage());
             e.printStackTrace();
         }
 
         return false;
+    }
+
+    public boolean updateEvent(Event event) {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

@@ -4,6 +4,7 @@
  */
 package View;
 
+import Dao.CustomerDao;
 import Dao.Customer;
 import javax.swing.JOptionPane;
 
@@ -182,8 +183,8 @@ public class CustomerPersonalInformation extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        String firstName = jTextPane1.getText();
+
+    String firstName = jTextPane1.getText();
     String lastName = jTextPane2.getText();
     String contact = jTextPane3.getText();
     String idNumber = jTextPane4.getText();
@@ -196,9 +197,15 @@ public class CustomerPersonalInformation extends javax.swing.JFrame {
     }
 
     Customer customer = new Customer(firstName, lastName, contact, idNumber, email, address);
-    customerController.saveCustomer(customer);
+    CustomerDao dao = new CustomerDao();
+    boolean saved = dao.saveCustomer(customer);
 
-    JOptionPane.showMessageDialog(this, "Customer information saved successfully!");
+    if (saved) {
+        JOptionPane.showMessageDialog(this, "Customer information saved successfully!");
+    } else {
+        JOptionPane.showMessageDialog(this, "Failed to save customer information.");
+    }
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -275,56 +282,56 @@ public class CustomerPersonalInformation extends javax.swing.JFrame {
     private javax.swing.JTextPane jTextPane6;
     // End of variables declaration//GEN-END:variables
 
-    private static class customerController {
+    // private static class customerController {
+//
+    //    private static void saveCustomer(Customer customer) {
+    //        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    //    }
 
-        private static void saveCustomer(Customer customer) {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-      public void saveCustomer() {
+    //  public void saveCustomer() {
     // Example logic to save customer info
-    String name = customerView.getName();  // assuming getters exist
-    String email = customerView.getEmail();
+   // String name = customerView.getName();  // assuming getters exist
+   // String email = customerView.getEmail();
 
     // Perform validation
-    if (name.isEmpty() || email.isEmpty()) {
-        JOptionPane.showMessageDialog(null, "Please fill all fields.");
-        return;
-    }
+   // if (name.isEmpty() || email.isEmpty()) {
+   //     JOptionPane.showMessageDialog(null, "Please fill all fields.");
+   //     return;
+   // }
 
     // Save to database or list
-    Customer customer = new Customer(name, email);
-    customerRepository.save(customer); // if using DAO pattern or similar
+   // Customer customer = new Customer(name, email);
+   // customerRepository.save(customer); // if using DAO pattern or similar
 
-    JOptionPane.showMessageDialog(null, "Customer saved successfully!");
+   // JOptionPane.showMessageDialog(null, "Customer saved successfully!");}
+//
+
+  //      public customerController() {
+//        }
+  //  }
+
+  //  private static class customerView {
+
+  //      private static String getName() {
+  //          throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+  //      }
+
+  //      private static String getEmail() {
+  //          throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+  //      }
+
+  //      public customerView() {
+  //      }
+  //  }
+
+    //private static class customerRepository {
+
+    //    private static void save(Customer customer) {
+    //        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    //    }
+
+    //    public customerRepository() {
+    //    }
+   // 
 }
-
-
-        public customerController() {
-        }
-    }
-
-    private static class customerView {
-
-        private static String getName() {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-        private static String getEmail() {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-        public customerView() {
-        }
-    }
-
-    private static class customerRepository {
-
-        private static void save(Customer customer) {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-        public customerRepository() {
-        }
-    }
-}
+//}

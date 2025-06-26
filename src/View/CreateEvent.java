@@ -397,23 +397,29 @@ public class CreateEvent extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       String title = EventText.getText();
+
+    String title = EventText.getText();
     String type = TypeText.getText();
-    
     java.util.Date date = jDateChooser1.getDate();
     String description = DescriptionText.getText();
     String guestStr = jTextField4.getText();
     String budgetStr = jTextField5.getText();
-        String venue = null;
-        do {            
-            venue = jComboBox1.getSelectedItem().toString();
-        } while (rootPaneCheckingEnabled);
-    String privacy = jRadioButton1.isSelected() ? "Public" : "Private";
+    
+    String venue = jComboBox1.getSelectedItem() != null ? jComboBox1.getSelectedItem().toString() : "";
+
+    // Validate privacy choice
+    String privacy = jRadioButton1.isSelected() ? "Public" :
+                     jRadioButton2.isSelected() ? "Private" : "";
+
+    if (title.isEmpty() || type.isEmpty() || date == null || description.isEmpty() || guestStr.isEmpty() || budgetStr.isEmpty() || venue.isEmpty() || privacy.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Please fill all fields.");
+        return;
+    }
 
     try {
         int guests = Integer.parseInt(guestStr);
         double budget = Double.parseDouble(budgetStr);
-           String time = null;
+        String time = "10:00 AM"; // Set a default time or add a time field in your UI
 
         boolean success = Controller.EventController.createEvent(
             title, type, time, date, description, guests, budget, venue, privacy
@@ -424,15 +430,10 @@ public class CreateEvent extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(this, "Failed to create event.");
         }
+
     } catch (NumberFormatException e) {
         JOptionPane.showMessageDialog(this, "Please enter valid numbers for guests and budget.");
     }
-    
-    ButtonGroup group = new ButtonGroup();
-group.add(jRadioButton1); // Public
-group.add(jRadioButton2); // Private
-
-     
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void TypeTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TypeTextActionPerformed
