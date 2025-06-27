@@ -3,21 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/View/CreateEvent.java</file>
             <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/View/CustomerEditEvent.java</file>
-            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Model/CustomerEdit.java</file>
-            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Database/DBConnectionCustomerEdit.java</file>
-            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Dao/CustomerEditDAO.java</file>
-            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/eventmanagementsystemproject/DBTest.java</file>
-            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Controller/CustomerEditEventController.java</file>
-            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/View/CustomerPersonalInformation.java</file>
-            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Dao/User.java</file>
-            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Dao/Customer.java</file>
-            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Dao/CustomerDao.java</file>
-            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Database/DbConnection.java</file>
-            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Dao/EventDAO.java</file>
-            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Model/Event.java</file>
-            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Controller/EventController.java</file>
         </group>
     </open-files>
 </project-private>

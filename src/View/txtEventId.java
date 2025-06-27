@@ -8,6 +8,10 @@ package View;
  *
  * @author sumitshah
  */
-class jButton3 {
+class txtEventId {
+
+    static String getText() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }

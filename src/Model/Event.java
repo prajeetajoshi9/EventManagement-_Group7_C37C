@@ -14,6 +14,38 @@ public class Event {
     private String privacy;
     private String status;
     private String description;
+    private double ticketPrice;
+
+    public Event(int eventId, String title, String type, String venue, Date date, String time, int guests, String privacy, String status, double budget, String description) {
+        this.eventId = eventId;
+        this.title = title;
+        this.type = type;
+        this.venue = venue;
+        this.date = date;
+        this.time = time;
+        this.guests = guests;
+        this.privacy = privacy;
+        this.status = status;
+        this.budget = budget;
+        this.description = description;
+        this.ticketPrice = 0.0; // Default value
+    }
+
+    public Event() {
+        // Initialize with default values if needed
+        this.eventId = 0;
+        this.title = "";
+        this.type = "";
+        this.venue = "";
+        this.date = null;
+        this.time = "";
+        this.guests = 0;
+        this.privacy = "";
+        this.status = "";
+        this.budget = 0.0;
+        this.description = "";
+        this.ticketPrice = 0.0;
+    }
 
     // Getters and Setters
     public int getEventId() { return eventId; }
@@ -48,4 +80,7 @@ public class Event {
 
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
+
+    public double getTicketPrice() { return ticketPrice; }
+    public void setTicketPrice(double ticketPrice) { this.ticketPrice = ticketPrice; }
 }

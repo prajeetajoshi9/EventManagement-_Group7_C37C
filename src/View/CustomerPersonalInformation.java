@@ -19,6 +19,15 @@ public class CustomerPersonalInformation extends javax.swing.JFrame {
      */
     public CustomerPersonalInformation() {
         initComponents();
+        loadCustomerData(); // Load existing customer data
+    }
+
+    /**
+     * Creates new form CustomerPersonalInformation with specific customer email
+     */
+    public CustomerPersonalInformation(String customerEmail) {
+        initComponents();
+        loadCustomerData(customerEmail); // Load specific customer data
     }
 
     /**
@@ -174,38 +183,20 @@ public class CustomerPersonalInformation extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-          jTextPane1.setEditable(true);
-    jTextPane2.setEditable(true);
-    jTextPane3.setEditable(true);
-    jTextPane4.setEditable(true);
-    jTextPane5.setEditable(true);
-    jTextPane6.setEditable(true);
+        // Enable editing mode
+        enableEditing(true);
+        jButton1.setText("Cancel");
+        jButton2.setText("Update");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
-    String firstName = jTextPane1.getText();
-    String lastName = jTextPane2.getText();
-    String contact = jTextPane3.getText();
-    String idNumber = jTextPane4.getText();
-    String email = jTextPane5.getText();
-    String address = jTextPane6.getText();
-
-    if (firstName.isEmpty() || email.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Please fill in all required fields.");
-        return;
-    }
-
-    Customer customer = new Customer(firstName, lastName, contact, idNumber, email, address);
-    CustomerDao dao = new CustomerDao();
-    boolean saved = dao.saveCustomer(customer);
-
-    if (saved) {
-        JOptionPane.showMessageDialog(this, "Customer information saved successfully!");
-    } else {
-        JOptionPane.showMessageDialog(this, "Failed to save customer information.");
-    }
-
+        if (jButton2.getText().equals("Save")) {
+            // Save new customer
+            saveNewCustomer();
+        } else {
+            // Update existing customer
+            updateCustomer();
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -282,56 +273,105 @@ public class CustomerPersonalInformation extends javax.swing.JFrame {
     private javax.swing.JTextPane jTextPane6;
     // End of variables declaration//GEN-END:variables
 
-    // private static class customerController {
-//
-    //    private static void saveCustomer(Customer customer) {
-    //        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    //    }
+    // Add helper methods
+    private void enableEditing(boolean enable) {
+        jTextPane1.setEditable(enable);
+        jTextPane2.setEditable(enable);
+        jTextPane3.setEditable(enable);
+        jTextPane4.setEditable(enable);
+        jTextPane5.setEditable(enable);
+        jTextPane6.setEditable(enable);
+    }
 
-    //  public void saveCustomer() {
-    // Example logic to save customer info
-   // String name = customerView.getName();  // assuming getters exist
-   // String email = customerView.getEmail();
+    private void loadCustomerData() {
+        // For demo purposes, load sample data or prompt for email
+        String email = JOptionPane.showInputDialog(this, "Enter customer email to load:");
+        if (email != null && !email.trim().isEmpty()) {
+            loadCustomerData(email);
+        }
+    }
 
-    // Perform validation
-   // if (name.isEmpty() || email.isEmpty()) {
-   //     JOptionPane.showMessageDialog(null, "Please fill all fields.");
-   //     return;
-   // }
+    private void loadCustomerData(String email) {
+        try {
+            CustomerDao dao = new CustomerDao();
+            Customer customer = dao.getCustomerByEmail(email);
+            
+            if (customer != null) {
+                jTextPane1.setText(customer.getFirstName());
+                jTextPane2.setText(customer.getLastName());
+                jTextPane3.setText(customer.getContactNumber());
+                jTextPane4.setText(customer.getIdNumber());
+                jTextPane5.setText(customer.getEmail());
+                jTextPane6.setText(customer.getAddress());
+                
+                // Disable editing initially
+                enableEditing(false);
+                jButton1.setText("Edit");
+                jButton2.setText("Update");
+            } else {
+                JOptionPane.showMessageDialog(this, "Customer not found with email: " + email);
+                // Enable editing for new customer
+                enableEditing(true);
+                jTextPane5.setText(email); // Set the email
+                jButton1.setText("Cancel");
+                jButton2.setText("Save");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error loading customer data: " + e.getMessage());
+        }
+    }
 
-    // Save to database or list
-   // Customer customer = new Customer(name, email);
-   // customerRepository.save(customer); // if using DAO pattern or similar
+    private void saveNewCustomer() {
+        String firstName = jTextPane1.getText();
+        String lastName = jTextPane2.getText();
+        String contact = jTextPane3.getText();
+        String idNumber = jTextPane4.getText();
+        String email = jTextPane5.getText();
+        String address = jTextPane6.getText();
 
-   // JOptionPane.showMessageDialog(null, "Customer saved successfully!");}
-//
+        if (firstName.isEmpty() || email.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Please fill in all required fields.");
+            return;
+        }
 
-  //      public customerController() {
-//        }
-  //  }
+        Customer customer = new Customer(firstName, lastName, contact, idNumber, email, address);
+        CustomerDao dao = new CustomerDao();
+        boolean saved = dao.saveCustomer(customer);
 
-  //  private static class customerView {
+        if (saved) {
+            JOptionPane.showMessageDialog(this, "Customer information saved successfully!");
+            enableEditing(false);
+            jButton1.setText("Edit");
+            jButton2.setText("Update");
+        } else {
+            JOptionPane.showMessageDialog(this, "Failed to save customer information.");
+        }
+    }
 
-  //      private static String getName() {
-  //          throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-  //      }
+    private void updateCustomer() {
+        String firstName = jTextPane1.getText();
+        String lastName = jTextPane2.getText();
+        String contact = jTextPane3.getText();
+        String idNumber = jTextPane4.getText();
+        String email = jTextPane5.getText();
+        String address = jTextPane6.getText();
 
-  //      private static String getEmail() {
-  //          throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-  //      }
+        if (firstName.isEmpty() || email.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Please fill in all required fields.");
+            return;
+        }
 
-  //      public customerView() {
-  //      }
-  //  }
+        Customer customer = new Customer(firstName, lastName, contact, idNumber, email, address);
+        CustomerDao dao = new CustomerDao();
+        boolean updated = dao.updateCustomer(customer);
 
-    //private static class customerRepository {
-
-    //    private static void save(Customer customer) {
-    //        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    //    }
-
-    //    public customerRepository() {
-    //    }
-   // 
+        if (updated) {
+            JOptionPane.showMessageDialog(this, "Customer information updated successfully!");
+            enableEditing(false);
+            jButton1.setText("Edit");
+            jButton2.setText("Update");
+        } else {
+            JOptionPane.showMessageDialog(this, "Failed to update customer information.");
+        }
+    }
 }
-//}

@@ -67,4 +67,8 @@ public class EventDAO {
     public boolean updateEvent(Event event) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
+
+    public Event getEventById(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

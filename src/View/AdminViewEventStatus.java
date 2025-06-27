@@ -4,6 +4,12 @@
  */
 package View;
 
+import Dao.AdminEventDAO;
+import Model.Event;
+import java.util.List;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author sumitshah
@@ -15,6 +21,9 @@ public class AdminViewEventStatus extends javax.swing.JFrame {
      */
     public AdminViewEventStatus() {
         initComponents();
+        setLocationRelativeTo(null); // Center the window
+        loadEventsToTable(); // Load all events when form opens
+        setupTableListeners(); // Setup table event listeners
     }
 
     /**
@@ -123,16 +132,31 @@ public class AdminViewEventStatus extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-            this.dispose(); // Close current frame
-    new AdminDashboard().setVisible(true);
+        // Return to Admin Dashboard
+        this.dispose(); // Close current frame
+        new AdminDashboard().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-                // Go back to the previous frame (e.g., AdminEventList or AdminViewEventStatus)
-    new AdminEditEventStatus().setVisible(true);  // Replace with your actual class name
-    this.dispose(); // Close current frame
+        // Navigate to Edit Event Status
+        int selectedRow = jTable1.getSelectedRow();
+        if (selectedRow == -1) {
+            JOptionPane.showMessageDialog(this, "Please select an event to edit.");
+            return;
+        }
+        
+        // Get the event ID from the selected row
+        Object eventIdObj = jTable1.getValueAt(selectedRow, 0);
+        if (eventIdObj == null) {
+            JOptionPane.showMessageDialog(this, "Invalid event selection.");
+            return;
+        }
+        
+        int eventId = Integer.parseInt(eventIdObj.toString());
+        
+        // Open AdminEditEventStatus with the selected event
+        new AdminEditEventStatus(eventId).setVisible(true);
+        this.dispose(); // Close current frame
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -177,5 +201,269 @@ public class AdminViewEventStatus extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 
+    /**
+     * Loads all events from the database into the table
+     */
+    private void loadEventsToTable() {
+        try {
+            AdminEventDAO dao = new AdminEventDAO();
+            List<Event> events = dao.getAllEvents();
 
+            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+            model.setRowCount(0); // Clear existing data
+
+            if (events.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "No events found in the database.");
+                return;
+            }
+
+            for (Event event : events) {
+                model.addRow(new Object[]{
+                    event.getEventId(),
+                    event.getTitle() != null ? event.getTitle() : "N/A",
+                    event.getType() != null ? event.getType() : "N/A",
+                    event.getVenue() != null ? event.getVenue() : "N/A",
+                    event.getDate() != null ? event.getDate() : "N/A",
+                    event.getTime() != null ? event.getTime() : "N/A",
+                    event.getBudget(),
+                    event.getGuests(),
+                    event.getPrivacy() != null ? event.getPrivacy() : "N/A",
+                    event.getStatus() != null ? event.getStatus() : "N/A"
+                });
+            }
+            
+            // Show success message with event count
+            JOptionPane.showMessageDialog(this, 
+                "Loaded " + events.size() + " events successfully!", 
+                "Events Loaded", 
+                JOptionPane.INFORMATION_MESSAGE);
+                
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, 
+                "Error loading events: " + e.getMessage() + "\n\nPlease check your database connection.", 
+                "Error", 
+                JOptionPane.ERROR_MESSAGE);
+            e.printStackTrace();
+        }
+    }
+    
+    /**
+     * Refreshes the event table with latest data
+     */
+    public void refreshTable() {
+        loadEventsToTable();
+    }
+
+    /**
+     * Setup table event listeners for better user interaction
+     */
+    private void setupTableListeners() {
+        // Add double-click listener to show event details
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                if (evt.getClickCount() == 2) {
+                    showEventDetails();
+                }
+            }
+            
+            @Override
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                if (evt.isPopupTrigger()) {
+                    showContextMenu(evt);
+                }
+            }
+            
+            @Override
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                if (evt.isPopupTrigger()) {
+                    showContextMenu(evt);
+                }
+            }
+        });
+    }
+    
+    /**
+     * Shows context menu for right-click actions
+     */
+    private void showContextMenu(java.awt.event.MouseEvent evt) {
+        int row = jTable1.rowAtPoint(evt.getPoint());
+        if (row >= 0) {
+            jTable1.setRowSelectionInterval(row, row);
+            
+            javax.swing.JPopupMenu popup = new javax.swing.JPopupMenu();
+            
+            javax.swing.JMenuItem viewDetails = new javax.swing.JMenuItem("View Details");
+            viewDetails.addActionListener(e -> showEventDetails());
+            popup.add(viewDetails);
+            
+            javax.swing.JMenuItem editEvent = new javax.swing.JMenuItem("Edit Event");
+            editEvent.addActionListener(e -> jButton1ActionPerformed(null));
+            popup.add(editEvent);
+            
+            popup.addSeparator();
+            
+            javax.swing.JMenuItem approveEvent = new javax.swing.JMenuItem("Approve Event");
+            approveEvent.addActionListener(e -> updateSelectedEventStatus("Approved"));
+            popup.add(approveEvent);
+            
+            javax.swing.JMenuItem cancelEvent = new javax.swing.JMenuItem("Cancel Event");
+            cancelEvent.addActionListener(e -> updateSelectedEventStatus("Cancelled"));
+            popup.add(cancelEvent);
+            
+            popup.show(jTable1, evt.getX(), evt.getY());
+        }
+    }
+    
+    /**
+     * Updates the status of the selected event
+     */
+    private void updateSelectedEventStatus(String newStatus) {
+        int selectedRow = jTable1.getSelectedRow();
+        if (selectedRow == -1) {
+            JOptionPane.showMessageDialog(this, "Please select an event to update.");
+            return;
+        }
+        
+        Object eventIdObj = jTable1.getValueAt(selectedRow, 0);
+        if (eventIdObj == null) {
+            JOptionPane.showMessageDialog(this, "Invalid event selection.");
+            return;
+        }
+        
+        int eventId = Integer.parseInt(eventIdObj.toString());
+        String currentStatus = (String) jTable1.getValueAt(selectedRow, 9);
+        
+        int confirm = JOptionPane.showConfirmDialog(this, 
+            "Change event status from '" + currentStatus + "' to '" + newStatus + "'?", 
+            "Confirm Status Change", 
+            JOptionPane.YES_NO_OPTION);
+            
+        if (confirm == JOptionPane.YES_OPTION) {
+            try {
+                AdminEventDAO dao = new AdminEventDAO();
+                boolean success = dao.updateEventStatus(eventId, newStatus);
+                
+                if (success) {
+                    // Update the table
+                    jTable1.setValueAt(newStatus, selectedRow, 9);
+                    JOptionPane.showMessageDialog(this, 
+                        "Event status updated successfully to: " + newStatus);
+                } else {
+                    JOptionPane.showMessageDialog(this, 
+                        "Failed to update event status. Please try again.");
+                }
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(this, 
+                    "Error updating event status: " + e.getMessage());
+                e.printStackTrace();
+            }
+        }
+    }
+    
+    /**
+     * Shows detailed information for the selected event
+     */
+    private void showEventDetails() {
+        int selectedRow = jTable1.getSelectedRow();
+        if (selectedRow == -1) {
+            JOptionPane.showMessageDialog(this, "Please select an event to view details.");
+            return;
+        }
+        
+        Object eventIdObj = jTable1.getValueAt(selectedRow, 0);
+        if (eventIdObj == null) {
+            JOptionPane.showMessageDialog(this, "Invalid event selection.");
+            return;
+        }
+        
+        int eventId = Integer.parseInt(eventIdObj.toString());
+        
+        try {
+            AdminEventDAO dao = new AdminEventDAO();
+            Event event = dao.getEventById(eventId);
+            
+            if (event != null) {
+                StringBuilder details = new StringBuilder();
+                details.append("=== EVENT DETAILS ===\n\n");
+                details.append("Event ID: ").append(event.getEventId()).append("\n");
+                details.append("Title: ").append(event.getTitle() != null ? event.getTitle() : "N/A").append("\n");
+                details.append("Type: ").append(event.getType() != null ? event.getType() : "N/A").append("\n");
+                details.append("Venue: ").append(event.getVenue() != null ? event.getVenue() : "N/A").append("\n");
+                details.append("Date: ").append(event.getDate() != null ? event.getDate() : "N/A").append("\n");
+                details.append("Time: ").append(event.getTime() != null ? event.getTime() : "N/A").append("\n");
+                details.append("Budget: NRs. ").append(event.getBudget()).append("\n");
+                details.append("Number of Guests: ").append(event.getGuests()).append("\n");
+                details.append("Privacy: ").append(event.getPrivacy() != null ? event.getPrivacy() : "N/A").append("\n");
+                details.append("Status: ").append(event.getStatus() != null ? event.getStatus() : "N/A").append("\n");
+                details.append("Description: ").append(event.getDescription() != null ? event.getDescription() : "N/A").append("\n");
+                details.append("Ticket Price: NRs. ").append(event.getTicketPrice()).append("\n");
+                
+                JOptionPane.showMessageDialog(this, details.toString(), 
+                    "Event Details - ID: " + eventId, 
+                    JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(this, "Event not found in database.");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error loading event details: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+    
+    /**
+     * Shows statistics about the events
+     */
+    public void showEventStatistics() {
+        try {
+            AdminEventDAO dao = new AdminEventDAO();
+            List<Event> events = dao.getAllEvents();
+            
+            if (events.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "No events found to analyze.");
+                return;
+            }
+            
+            int totalEvents = events.size();
+            int pendingEvents = 0;
+            int approvedEvents = 0;
+            int cancelledEvents = 0;
+            double totalBudget = 0.0;
+            
+            for (Event event : events) {
+                totalBudget += event.getBudget();
+                String status = event.getStatus();
+                if (status != null) {
+                    switch (status.toLowerCase()) {
+                        case "pending":
+                            pendingEvents++;
+                            break;
+                        case "approved":
+                            approvedEvents++;
+                            break;
+                        case "cancelled":
+                            cancelledEvents++;
+                            break;
+                    }
+                }
+            }
+            
+            StringBuilder stats = new StringBuilder();
+            stats.append("=== EVENT STATISTICS ===\n\n");
+            stats.append("Total Events: ").append(totalEvents).append("\n");
+            stats.append("Pending Events: ").append(pendingEvents).append("\n");
+            stats.append("Approved Events: ").append(approvedEvents).append("\n");
+            stats.append("Cancelled Events: ").append(cancelledEvents).append("\n");
+            stats.append("Total Budget: NRs. ").append(String.format("%.2f", totalBudget)).append("\n");
+            stats.append("Average Budget: NRs. ").append(String.format("%.2f", totalBudget / totalEvents)).append("\n");
+            
+            JOptionPane.showMessageDialog(this, stats.toString(), 
+                "Event Statistics", 
+                JOptionPane.INFORMATION_MESSAGE);
+                
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error calculating statistics: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
 }

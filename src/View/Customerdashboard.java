@@ -4,6 +4,10 @@
  */
 package View;
 
+import Model.CustomerViewEvent;
+import javax.swing.JOptionPane;
+
+
 /**
  *
  * @author sumitshah
@@ -55,7 +59,7 @@ public class Customerdashboard extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 102));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screenshot 2025-05-22 at 20.45.48.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/create.png")));
         jLabel7.setText("jLabel7");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -128,9 +132,19 @@ public class Customerdashboard extends javax.swing.JFrame {
         getContentPane().add(jToggleButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(491, 176, 148, -1));
 
         jToggleButton4.setText("Edit Event");
+        jToggleButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton4ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jToggleButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(491, 217, 148, -1));
 
         jToggleButton5.setText("View Event");
+        jToggleButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton5ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jToggleButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(491, 258, 148, -1));
 
         jToggleButton6.setText("Delete Event");
@@ -182,11 +196,11 @@ public class Customerdashboard extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 690, 70));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/WhatsApp Image 2025-05-22 at 9.27.29 PM.jpeg"))); // NOI18N
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/create.png")));
         jLabel12.setText("jLabel12");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 690, 330));
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screenshot 2025-05-22 at 20.45.48.png"))); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/create.png")));
         jLabel13.setText("jLabel13");
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 90, 100));
 
@@ -221,11 +235,48 @@ public class Customerdashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_PersonalInformation
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-        // TODO add your handling code here:
+        // Test database connection and show events for debugging
+        testDatabaseConnection();
+        showAvailableEvents();
+        
+        String searchTerm = JOptionPane.showInputDialog(this, "Enter event title or type to search:");
+        
+        if (searchTerm != null && !searchTerm.trim().isEmpty()) {
+            // Here you would implement the search logic
+            // For now, show a message
+            JOptionPane.showMessageDialog(this, "Searching for: " + searchTerm + "\n\nThis feature will be implemented to search through events.");
+            
+            // TODO: Implement actual search functionality
+            // You can create a search results form or show results in a dialog
+        }
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     private void jToggleButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton8ActionPerformed
-        // TODO add your handling code here:
+        // Fetch ticket details from database using eventId
+        String eventIdStr = JOptionPane.showInputDialog(this, "Enter Event ID to view ticket details:");
+        
+        if (eventIdStr != null && !eventIdStr.trim().isEmpty()) {
+            try {
+                int eventId = Integer.parseInt(eventIdStr.trim());
+                Dao.CustomerViewEventDAO dao = new Dao.CustomerViewEventDAO();
+                Model.Event event = dao.getEventById(eventId);
+                if (event != null) {
+                    StringBuilder details = new StringBuilder();
+                    details.append("Event ID: ").append(event.getEventId()).append("\n");
+                    details.append("Title: ").append(event.getTitle()).append("\n");
+                    details.append("Ticket Price: NRs. ").append(event.getTicketPrice()).append("\n");
+                    details.append("Guests: ").append(event.getGuests()).append("\n");
+                    details.append("Privacy: ").append(event.getPrivacy()).append("\n");
+                    details.append("Status: ").append(event.getStatus()).append("\n");
+                    // You can add more ticket-related fields if available
+                    JOptionPane.showMessageDialog(this, details.toString(), "Ticket Details", JOptionPane.INFORMATION_MESSAGE);
+                } else {
+                    JOptionPane.showMessageDialog(this, "No event/ticket found for Event ID: " + eventId);
+                }
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(this, "Please enter a valid Event ID (number).");
+            }
+        }
     }//GEN-LAST:event_jToggleButton8ActionPerformed
 
     private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
@@ -251,7 +302,132 @@ public class Customerdashboard extends javax.swing.JFrame {
 
     private void jToggleButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton7ActionPerformed
         // TODO add your handling code here:
+        String eventIdStr = JOptionPane.showInputDialog(this, "Enter Event ID to book ticket:");
+        
+        if (eventIdStr != null && !eventIdStr.trim().isEmpty()) {
+            try {
+                int eventId = Integer.parseInt(eventIdStr.trim());
+                String numTicketsStr = JOptionPane.showInputDialog(this, "Enter number of tickets:");
+                
+                if (numTicketsStr != null && !numTicketsStr.trim().isEmpty()) {
+                    int numTickets = Integer.parseInt(numTicketsStr.trim());
+                    
+                    // Show booking confirmation
+                    int confirm = JOptionPane.showConfirmDialog(this, 
+                        "Confirm booking:\nEvent ID: " + eventId + "\nNumber of tickets: " + numTickets,
+                        "Confirm Booking", JOptionPane.YES_NO_OPTION);
+                    
+                    if (confirm == JOptionPane.YES_OPTION) {
+                        JOptionPane.showMessageDialog(this, "Booking successful!\n\nEvent ID: " + eventId + "\nTickets: " + numTickets + "\n\nYou will receive a confirmation email.");
+                    }
+                }
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(this, "Please enter valid numbers for Event ID and tickets.");
+            }
+        }
     }//GEN-LAST:event_jToggleButton7ActionPerformed
+
+    private void jToggleButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton4ActionPerformed
+        // Enhanced Edit Event functionality
+        int choice = JOptionPane.showConfirmDialog(this, 
+            "Would you like to see available events first?", 
+            "Edit Event", JOptionPane.YES_NO_OPTION);
+        
+        if (choice == JOptionPane.YES_OPTION) {
+            showAvailableEvents();
+        }
+        
+        String eventIdStr = JOptionPane.showInputDialog(this, "Enter Event ID to edit:");
+        
+        if (eventIdStr != null && !eventIdStr.trim().isEmpty()) {
+            try {
+                int eventId = Integer.parseInt(eventIdStr.trim());
+                
+                // First verify the event exists
+                Dao.CustomerViewEventDAO dao = new Dao.CustomerViewEventDAO();
+                Model.Event event = dao.getEventById(eventId);
+                
+                if (event != null) {
+                    // Open CustomerEditEvent with the specific event ID
+                    CustomerEditEvent editEvent = new CustomerEditEvent(eventId);
+                    editEvent.setVisible(true);
+                    editEvent.setLocationRelativeTo(null); // center on screen
+                    this.dispose(); // close current form
+                } else {
+                    // Provide more detailed information about why event wasn't found
+                    StringBuilder message = new StringBuilder();
+                    message.append("No event found with ID: ").append(eventId).append("\n\n");
+                    message.append("Possible reasons:\n");
+                    message.append("1. Event ID doesn't exist\n");
+                    message.append("2. Database connection issue\n");
+                    message.append("3. No events in database\n\n");
+                    message.append("Try:\n");
+                    message.append("- Check the event list first\n");
+                    message.append("- Create an event first\n");
+                    message.append("- Verify database connection");
+                    
+                    JOptionPane.showMessageDialog(this, message.toString(), "Event Not Found", JOptionPane.WARNING_MESSAGE);
+                }
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(this, "Please enter a valid Event ID (number).");
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(this, "Error loading event: " + e.getMessage() + "\n\nPlease check your database connection.");
+                e.printStackTrace();
+            }
+        }
+    }//GEN-LAST:event_jToggleButton4ActionPerformed
+
+    // Helper method to show available events
+    private void showAvailableEvents() {
+        try {
+            Dao.CustomerViewEventDAO dao = new Dao.CustomerViewEventDAO();
+            java.util.List<Model.Event> events = dao.getAllEvents();
+            
+            if (events == null) {
+                JOptionPane.showMessageDialog(this, "Database connection failed. Please check your database connection.");
+                return;
+            }
+            
+            if (events.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "No events found in the database.\n\nThis could mean:\n1. No events have been created yet\n2. Database is empty\n3. Database connection issue\n\nTry creating an event first using 'Create Event'.");
+                return;
+            }
+            
+            StringBuilder eventList = new StringBuilder();
+            eventList.append("Available Events (").append(events.size()).append(" total):\n\n");
+            
+            for (Model.Event event : events) {
+                eventList.append("ID: ").append(event.getEventId())
+                        .append(" | Title: ").append(event.getTitle() != null ? event.getTitle() : "N/A")
+                        .append(" | Date: ").append(event.getDate() != null ? event.getDate() : "N/A")
+                        .append(" | Status: ").append(event.getStatus() != null ? event.getStatus() : "N/A")
+                        .append("\n");
+            }
+            
+            JOptionPane.showMessageDialog(this, eventList.toString(), "Available Events", JOptionPane.INFORMATION_MESSAGE);
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error loading events: " + e.getMessage() + "\n\nPlease check:\n1. Database connection\n2. Database server is running\n3. Database credentials are correct");
+            e.printStackTrace();
+        }
+    }
+
+    private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
+        // Show dialog to get event ID
+        String eventIdStr = JOptionPane.showInputDialog(this, "Enter Event ID to view:");
+        
+        if (eventIdStr != null && !eventIdStr.trim().isEmpty()) {
+            try {
+                int eventId = Integer.parseInt(eventIdStr.trim());
+                CustomerEventViewer view = new CustomerEventViewer(eventId);
+                view.setVisible(true);
+                view.setLocationRelativeTo(null);
+                this.dispose();
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(this, "Please enter a valid Event ID (number).");
+            }
+        }
+    }//GEN-LAST:event_jToggleButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -286,6 +462,7 @@ public class Customerdashboard extends javax.swing.JFrame {
         });
     }
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
@@ -314,4 +491,44 @@ public class Customerdashboard extends javax.swing.JFrame {
     private javax.swing.JToggleButton jToggleButton8;
     private javax.swing.JToggleButton jToggleButton9;
     // End of variables declaration//GEN-END:variables
+
+   private int getSelectedEventId() {
+    String eventIdText = txtEventId.getText(); // ✅ must be a JTextField component in the form
+    if (eventIdText.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Please enter/select an Event ID.");
+        return -1;
+    }
+    try {
+        return Integer.parseInt(eventIdText);
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Invalid Event ID format.");
+        return -1;
+    }
+}
+   
+
+    private static class jTable1 {
+
+        private static int getSelectedRow() {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+
+        private static Object getValueAt(int selectedRow, int i) {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+
+        public jTable1() {
+        }
+    }
+
+    // Helper method to test database connection
+    private void testDatabaseConnection() {
+        try {
+            Database.DbConnection.getConnection();
+            JOptionPane.showMessageDialog(this, "Database connection successful!");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Database connection failed: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
 }

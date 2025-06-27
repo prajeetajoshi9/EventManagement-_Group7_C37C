@@ -1,59 +1,73 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Controller;
 
-/**
- *
- * @author sumitshah
- */
-
-
+import Dao.CustomerEditEventControllerDAO;
 import Model.Event;
-import Dao.EventDAO;
 import View.CustomerEditEvent;
 
-import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 public class CustomerEditEventController {
+
     private CustomerEditEvent view;
-    private EventDAO eventDAO;
+    private CustomerEditEventControllerDAO dao;
 
     public CustomerEditEventController(CustomerEditEvent view) {
         this.view = view;
-        this.eventDAO = new EventDAO();
+        this.dao = new CustomerEditEventControllerDAO();
+
+    ((JButton) this.view.getUpdateButton()).addActionListener(new ActionListener() {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        updateEvent();
+    }
+});
     }
 
-    public void updateEvent(int eventId) {
+    private void updateEvent() {
         try {
-            Event event = new Event();
-            event.setId(eventId);
-            event.setTitle(view.EventText.getText());
-            event.setType(view.TypeText.getText());
-            event.setDate(view.jComboBox2.getSelectedItem().toString());
-            event.setStartTime(view.TimeText.getSelectedItem().toString());
-            event.setEndTime(view.jComboBox3.getSelectedItem().toString());
-            event.setDescription(view.DescriptionText.getText());
-            event.setGuests(Integer.parseInt(view.GuestText.getText()));
-            event.setVenue(view.jComboBox1.getSelectedItem().toString());
-            event.setBudget(Double.parseDouble(view.BudgetText.getText()));
-            event.setPrivacy(view.jRadioButton1.isSelected() ? "Public" : "Private");
-            event.setTicketPrice(Double.parseDouble(view.SetPriceButton.getText().replace("NRs.", "").trim()));
-
-            boolean success = eventDAO.updateEvent(event);
-            if (success) {
-                JOptionPane.showMessageDialog(view, "Event updated successfully.");
-            } else {
-                JOptionPane.showMessageDialog(view, "Failed to update event.");
+            // Validate form data first
+            if (!view.validateForm()) {
+                return; // Stop if validation fails
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(view, "Error: " + e.getMessage());
-        }
-    }
+            
+            Event event = new Event();
 
-    public void updateEvent() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+            // Extract values from the view and set them to the Event object
+            event.setEventId(view.getEventId());
+            event.setTitle(view.getTitleText());
+            event.setType(view.getTypeSelection());
+            event.setVenue(view.getVenueSelection());
+            event.setDate(view.getSelectedDate());
+            event.setTime(view.getSelectedTime());
+            event.setBudget(Double.parseDouble(view.getBudgetText()));
+            event.setGuests(Integer.parseInt(view.getGuestsText()));
+            event.setPrivacy(view.getPrivacySelection());
+            event.setStatus(view.getStatusSelection()); // Optional: or default to "Pending"
+            event.setDescription(view.getDescriptionText());
+            event.setTicketPrice(Double.parseDouble(view.getTicketPriceText()));
+
+            boolean success = dao.updateEvent(event);
+
+            if (success) {
+                view.showMessage("Event updated successfully!");
+                // Optionally return to dashboard or clear form
+                int choice = JOptionPane.showConfirmDialog(view, 
+                    "Event updated successfully! Would you like to return to the dashboard?", 
+                    "Success", JOptionPane.YES_NO_OPTION);
+                if (choice == JOptionPane.YES_OPTION) {
+                    view.dispose();
+                    new View.Customerdashboard().setVisible(true);
+                }
+            } else {
+                view.showMessage("Failed to update event. Please try again.");
+            }
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            view.showMessage("Error: " + ex.getMessage());
+        }
     }
 }
