@@ -55,21 +55,19 @@ public class PaymentController {
                 return;
             }
 
-            // You can assign a dummy fixed amount or retrieve from input if dynamic
-            int amount = 1050000; // e.g., amount in cents
+            int amount = 1050000; 
 
-            // Create payment info object
+           
             PaymentInfo info = new PaymentInfo();
             info.setPaymentMethod(method);
             info.setAccountNumber(accountNumber);
             info.setConsent(consent);
             info.setAmount(amount);
 
-            // 1. Save to database
+            
             PaymentDao dao = new PaymentDao();
             boolean saved = dao.savePaymentInfo(info);
 
-            // 2. Trigger Stripe payment
             StripePaymentDao stripe = new StripePaymentDao();
             stripe.createPaymentIntent(amount, "usd");
 

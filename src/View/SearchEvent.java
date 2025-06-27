@@ -8,9 +8,13 @@ import java.awt.Color;
 
 import com.toedter.calendar.JDateChooser;
 import controller.EventController;
+import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.awt.PopupMenu;
 import javax.swing.*;
 import org.netbeans.lib.awtextra.AbsoluteConstraints;
+import javax.swing.BoxLayout;
+import javax.swing.Box;
 
 /**
  *
@@ -31,25 +35,34 @@ public class SearchEvent extends javax.swing.JFrame {
 
        EvtType.setModel(new javax.swing.DefaultComboBoxModel<>(
     new String[] {
-        "Pasni", "Bratabandha", "Wedding", "Guniu Cholo", "Concert"
+        "Pasni", "Bratabandha", "Wedding", "Guniu Cholo", "Concert","Birthday"
     }
 ));
 
        EvtVenue.setModel(new javax.swing.DefaultComboBoxModel<>(
     new String[] {
-        "Kathmandu", "Pokhara", "Lalitpur", "Bhaktapur", "Chitwan"
+       "Jhapa","Kathmandu", "Pokhara", "Lalitpur", "Bhaktapur", "Chitwan",
     }
 ));
        dateChooser = new JDateChooser();
        dateChooser.setDateFormatString("yyyy-MM-dd");
        getContentPane().add(dateChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 180, 30));
 
-       resultPanel = new JPanel(); // ✅ Moved above usage
+       resultPanel = new JPanel(); 
        resultPanel.setLayout(new GridLayout(0, 1));
-       resultPanel.setBounds(80, 430, 420, 200);
+       resultPanel.setBounds(80, 430, 420, 150);
        resultPanel.setBackground(Color.WHITE);
        resultPanel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-       getContentPane().add(resultPanel, new AbsoluteConstraints(80, 430, 420, 200));
+       getContentPane().add(resultPanel, new AbsoluteConstraints(80, 430, 420, 300));
+        Object popup = null;
+       if (popup != null) {
+    add((PopupMenu) popup);
+} else {
+    System.err.println("popup is null!");
+}
+
+ 
+
 
        new EventController(this);
     }
@@ -153,7 +166,7 @@ public class SearchEvent extends javax.swing.JFrame {
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/pinkkkkkk.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 770, 520));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 770, 570));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Screenshot 2025-06-08 at 14.34.16.png"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, 80));
@@ -189,12 +202,14 @@ public class SearchEvent extends javax.swing.JFrame {
     private void filterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterActionPerformed
         // TODO add your handling code here:
         resultPanel = new JPanel();
-        resultPanel.setLayout(new BoxLayout(resultPanel, BoxLayout.Y_AXIS));
+        BoxLayout layout = new BoxLayout(resultPanel, BoxLayout.Y_AXIS);
+        resultPanel.setLayout(layout);
 
-        resultScrollPane = new JScrollPane(resultPanel);
-        resultScrollPane.setBounds(20, 420, 540, 180); // Adjust height and position
-        getContentPane().add(resultScrollPane);
+     resultScrollPane = new JScrollPane(resultPanel);
+     resultScrollPane.setBounds(20, 420, 540, 180); 
+     add(resultScrollPane); 
 
+    
     }//GEN-LAST:event_filterActionPerformed
 
     /**

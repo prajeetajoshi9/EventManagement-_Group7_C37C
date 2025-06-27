@@ -46,9 +46,9 @@ public class LoginController {
                         AdminDashboard dashboard = new AdminDashboard();
                              dashboard.setVisible(true);
 
-// Close the login form
+
 userView.dispose();
-                    // open dashboard here if needed
+                   
                 }
             } catch (Exception ex) {
                 System.out.println("Error during login: " + ex.getMessage());

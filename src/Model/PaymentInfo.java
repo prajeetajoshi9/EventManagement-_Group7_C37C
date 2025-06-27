@@ -10,7 +10,7 @@ public class PaymentInfo {
     private boolean consent;
     private int amount;  
 
-    // Getter and Setter for paymentMethod
+   
     public String getPaymentMethod() {
         return paymentMethod;
     }
@@ -19,7 +19,7 @@ public class PaymentInfo {
         this.paymentMethod = paymentMethod;
     }
 
-    // Getter and Setter for accountNumber
+   
     public String getAccountNumber() {
         return accountNumber;
     }
@@ -28,7 +28,7 @@ public class PaymentInfo {
         this.accountNumber = accountNumber;
     }
 
-    // Getter and Setter for consent
+   
     public boolean isConsent() {
         return consent;
     }
@@ -37,7 +37,7 @@ public class PaymentInfo {
         this.consent = consent;
     }
 
-    // Getter and Setter for amount
+ 
     public int getAmount() {
         return amount;
     }

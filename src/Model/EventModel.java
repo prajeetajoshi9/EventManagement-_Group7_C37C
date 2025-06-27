@@ -11,7 +11,7 @@ public class EventModel {
     private String date;
 
     public EventModel() {
-        // Default constructor
+       
     }
 
     public EventModel(String eventType, String venue, String date) {
@@ -20,7 +20,7 @@ public class EventModel {
         this.date = date;
     }
 
-    // Getter and Setter for Event Type
+   
     public String getEventType() {
         return eventType;
     }
@@ -29,7 +29,7 @@ public class EventModel {
         this.eventType = eventType;
     }
 
-    // Getter and Setter for Venue
+   
     public String getVenue() {
         return venue;
     }
@@ -38,7 +38,7 @@ public class EventModel {
         this.venue = venue;
     }
 
-    // Getter and Setter for Date
+   
     public String getDate() {
         return date;
     }

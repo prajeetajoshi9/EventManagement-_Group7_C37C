@@ -10,7 +10,7 @@ import java.util.List;
 
 public class EventDao {
 
-    // Simulated database (static list for testing)
+   
     private static final List<EventModel> events = new ArrayList<>();
 
     static {
@@ -19,9 +19,10 @@ public class EventDao {
         events.add(new EventModel("Bratabandha", "Lalitpur", "2025-09-01"));
         events.add(new EventModel("Guniu Cholo", "Bhaktapur", "2025-10-15"));
         events.add(new EventModel("Concert", "Chitwan", "2025-12-20"));
+        events.add(new EventModel("Birthday","jhapa","2025-11-03"));
     }
 
-    // ✅ Get all event types
+   
     public List<String> getAllEventTypes() {
         List<String> types = new ArrayList<>();
         for (EventModel e : events) {
@@ -32,7 +33,7 @@ public class EventDao {
         return types;
     }
 
-    // ✅ Get all venues
+   
     public List<String> getAllVenues() {
         List<String> venues = new ArrayList<>();
         for (EventModel e : events) {
@@ -43,12 +44,12 @@ public class EventDao {
         return venues;
     }
 
-    // ✅ Get all events
+   
     public List<EventModel> getAllEvents() {
         return events;
     }
 
-    // ✅ Filtered search
+    
     public List<EventModel> filterEvents(String type, String venue, String date) {
         List<EventModel> filtered = new ArrayList<>();
         for (EventModel e : events) {
