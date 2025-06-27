@@ -6,17 +6,52 @@ package View;
 
 import java.awt.Color;
 
+import com.toedter.calendar.JDateChooser;
+import controller.EventController;
+import java.awt.GridLayout;
+import javax.swing.*;
+import org.netbeans.lib.awtextra.AbsoluteConstraints;
+
 /**
  *
  * @author prasmshachapagain
  */
 public class SearchEvent extends javax.swing.JFrame {
 
+    private JDateChooser dateChooser;
+    private JTable eventTable;
+
     /**
      * Creates new form SearchEvent
      */
     public SearchEvent() {
         initComponents();
+        EvtType.setEnabled(true);
+        EvtVenue.setEnabled(true);
+
+       EvtType.setModel(new javax.swing.DefaultComboBoxModel<>(
+    new String[] {
+        "Pasni", "Bratabandha", "Wedding", "Guniu Cholo", "Concert"
+    }
+));
+
+       EvtVenue.setModel(new javax.swing.DefaultComboBoxModel<>(
+    new String[] {
+        "Kathmandu", "Pokhara", "Lalitpur", "Bhaktapur", "Chitwan"
+    }
+));
+       dateChooser = new JDateChooser();
+       dateChooser.setDateFormatString("yyyy-MM-dd");
+       getContentPane().add(dateChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 180, 30));
+
+       resultPanel = new JPanel(); // ✅ Moved above usage
+       resultPanel.setLayout(new GridLayout(0, 1));
+       resultPanel.setBounds(80, 430, 420, 200);
+       resultPanel.setBackground(Color.WHITE);
+       resultPanel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+       getContentPane().add(resultPanel, new AbsoluteConstraints(80, 430, 420, 200));
+
+       new EventController(this);
     }
 
     /**
@@ -30,15 +65,13 @@ public class SearchEvent extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         search = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        searchh = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         EvtType = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         EvtVenue = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        jButton2 = new javax.swing.JButton();
+        filter = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -48,7 +81,7 @@ public class SearchEvent extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
         jLabel1.setText("Search Event");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 160, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 40, 160, -1));
 
         search.setForeground(new java.awt.Color(204, 204, 204));
         search.setText("search....");
@@ -64,10 +97,10 @@ public class SearchEvent extends javax.swing.JFrame {
         });
         getContentPane().add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 337, 31));
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 255));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("search");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, 31));
+        searchh.setBackground(new java.awt.Color(0, 0, 255));
+        searchh.setForeground(new java.awt.Color(255, 255, 255));
+        searchh.setText("search");
+        getContentPane().add(searchh, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, 31));
 
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel2.setText(" Event Type:");
@@ -94,20 +127,19 @@ public class SearchEvent extends javax.swing.JFrame {
         getContentPane().add(EvtVenue, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 263, 31));
 
         jLabel4.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        jLabel4.setText("Delete:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, -1, -1));
+        jLabel4.setText("Date:");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, -1, -1));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 87, -1));
-
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 390, 83, -1));
-
-        jButton2.setBackground(new java.awt.Color(0, 0, 255));
-        jButton2.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Filter");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(416, 318, -1, 23));
+        filter.setBackground(new java.awt.Color(0, 0, 255));
+        filter.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        filter.setForeground(new java.awt.Color(255, 255, 255));
+        filter.setText("Filter");
+        filter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                filterActionPerformed(evt);
+            }
+        });
+        getContentPane().add(filter, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 310, 70, 30));
 
         jButton3.setBackground(new java.awt.Color(0, 0, 255));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
@@ -117,11 +149,11 @@ public class SearchEvent extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 10, -1, -1));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 10, -1, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/pinkkkkkk.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 600, 410));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 770, 520));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Screenshot 2025-06-08 at 14.34.16.png"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, 80));
@@ -154,6 +186,17 @@ public class SearchEvent extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_searchFocusGained
 
+    private void filterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterActionPerformed
+        // TODO add your handling code here:
+        resultPanel = new JPanel();
+        resultPanel.setLayout(new BoxLayout(resultPanel, BoxLayout.Y_AXIS));
+
+        resultScrollPane = new JScrollPane(resultPanel);
+        resultScrollPane.setBounds(20, 420, 540, 180); // Adjust height and position
+        getContentPane().add(resultScrollPane);
+
+    }//GEN-LAST:event_filterActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -183,20 +226,20 @@ public class SearchEvent extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new SearchEvent().setVisible(true);
-            }
-        });
+        public void run() {
+            new SearchEvent().setVisible(true);
+        }
+    });
     }
+private JPanel resultPanel;
+private JScrollPane resultScrollPane;
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> EvtType;
     private javax.swing.JComboBox<String> EvtVenue;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton filter;
     private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -204,5 +247,49 @@ public class SearchEvent extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField search;
+    private javax.swing.JButton searchh;
     // End of variables declaration//GEN-END:variables
+
+    public JButton getFilterButton() {
+  
+        return filter;
+  
+    }
+  
+    public JComboBox<String> getEventTypeCombo() {
+    return EvtType;
 }
+
+    public JComboBox<String> getVenueCombo() {
+    return EvtVenue;
+}
+
+   
+
+   public JButton getSearchButton() {
+    return searchh;
+}
+
+   
+
+
+    public JTextField getSearchField() {
+       
+        return search;
+       
+    }
+    public com.toedter.calendar.JDateChooser getDateChooser() {
+    return dateChooser;
+}
+    public JPanel getResultPanel() {
+    return resultPanel;
+}
+
+    public JTable getEventTable() {
+         return eventTable;
+    }
+       
+}
+
+
+

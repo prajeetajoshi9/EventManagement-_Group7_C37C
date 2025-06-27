@@ -14,13 +14,21 @@ public class StripePaymentDao {
 
     public static boolean createPaymentIntent(int amountInCents, String currency) {
     try {
+        
         Stripe.apiKey = System.getenv("STRIPE_SECRET_KEY");
+        PaymentIntentCreateParams.builder()
+                .setAmount((long) amountInCents)
+                .setCurrency(currency)
+                .setConfirm(true)
+                .setPaymentMethod("pm_card_visa"); 
+
+        Stripe.apiKey = "sk_test_51RdCA8RtZ2UpBC1VJdoCX4wrvLU59mD7SOKxRRsEvPtxPoENeUS6WZ5W60AQ81HK7luWq1DUswhZiZpyxBD9bDib00vEE01YLx";
       PaymentIntentCreateParams params =
-    PaymentIntentCreateParams.builder()
-        .setAmount((long) amountInCents) 
+      PaymentIntentCreateParams.builder()
+        .setAmount((long) amountInCents) // $50.00 = 5000 cents
         .setCurrency(currency)
         .setConfirm(true)
-        .setPaymentMethod("pm_card_visa") 
+        .setPaymentMethod("pm_card_visa") // Stripe test payment method
         .setAutomaticPaymentMethods(
             PaymentIntentCreateParams.AutomaticPaymentMethods.builder()
                 .setEnabled(true)
@@ -36,7 +44,11 @@ public class StripePaymentDao {
         return intent != null;
 
     } catch (StripeException e) {
+
         System.out.println("Stripe error: " + e.getMessage()); 
+
+        System.out.println("Stripe error: " + e.getMessage()); 
+
         return false;
     }
 }
