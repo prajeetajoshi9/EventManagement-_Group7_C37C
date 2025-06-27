@@ -6,11 +6,14 @@ package Dao;
 
 import Database.MySqlConnection;
 
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 
 /**
  *
@@ -19,13 +22,24 @@ import java.util.logging.Logger;
 public class EventDao {
 
     MySqlConnection mysql = new MySqlConnection();
+    
+   
 
-    public boolean deleteEvent(int eventId) {
+    public boolean deleteEvent(int eventId,String Reason, String Feedback) {
         Connection conn = mysql.openConnection();
-        String sql = "DELETE FROM events WHERE id = ?";
+     
+        System.out.println(eventId);
+         String sql = "UPDATE events SET reason_for_deletion = ?, feedback = ?, deleted_at = ? WHERE id= ?";
+         
 
         try (PreparedStatement ps = conn.prepareStatement(sql)) {
-            ps.setInt(1, eventId);
+            ps.setString(1,Reason);
+            ps.setString(2,Feedback);
+           
+            LocalDateTime now =LocalDateTime.now();
+            ps.setObject(3, now);
+            ps.setInt(4, eventId);
+           
 
             int rowsAffected = ps.executeUpdate();
             return rowsAffected > 0;

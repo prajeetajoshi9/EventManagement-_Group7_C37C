@@ -15,6 +15,8 @@ import java.util.Date;
 import javax.swing.JOptionPane;
 
 
+
+
 /**
  *
  * @author Rashmi Jha
@@ -26,8 +28,13 @@ public class DeleteEventController {
 
     public DeleteEventController(DeleteEventView deleteEventView) {
         this.deleteEventView = deleteEventView;
-        deleteEventView.deleteEventListener(new DeleteButtonListener());
+         deleteEventView.deleteEventListener(new DeleteEventController.DeleteButtonListener());
+        
+      
+       deleteEventView.deleteEventListener(e -> onDeleteClicked());
+        deleteEventView.cancelEventListener(e -> onCancelClicked());
     }
+    
 
     public void open() {
         deleteEventView.setVisible(true);
@@ -35,6 +42,14 @@ public class DeleteEventController {
 
     public void close() {
         deleteEventView.dispose();
+    }
+    private void onDeleteClicked(){
+       System.out.println("Delete button clicked");
+        
+    }
+    private void onCancelClicked(){
+        deleteEventView.dispose();
+        
     }
 
     class DeleteButtonListener implements ActionListener {
@@ -50,17 +65,21 @@ public class DeleteEventController {
 
             }
             int editEventId = Integer.parseInt(deleteEventView.gettextEditEventId().getText());
-            
+            String Reason = deleteEventView.gettextReason().getText();
+            String Feedback = deleteEventView.gettextFeedback().getText();
+
             Date selectedDate = deleteEventView.getDateChooser().getDate();
-            if (selectedDate != null){
+            if (selectedDate != null) {
                 String formattedDate = new java.text.SimpleDateFormat("yyyy-MM-dd").format(selectedDate);
-                System.out.println("Selected Event Date: "+ formattedDate);
-            }else{
+                System.out.println("Selected Event Date: " + formattedDate);
+            } else {
                 System.out.println("No date selected.");
             }
 
             if (editEventId > 0) {
-                boolean result = eventDao.deleteEvent(editEventId);
+                System.out.println(editEventId);
+                boolean result = eventDao.deleteEvent(editEventId,Reason,Feedback);
+                
                 if (result) {
                     JOptionPane.showMessageDialog(deleteEventView, "Event deleted successfully.");
                 } else {
