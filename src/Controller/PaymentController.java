@@ -55,7 +55,7 @@ public class PaymentController {
                 return;
             }
 
-            int amount = 1050000; 
+            int amount = 200000; 
 
            
             PaymentInfo info = new PaymentInfo();
@@ -69,7 +69,7 @@ public class PaymentController {
             boolean saved = dao.savePaymentInfo(info);
 
             StripePaymentDao stripe = new StripePaymentDao();
-            stripe.createPaymentIntent(amount, "usd");
+            stripe.createPaymentIntent(amount, "npr");
 
             if (saved) {
                 JOptionPane.showMessageDialog(view, "Payment processed successfully!");
