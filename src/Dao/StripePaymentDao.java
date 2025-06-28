@@ -14,7 +14,7 @@ public class StripePaymentDao {
     public static boolean createPaymentIntent(int amountInCents, String currency) {
         try {
             // Set your Stripe secret key
-            Stripe.apiKey =  System.getenv("STRIPE_SECRET_KEY");
+            Stripe.apiKey = System.getenv("STRIPE_SECRET_KEY");
 
             // Create payment intent parameters
             PaymentIntentCreateParams params = PaymentIntentCreateParams.builder()
@@ -43,3 +43,4 @@ public class StripePaymentDao {
         }
     }
 }
+
