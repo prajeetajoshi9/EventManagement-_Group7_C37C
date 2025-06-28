@@ -84,7 +84,6 @@ public class SearchEvent extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         EvtVenue = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
-        filter = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -143,17 +142,6 @@ public class SearchEvent extends javax.swing.JFrame {
         jLabel4.setText("Date:");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, -1, -1));
 
-        filter.setBackground(new java.awt.Color(0, 0, 255));
-        filter.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        filter.setForeground(new java.awt.Color(255, 255, 255));
-        filter.setText("Filter");
-        filter.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                filterActionPerformed(evt);
-            }
-        });
-        getContentPane().add(filter, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 310, 70, 30));
-
         jButton3.setBackground(new java.awt.Color(0, 0, 255));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Return to Homepage");
@@ -199,19 +187,6 @@ public class SearchEvent extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_searchFocusGained
 
-    private void filterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterActionPerformed
-        // TODO add your handling code here:
-        resultPanel = new JPanel();
-        BoxLayout layout = new BoxLayout(resultPanel, BoxLayout.Y_AXIS);
-        resultPanel.setLayout(layout);
-
-     resultScrollPane = new JScrollPane(resultPanel);
-     resultScrollPane.setBounds(20, 420, 540, 180); 
-     add(resultScrollPane); 
-
-    
-    }//GEN-LAST:event_filterActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -253,7 +228,6 @@ private JScrollPane resultScrollPane;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> EvtType;
     private javax.swing.JComboBox<String> EvtVenue;
-    private javax.swing.JButton filter;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -265,12 +239,9 @@ private JScrollPane resultScrollPane;
     private javax.swing.JButton searchh;
     // End of variables declaration//GEN-END:variables
 
-    public JButton getFilterButton() {
+
   
-        return filter;
-  
-    }
-  
+
     public JComboBox<String> getEventTypeCombo() {
     return EvtType;
 }

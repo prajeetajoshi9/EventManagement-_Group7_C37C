@@ -10,6 +10,7 @@ import javax.swing.JComboBox;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import Controller.PaymentController;
+import Dao.StripePaymentDao;
 
 /**
  *
@@ -181,7 +182,13 @@ public class Payment extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Payment().setVisible(true);
-            }
+                
+                
+      boolean result = StripePaymentDao.createPaymentIntent(5000, "usd");
+     System.out.println("Payment result: " + result);
+}
+
+            
         });
     }
 

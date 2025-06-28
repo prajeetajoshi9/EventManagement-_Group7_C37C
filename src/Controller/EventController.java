@@ -27,12 +27,7 @@ public class EventController {
 
         loadDropdowns();
 
-        view.getFilterButton().addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                filterEvents();
-            }
-        });
+        
 
         view.getSearchButton().addActionListener(new ActionListener() {
             @Override
