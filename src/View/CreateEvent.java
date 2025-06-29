@@ -56,6 +56,7 @@ public class CreateEvent extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         SetPriceButton = new javax.swing.JButton();
         TypeText1 = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/create.png"))); // NOI18N
 
@@ -76,20 +77,18 @@ public class CreateEvent extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(271, 271, 271)
+                .addGap(115, 115, 115)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 421, Short.MAX_VALUE))
+                .addGap(0, 328, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 700, -1));
 
         jLabel3.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel3.setText("Event Title:");
@@ -125,7 +124,7 @@ public class CreateEvent extends javax.swing.JFrame {
                 EventTextFocusLost(evt);
             }
         });
-        getContentPane().add(EventText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 124, 569, 40));
+        getContentPane().add(EventText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 124, 450, 40));
 
         TimeText.setForeground(new java.awt.Color(224, 224, 224));
         TimeText.setText("Choose Time");
@@ -149,7 +148,7 @@ public class CreateEvent extends javax.swing.JFrame {
                 DescriptionTextFocusLost(evt);
             }
         });
-        getContentPane().add(DescriptionText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 298, 569, 50));
+        getContentPane().add(DescriptionText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 298, 440, 50));
 
         GuestText.setForeground(new java.awt.Color(224, 224, 224));
         GuestText.setText("Provide total attendees");
@@ -166,7 +165,7 @@ public class CreateEvent extends javax.swing.JFrame {
                 GuestTextActionPerformed(evt);
             }
         });
-        getContentPane().add(GuestText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, 246, 40));
+        getContentPane().add(GuestText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, 140, 40));
 
         BudgetText.setForeground(new java.awt.Color(224, 224, 224));
         BudgetText.setText("NRs.");
@@ -178,14 +177,19 @@ public class CreateEvent extends javax.swing.JFrame {
                 BudgetTextFocusLost(evt);
             }
         });
-        getContentPane().add(BudgetText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 430, 246, 40));
+        getContentPane().add(BudgetText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 430, 140, 40));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "BhirkutiMandap", "Hotel Diyo" }));
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 370, 245, 40));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 370, 150, 40));
 
         jLabel9.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel9.setText("Date:");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(504, 194, -1, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 190, -1, -1));
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2025-06-21", "2025-06-22", "2025-06-23", "2025-06-24" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
@@ -193,43 +197,48 @@ public class CreateEvent extends javax.swing.JFrame {
                 jComboBox2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(553, 182, 246, 40));
+        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 180, 180, 40));
 
         jLabel10.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel10.setText("Venue:");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 370, -1, -1));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 380, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel11.setText("Event Privacy: ");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 430, -1, -1));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 440, -1, -1));
 
         jRadioButton1.setText("Public");
-        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 430, -1, -1));
+        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 440, -1, -1));
 
         jRadioButton2.setText("Private");
-        getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 430, -1, -1));
+        getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 440, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(38, 78, 201));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Cancel");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(437, 547, 100, 40));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 550, 100, 40));
 
         jButton2.setBackground(new java.awt.Color(38, 78, 201));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Edit");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(615, 547, 100, 40));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 550, 100, 40));
 
         jButton3.setBackground(new java.awt.Color(38, 78, 201));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Confirm");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(271, 547, 100, 40));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 550, 100, 40));
 
         jLabel15.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel15.setText("Set  Ticket Price: ");
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 480, -1, -1));
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 500, -1, -1));
 
         SetPriceButton.setText("NRs.");
-        getContentPane().add(SetPriceButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 470, 150, 40));
+        getContentPane().add(SetPriceButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 500, 150, 40));
 
         TypeText1.setForeground(new java.awt.Color(224, 224, 224));
         TypeText1.setText("Choose Type");
@@ -241,7 +250,10 @@ public class CreateEvent extends javax.swing.JFrame {
                 TypeText1FocusLost(evt);
             }
         });
-        getContentPane().add(TypeText1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 182, 242, 40));
+        getContentPane().add(TypeText1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 182, 140, 40));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/494574320_597322936170871_3710706709161285347_n.png"))); // NOI18N
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1110, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -358,6 +370,14 @@ public class CreateEvent extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TypeText1FocusLost
 
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -409,6 +429,7 @@ public class CreateEvent extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;

@@ -108,6 +108,8 @@ public Ticket(int ticketId){
         jTextField10 = new javax.swing.JTextField();
         jTextField11 = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -215,6 +217,14 @@ public Ticket(int ticketId){
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/494574320_597322936170871_3710706709161285347_n.png"))); // NOI18N
         jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, 68, 1100, 400));
 
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Screenshot 2025-05-31 182812 (1).png"))); // NOI18N
+        jLabel17.setText("jLabel17");
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 60));
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel18.setText("Ticket Details");
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, -1, -1));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 744, 470));
 
         pack();
@@ -289,6 +299,8 @@ public Ticket(int ticketId){
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
