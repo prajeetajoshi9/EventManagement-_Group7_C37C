@@ -90,7 +90,7 @@ public class AdminDashboard extends javax.swing.JFrame {
 
         Signout.setText("Sign Out");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screenshot 2025-05-22 at 20.45.48.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Screenshot 2025-05-31 182812 (1).png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -143,7 +143,7 @@ public class AdminDashboard extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(248, 245, 221));
 
-        jLabel5.setText("Hamro Events, Nepal’s number one event management system.");
+        jLabel5.setText("Hamro Events, Nepal's number one event management system.");
 
         Ourteam.setText("Our Team");
 

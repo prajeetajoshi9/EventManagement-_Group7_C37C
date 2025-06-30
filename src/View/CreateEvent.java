@@ -86,6 +86,7 @@ public class CreateEvent extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jComboBox4 = new javax.swing.JComboBox<>();
         jTextField1 = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -292,6 +293,10 @@ public class CreateEvent extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 490, 115, 42));
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/create.png"))); // NOI18N
+        jLabel14.setText("jLabel14");
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -3, 890, 620));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -528,6 +533,7 @@ public class CreateEvent extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

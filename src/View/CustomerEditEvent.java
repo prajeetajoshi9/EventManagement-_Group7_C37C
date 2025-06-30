@@ -8,6 +8,7 @@ package View;
 import Controller.CustomerEditEventController;
 import java.awt.Color;
 import View.CreateEvent;  // or whatever your CreateEvent class is
+import View.CustomerEventViewer;  // Import for CustomerEventViewer
 import java.util.Date;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
@@ -391,16 +392,23 @@ public class CustomerEditEvent extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // Load event manually
-        String eventIdStr = JOptionPane.showInputDialog(this, "Enter Event ID to load:");
+        // Open CustomerEventViewer to view event details
+        String eventIdStr = JOptionPane.showInputDialog(this, "Enter Event ID to view:");
         
         if (eventIdStr != null && !eventIdStr.trim().isEmpty()) {
             try {
                 int eventId = Integer.parseInt(eventIdStr.trim());
-                this.currentEventId = eventId;
-                loadEventForEditing(eventId);
+                
+                // Open CustomerEventViewer with the specific event ID
+                CustomerEventViewer viewer = new CustomerEventViewer(eventId);
+                viewer.setVisible(true);
+                viewer.setLocationRelativeTo(null); // center on screen
+                
             } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(this, "Please enter a valid Event ID (number).");
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(this, "Error opening event viewer: " + e.getMessage());
+                e.printStackTrace();
             }
         }
     }//GEN-LAST:event_jButton2ActionPerformed

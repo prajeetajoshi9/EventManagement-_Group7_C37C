@@ -71,4 +71,30 @@ public class EventDAO {
     public Event getEventById(int id) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+    
+    /**
+     * Checks if an event exists by name in the database
+     * @param eventName The name of the event to check
+     * @return true if event exists, false otherwise
+     */
+    public boolean eventExists(String eventName) {
+        String query = "SELECT COUNT(*) FROM events WHERE title = ?";
+        
+        try (Connection conn = DbConnection.getConnection();
+             PreparedStatement ps = conn.prepareStatement(query)) {
+            
+            ps.setString(1, eventName);
+            ResultSet rs = ps.executeQuery();
+            
+            if (rs.next()) {
+                return rs.getInt(1) > 0;
+            }
+            
+        } catch (SQLException e) {
+            System.err.println("SQL Error (eventExists): " + e.getMessage());
+            e.printStackTrace();
+        }
+        
+        return false;
+    }
 }

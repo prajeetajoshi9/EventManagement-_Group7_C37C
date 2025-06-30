@@ -32,6 +32,8 @@ public class Customerdashboard extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -53,13 +55,13 @@ public class Customerdashboard extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 102));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/create.png")));
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screenshot 2025-05-22 at 20.45.48.png"))); // NOI18N
         jLabel7.setText("jLabel7");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -76,6 +78,12 @@ public class Customerdashboard extends javax.swing.JFrame {
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/WhatsApp Image 2025-05-22 at 9.27.29 PM.jpeg"))); // NOI18N
+        jLabel12.setText("jLabel12");
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/WhatsApp Image 2025-05-22 at 9.27.29 PM.jpeg"))); // NOI18N
+        jLabel14.setText("jLabel14");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -196,11 +204,7 @@ public class Customerdashboard extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 690, 70));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/create.png")));
-        jLabel12.setText("jLabel12");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 690, 330));
-
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/create.png")));
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screenshot 2025-05-22 at 20.45.48.png"))); // NOI18N
         jLabel13.setText("jLabel13");
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 90, 100));
 
@@ -218,6 +222,10 @@ public class Customerdashboard extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, -1));
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/WhatsApp Image 2025-05-22 at 9.27.29 PM.jpeg"))); // NOI18N
+        jLabel15.setText("jLabel15");
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 97, 690, 330));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -301,30 +309,8 @@ public class Customerdashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jToggleButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton7ActionPerformed
-        // TODO add your handling code here:
-        String eventIdStr = JOptionPane.showInputDialog(this, "Enter Event ID to book ticket:");
+        // Open the Book Ticket form
         
-        if (eventIdStr != null && !eventIdStr.trim().isEmpty()) {
-            try {
-                int eventId = Integer.parseInt(eventIdStr.trim());
-                String numTicketsStr = JOptionPane.showInputDialog(this, "Enter number of tickets:");
-                
-                if (numTicketsStr != null && !numTicketsStr.trim().isEmpty()) {
-                    int numTickets = Integer.parseInt(numTicketsStr.trim());
-                    
-                    // Show booking confirmation
-                    int confirm = JOptionPane.showConfirmDialog(this, 
-                        "Confirm booking:\nEvent ID: " + eventId + "\nNumber of tickets: " + numTickets,
-                        "Confirm Booking", JOptionPane.YES_NO_OPTION);
-                    
-                    if (confirm == JOptionPane.YES_OPTION) {
-                        JOptionPane.showMessageDialog(this, "Booking successful!\n\nEvent ID: " + eventId + "\nTickets: " + numTickets + "\n\nYou will receive a confirmation email.");
-                    }
-                }
-            } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(this, "Please enter valid numbers for Event ID and tickets.");
-            }
-        }
     }//GEN-LAST:event_jToggleButton7ActionPerformed
 
     private void jToggleButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton4ActionPerformed
@@ -429,6 +415,79 @@ public class Customerdashboard extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jToggleButton5ActionPerformed
 
+    private void jToggleButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton6ActionPerformed
+        // Show available events first
+        showAvailableEvents();
+        
+        String eventIdStr = JOptionPane.showInputDialog(this, "Enter Event ID to delete:");
+        
+        if (eventIdStr != null && !eventIdStr.trim().isEmpty()) {
+            try {
+                int eventId = Integer.parseInt(eventIdStr.trim());
+                
+                // First verify the event exists
+                Dao.CustomerViewEventDAO dao = new Dao.CustomerViewEventDAO();
+                Model.Event event = dao.getEventById(eventId);
+                
+                if (event != null) {
+                    // Show event details and ask for confirmation
+                    StringBuilder message = new StringBuilder();
+                    message.append("Are you sure you want to delete this event?\n\n");
+                    message.append("Event ID: ").append(event.getEventId()).append("\n");
+                    message.append("Title: ").append(event.getTitle() != null ? event.getTitle() : "N/A").append("\n");
+                    message.append("Type: ").append(event.getType() != null ? event.getType() : "N/A").append("\n");
+                    message.append("Date: ").append(event.getDate() != null ? event.getDate() : "N/A").append("\n");
+                    message.append("Venue: ").append(event.getVenue() != null ? event.getVenue() : "N/A").append("\n\n");
+                    message.append("This action cannot be undone!");
+                    
+                    int confirm = JOptionPane.showConfirmDialog(this, message.toString(), 
+                        "Confirm Delete", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+                    
+                    if (confirm == JOptionPane.YES_OPTION) {
+                        // TODO: Implement actual delete functionality
+                        // For now, show a message that delete is not implemented
+                        JOptionPane.showMessageDialog(this, 
+                            "Delete functionality will be implemented soon.\n\n" +
+                            "Event ID: " + eventId + " would be deleted from the database.",
+                            "Delete Event", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(this, "No event found with ID: " + eventId);
+                }
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(this, "Please enter a valid Event ID (number).");
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(this, "Error loading event: " + e.getMessage());
+                e.printStackTrace();
+            }
+        }
+    }//GEN-LAST:event_jToggleButton6ActionPerformed
+
+    private void jToggleButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton9ActionPerformed
+        // Show payment information
+        StringBuilder paymentInfo = new StringBuilder();
+        paymentInfo.append("=== PAYMENT INFORMATION ===\n\n");
+        paymentInfo.append("Supported Payment Methods:\n");
+        paymentInfo.append("• Khalti - Digital Wallet\n");
+        paymentInfo.append("• Esewa - Digital Payment\n\n");
+        paymentInfo.append("Payment Process:\n");
+        paymentInfo.append("1. Select your event\n");
+        paymentInfo.append("2. Choose number of tickets\n");
+        paymentInfo.append("3. Select payment method\n");
+        paymentInfo.append("4. Complete payment\n");
+        paymentInfo.append("5. Receive confirmation\n\n");
+        paymentInfo.append("Security:\n");
+        paymentInfo.append("• All payments are secure\n");
+        paymentInfo.append("• SSL encryption enabled\n");
+        paymentInfo.append("• No card details stored\n\n");
+        paymentInfo.append("For support, contact:\n");
+        paymentInfo.append("Email: support@eventmanagement.com\n");
+        paymentInfo.append("Phone: +977-1-2345678");
+        
+        JOptionPane.showMessageDialog(this, paymentInfo.toString(), 
+            "Payment Information", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_jToggleButton9ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -470,6 +529,8 @@ public class Customerdashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -493,15 +554,15 @@ public class Customerdashboard extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
    private int getSelectedEventId() {
-    String eventIdText = txtEventId.getText(); // ✅ must be a JTextField component in the form
-    if (eventIdText.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Please enter/select an Event ID.");
+    String eventIdText = JOptionPane.showInputDialog(this, "Enter Event ID:");
+    if (eventIdText == null || eventIdText.trim().isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Please enter an Event ID.");
         return -1;
     }
     try {
-        return Integer.parseInt(eventIdText);
+        return Integer.parseInt(eventIdText.trim());
     } catch (NumberFormatException e) {
-        JOptionPane.showMessageDialog(this, "Invalid Event ID format.");
+        JOptionPane.showMessageDialog(this, "Invalid Event ID format. Please enter a number.");
         return -1;
     }
 }
