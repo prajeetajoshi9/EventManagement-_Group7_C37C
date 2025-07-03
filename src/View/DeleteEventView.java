@@ -1,4 +1,4 @@
-/*
+    /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
@@ -126,7 +126,7 @@ public class DeleteEventView extends javax.swing.JFrame {
         jRadioButton1.setText("Yes, I want to delete the event");
         getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 370, -1, -1));
 
-        jRadioButton2.setText("No, I don't want to delete th event ");
+        jRadioButton2.setText("No, I don't want to delete the event ");
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton2ActionPerformed(evt);
