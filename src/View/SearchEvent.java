@@ -6,6 +6,7 @@ package View;
 
 import java.awt.Color;
 
+<<<<<<< HEAD
 import com.toedter.calendar.JDateChooser;
 import controller.EventController;
 import java.awt.Dimension;
@@ -16,20 +17,26 @@ import org.netbeans.lib.awtextra.AbsoluteConstraints;
 import javax.swing.BoxLayout;
 import javax.swing.Box;
 
+=======
+>>>>>>> origin/forgotpassword
 /**
  *
  * @author prasmshachapagain
  */
 public class SearchEvent extends javax.swing.JFrame {
 
+<<<<<<< HEAD
     private JDateChooser dateChooser;
     private JTable eventTable;
 
+=======
+>>>>>>> origin/forgotpassword
     /**
      * Creates new form SearchEvent
      */
     public SearchEvent() {
         initComponents();
+<<<<<<< HEAD
         EvtType.setEnabled(true);
         EvtVenue.setEnabled(true);
 
@@ -65,6 +72,8 @@ public class SearchEvent extends javax.swing.JFrame {
 
 
        new EventController(this);
+=======
+>>>>>>> origin/forgotpassword
     }
 
     /**
@@ -78,12 +87,22 @@ public class SearchEvent extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         search = new javax.swing.JTextField();
+<<<<<<< HEAD
         searchh = new javax.swing.JButton();
+=======
+        jButton1 = new javax.swing.JButton();
+>>>>>>> origin/forgotpassword
         jLabel2 = new javax.swing.JLabel();
         EvtType = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         EvtVenue = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
+<<<<<<< HEAD
+=======
+        jComboBox3 = new javax.swing.JComboBox<>();
+        jComboBox4 = new javax.swing.JComboBox<>();
+        jButton2 = new javax.swing.JButton();
+>>>>>>> origin/forgotpassword
         jButton3 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -93,7 +112,11 @@ public class SearchEvent extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
         jLabel1.setText("Search Event");
+<<<<<<< HEAD
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 40, 160, -1));
+=======
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 160, -1));
+>>>>>>> origin/forgotpassword
 
         search.setForeground(new java.awt.Color(204, 204, 204));
         search.setText("search....");
@@ -109,10 +132,17 @@ public class SearchEvent extends javax.swing.JFrame {
         });
         getContentPane().add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 337, 31));
 
+<<<<<<< HEAD
         searchh.setBackground(new java.awt.Color(0, 0, 255));
         searchh.setForeground(new java.awt.Color(255, 255, 255));
         searchh.setText("search");
         getContentPane().add(searchh, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, 31));
+=======
+        jButton1.setBackground(new java.awt.Color(0, 0, 255));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("search");
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, 31));
+>>>>>>> origin/forgotpassword
 
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel2.setText(" Event Type:");
@@ -139,8 +169,25 @@ public class SearchEvent extends javax.swing.JFrame {
         getContentPane().add(EvtVenue, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 263, 31));
 
         jLabel4.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+<<<<<<< HEAD
         jLabel4.setText("Date:");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, -1, -1));
+=======
+        jLabel4.setText("Delete:");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, -1, -1));
+
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 87, -1));
+
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 390, 83, -1));
+
+        jButton2.setBackground(new java.awt.Color(0, 0, 255));
+        jButton2.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Filter");
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(416, 318, -1, 23));
+>>>>>>> origin/forgotpassword
 
         jButton3.setBackground(new java.awt.Color(0, 0, 255));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
@@ -150,11 +197,19 @@ public class SearchEvent extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 10, -1, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/pinkkkkkk.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 770, 570));
+=======
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 10, -1, -1));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/pinkkkkkk.jpg"))); // NOI18N
+        jLabel5.setText("jLabel5");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 600, 410));
+>>>>>>> origin/forgotpassword
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Screenshot 2025-06-08 at 14.34.16.png"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, 80));
@@ -216,6 +271,7 @@ public class SearchEvent extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+<<<<<<< HEAD
         public void run() {
             new SearchEvent().setVisible(true);
         }
@@ -224,11 +280,26 @@ public class SearchEvent extends javax.swing.JFrame {
 private JPanel resultPanel;
 private JScrollPane resultScrollPane;
 
+=======
+            public void run() {
+                new SearchEvent().setVisible(true);
+            }
+        });
+    }
+>>>>>>> origin/forgotpassword
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> EvtType;
     private javax.swing.JComboBox<String> EvtVenue;
+<<<<<<< HEAD
     private javax.swing.JButton jButton3;
+=======
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBox4;
+>>>>>>> origin/forgotpassword
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -236,6 +307,7 @@ private JScrollPane resultScrollPane;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField search;
+<<<<<<< HEAD
     private javax.swing.JButton searchh;
     // End of variables declaration//GEN-END:variables
 
@@ -279,3 +351,7 @@ private JScrollPane resultScrollPane;
 
 
 
+=======
+    // End of variables declaration//GEN-END:variables
+}
+>>>>>>> origin/forgotpassword

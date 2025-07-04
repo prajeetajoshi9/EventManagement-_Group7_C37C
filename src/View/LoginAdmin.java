@@ -59,6 +59,11 @@ public class LoginAdmin extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Forgot Password?");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         loginBtn.setBackground(new java.awt.Color(51, 0, 255));
         loginBtn.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
@@ -184,6 +189,17 @@ public class LoginAdmin extends javax.swing.JFrame {
 });
 
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+            jButton1.addActionListener(new java.awt.event.ActionListener() {
+    public void actionPerformed(java.awt.event.ActionEvent evt) {
+        ResetPassword signup = new ResetPassword();
+        signup.setVisible(true);
+        dispose(); // closes the LoginAdmin frame
+    }
+}); 
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

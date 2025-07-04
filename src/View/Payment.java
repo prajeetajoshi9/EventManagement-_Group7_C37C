@@ -4,14 +4,6 @@
  */
 package View;
 
-import java.awt.Color;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JRadioButton;
-import javax.swing.JTextField;
-import Controller.PaymentController;
-import Dao.StripePaymentDao;
-
 /**
  *
  * @author prasmshachapagain
@@ -23,17 +15,6 @@ public class Payment extends javax.swing.JFrame {
      */
     public Payment() {
         initComponents();
-        Payment.setEnabled(true);
-        accountNumberField.setEditable(true);
-        yes.setEnabled(true);
-        no.setEnabled(true);
-       Payment.setModel(new javax.swing.DefaultComboBoxModel<>(
-            new String[] {"PayPal", "Global IME Bank", "Bank of America", "Stripe", "Western Union"}
-        ));
- 
-        // Attach controller
-        new PaymentController(this);
-
     }
 
     /**
@@ -46,109 +27,31 @@ public class Payment extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        accountNumberField = new javax.swing.JTextField();
-        Payment = new javax.swing.JComboBox<>();
-        jLabel4 = new javax.swing.JLabel();
-        no = new javax.swing.JRadioButton();
-        yes = new javax.swing.JRadioButton();
-        edit = new javax.swing.JButton();
-        save = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
         jLabel1.setText("Payment Information");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, 280, -1));
 
-        jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        jLabel2.setText("Payment Method:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 220, 30));
-
-        jLabel3.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        jLabel3.setText("Account Number:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 190, -1));
-
-        accountNumberField.setForeground(new java.awt.Color(204, 204, 204));
-        accountNumberField.setText("Provide your Account Number");
-        accountNumberField.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                accountNumberFieldFocusGained(evt);
-            }
-        });
-        getContentPane().add(accountNumberField, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 410, 30));
-
-        Payment.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        Payment.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PaymentActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Payment, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, 410, 30));
-
-        jLabel4.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        jLabel4.setText("Do you accept sharing your payment details with us?");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 280, -1, 20));
-
-        no.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        no.setText("No");
-        getContentPane().add(no, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 310, -1, -1));
-
-        yes.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        yes.setText("Yes");
-        getContentPane().add(yes, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 310, -1, -1));
-
-        edit.setBackground(new java.awt.Color(0, 0, 255));
-        edit.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        edit.setForeground(new java.awt.Color(255, 255, 255));
-        edit.setText("Edit");
-        getContentPane().add(edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 400, -1, -1));
-
-        save.setBackground(new java.awt.Color(0, 0, 255));
-        save.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        save.setForeground(new java.awt.Color(255, 255, 255));
-        save.setText("Save");
-        getContentPane().add(save, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 400, -1, -1));
-
-        jButton3.setBackground(new java.awt.Color(0, 0, 255));
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Return to Homepage");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 10, 160, -1));
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/bbbbbbbbbb.jpeg"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 620, 430));
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Screenshot 2025-06-08 at 14.34.16.png"))); // NOI18N
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, 80));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(130, 130, 130)
+                .addComponent(jLabel1)
+                .addContainerGap(138, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jLabel1)
+                .addContainerGap(356, Short.MAX_VALUE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void PaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PaymentActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PaymentActionPerformed
-
-    private void accountNumberFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_accountNumberFieldFocusGained
-        // TODO add your handling code here:
-        if(accountNumberField.getText().equals("Provide your Account Number")){
-            accountNumberField.setText("");
-            accountNumberField.setForeground(Color.BLACK);
-        }
-    }//GEN-LAST:event_accountNumberFieldFocusGained
 
     /**
      * @param args the command line arguments
@@ -176,58 +79,16 @@ public class Payment extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Payment.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Payment().setVisible(true);
-                
-                
-      boolean result = StripePaymentDao.createPaymentIntent(5000, "usd");
-     System.out.println("Payment result: " + result);
-}
-
-            
+            }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> Payment;
-    private javax.swing.JTextField accountNumberField;
-    private javax.swing.JButton edit;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JRadioButton no;
-    private javax.swing.JButton save;
-    private javax.swing.JRadioButton yes;
     // End of variables declaration//GEN-END:variables
-
-    public JButton getSaveButton() {
-    return save;
-}
-
-public JComboBox<String> getPaymentMethodCombo() {
-    return Payment;
-}
-
-public JTextField getAccountNumberField() {
-    return accountNumberField;
-}
-
-public JRadioButton yes() {
-    return yes;
-}
-public JButton getEditButton() {
-    return edit;
-}
-public JRadioButton getNoButton() {
-    return no;
-}
-
 }

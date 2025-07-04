@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/View/AdminDashboard.java</file>
             <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/View/AdminPersonalInfo.java</file>
             <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/Controller/UserController.java</file>
@@ -80,6 +81,15 @@
             <file>file:/Users/prasmshachapagain/Desktop/pc/EventManagement-_Group7_C37C/src/View/Payment.java</file>
             <file>file:/Users/prasmshachapagain/Desktop/pc/EventManagement-_Group7_C37C/src/Dao/StripePaymentDao.java</file>
 >>>>>>> origin/Admin-Login
+=======
+            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Dao/EventDao.java</file>
+            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Dao/User.java</file>
+            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Database/Database.java</file>
+            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Database/MySqlConnection.java</file>
+            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Model/Event.java</file>
+            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Dao/UserDao.java</file>
+            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/View/DeleteEventView.java</file>
+>>>>>>> origin/forgotpassword
         </group>
     </open-files>
 </project-private>

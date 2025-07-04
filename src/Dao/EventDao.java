@@ -4,61 +4,51 @@
  */
 package Dao;
 
-import Model.EventModel;
-import java.util.ArrayList;
-import java.util.List;
+import Database.MySqlConnection;
 
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.time.LocalDateTime;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+
+/**
+ *
+ * @author Rashmi Jha
+ */
 public class EventDao {
 
-   
-    private static final List<EventModel> events = new ArrayList<>();
-
-    static {
-        events.add(new EventModel("Pasni", "Kathmandu", "2025-07-10"));
-        events.add(new EventModel("Wedding", "Pokhara", "2025-08-05"));
-        events.add(new EventModel("Bratabandha", "Lalitpur", "2025-09-01"));
-        events.add(new EventModel("Guniu Cholo", "Bhaktapur", "2025-10-15"));
-        events.add(new EventModel("Concert", "Chitwan", "2025-12-20"));
-        events.add(new EventModel("Birthday","jhapa","2025-11-03"));
-    }
-
-   
-    public List<String> getAllEventTypes() {
-        List<String> types = new ArrayList<>();
-        for (EventModel e : events) {
-            if (!types.contains(e.getEventType())) {
-                types.add(e.getEventType());
-            }
-        }
-        return types;
-    }
-
-   
-    public List<String> getAllVenues() {
-        List<String> venues = new ArrayList<>();
-        for (EventModel e : events) {
-            if (!venues.contains(e.getVenue())) {
-                venues.add(e.getVenue());
-            }
-        }
-        return venues;
-    }
-
-   
-    public List<EventModel> getAllEvents() {
-        return events;
-    }
-
+    MySqlConnection mysql = new MySqlConnection();
     
-    public List<EventModel> filterEvents(String type, String venue, String date) {
-        List<EventModel> filtered = new ArrayList<>();
-        for (EventModel e : events) {
-            if (e.getEventType().equals(type) &&
-                e.getVenue().equals(venue) &&
-                e.getDate().equals(date)) {
-                filtered.add(e);
-            }
+   
+
+    public boolean deleteEvent(int eventId,String Reason, String Feedback) {
+        Connection conn = mysql.openConnection();
+     
+        System.out.println(eventId);
+         String sql = "UPDATE events SET reason_for_deletion = ?, feedback = ?, deleted_at = ? WHERE id= ?";
+         
+
+        try (PreparedStatement ps = conn.prepareStatement(sql)) {
+            ps.setString(1,Reason);
+            ps.setString(2,Feedback);
+           
+            LocalDateTime now =LocalDateTime.now();
+            ps.setObject(3, now);
+            ps.setInt(4, eventId);
+           
+
+            int rowsAffected = ps.executeUpdate();
+            return rowsAffected > 0;
+        } catch (SQLException ex) {
+            Logger.getLogger(Model.User.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            mysql.closeConnection(conn);
         }
-        return filtered;
+        return false;
     }
+
 }

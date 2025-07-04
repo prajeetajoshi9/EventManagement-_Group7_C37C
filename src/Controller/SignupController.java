@@ -20,7 +20,7 @@ public class SignupController {
     public SignupController(AdminSignup view) {
         this.view = view;
 
-       
+        // Attach event listener to Sign Up button
         this.view.getSignupButton().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
