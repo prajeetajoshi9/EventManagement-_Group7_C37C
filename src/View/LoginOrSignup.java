@@ -37,17 +37,24 @@ public class LoginOrSignup extends javax.swing.JFrame {
         AlreadyLabel = new javax.swing.JLabel();
         LoginButton = new javax.swing.JButton();
         Return = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         WelcomeLabel.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        WelcomeLabel.setForeground(new java.awt.Color(255, 255, 255));
         WelcomeLabel.setText("Welcome");
+        getContentPane().add(WelcomeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(175, 128, -1, -1));
 
         HamroLabel.setFont(new java.awt.Font("Helvetica Neue", 3, 48)); // NOI18N
+        HamroLabel.setForeground(new java.awt.Color(255, 255, 255));
         HamroLabel.setText("Hamro Events");
+        getContentPane().add(HamroLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(133, 248, -1, -1));
 
         DontHaveLabel.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         DontHaveLabel.setText("Don’t Have an Account?");
+        getContentPane().add(DontHaveLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(592, 133, -1, -1));
 
         SignupButton.setBackground(new java.awt.Color(37, 78, 201));
         SignupButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -57,9 +64,11 @@ public class LoginOrSignup extends javax.swing.JFrame {
                 SignupButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(SignupButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(629, 193, 118, 49));
 
         AlreadyLabel.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         AlreadyLabel.setText("Already Have an Account?");
+        getContentPane().add(AlreadyLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(592, 294, -1, -1));
 
         LoginButton.setBackground(new java.awt.Color(37, 78, 201));
         LoginButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -69,6 +78,7 @@ public class LoginOrSignup extends javax.swing.JFrame {
                 LoginButtonActionPerformed(evt);
             }
         });
+        getContentPane().add(LoginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 351, 118, 49));
 
         Return.setBackground(new java.awt.Color(37, 78, 201));
         Return.setForeground(new java.awt.Color(255, 255, 255));
@@ -78,68 +88,19 @@ public class LoginOrSignup extends javax.swing.JFrame {
                 ReturnActionPerformed(evt);
             }
         });
+        getContentPane().add(Return, new org.netbeans.lib.awtextra.AbsoluteConstraints(356, 485, -1, 40));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(SignupButton, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(146, 146, 146))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(LoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(145, 145, 145))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(175, 175, 175)
-                        .addComponent(WelcomeLabel))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(133, 133, 133)
-                        .addComponent(HamroLabel)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 134, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(AlreadyLabel)
-                    .addComponent(DontHaveLabel))
-                .addGap(84, 84, 84))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(356, 356, 356)
-                .addComponent(Return)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(128, 128, 128)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(DontHaveLabel)
-                    .addComponent(WelcomeLabel))
-                .addGap(36, 36, 36)
-                .addComponent(SignupButton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(HamroLabel)
-                        .addGap(44, 44, 44))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(AlreadyLabel)
-                        .addGap(34, 34, 34)))
-                .addComponent(LoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
-                .addComponent(Return, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(67, 67, 67))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screenshot 2025-07-04 at 17.51.41.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 590));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void SignupButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignupButtonActionPerformed
         // TODO add your handling code here:
-    new Registration_form ().setVisible(true);
-        this.dispose(); 
+        new Registration_form().setVisible(true);
+   
     }//GEN-LAST:event_SignupButtonActionPerformed
 
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
@@ -209,7 +170,10 @@ public class LoginOrSignup extends javax.swing.JFrame {
     private javax.swing.JButton Return;
     private javax.swing.JButton SignupButton;
     private javax.swing.JLabel WelcomeLabel;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 
     
 }
+
+
