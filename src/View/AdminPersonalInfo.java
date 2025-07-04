@@ -52,6 +52,7 @@ public class AdminPersonalInfo extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         HeadingLabel = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        Return = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -233,6 +234,15 @@ public class AdminPersonalInfo extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screenshot 2025-05-22 at 20.45.48.png"))); // NOI18N
 
+        Return.setBackground(new java.awt.Color(37, 78, 201));
+        Return.setForeground(new java.awt.Color(255, 255, 255));
+        Return.setText("Return to Homepage");
+        Return.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ReturnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -241,17 +251,23 @@ public class AdminPersonalInfo extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addGap(262, 262, 262)
                 .addComponent(HeadingLabel)
-                .addContainerGap(388, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 190, Short.MAX_VALUE)
+                .addComponent(Return)
+                .addGap(48, 48, 48))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(HeadingLabel)
                 .addContainerGap(31, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(Return, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 90));
@@ -427,6 +443,14 @@ public class AdminPersonalInfo extends javax.swing.JFrame {
                             
     }//GEN-LAST:event_EditButtonActionPerformed
 
+    private void ReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReturnActionPerformed
+        // TODO add your handling code here:
+
+        AdminDashboard adminDashboard = new AdminDashboard();
+        adminDashboard.setLocationRelativeTo(null);
+        adminDashboard.setVisible(true);
+    }//GEN-LAST:event_ReturnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -471,6 +495,7 @@ public class AdminPersonalInfo extends javax.swing.JFrame {
     private javax.swing.JLabel HeadingLabel;
     private javax.swing.JLabel IdentificationNumber;
     private javax.swing.JLabel LastName;
+    private javax.swing.JButton Return;
     private javax.swing.JLabel UsernameLabel;
     private javax.swing.JTextField address;
     private javax.swing.JTextField adminid;

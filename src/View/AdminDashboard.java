@@ -240,8 +240,7 @@ public class AdminDashboard extends javax.swing.JFrame {
 
     private void jButtonEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditActionPerformed
         // TODO add your handling code here:
-           new AdminEditEvent().setVisible(true); 
-        this.dispose(); 
+           
     }//GEN-LAST:event_jButtonEditActionPerformed
 
     private void jButtonViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonViewActionPerformed

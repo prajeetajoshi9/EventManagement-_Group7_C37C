@@ -7,12 +7,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/View/AdminDashboard.java</file>
             <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/View/AdminPersonalInfo.java</file>
+=======
+            <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/Controller/SignupController.java</file>
+>>>>>>> Dashboard
             <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/Controller/UserController.java</file>
-            <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/Dao/UserDao.java</file>
-            <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/Database/Database.java</file>
+            <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/Controller/logincontroller.java</file>
+            <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/View/Registration_form.java</file>
             <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/Database/MySqlConnection.java</file>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/Bookmark.java</file>
@@ -90,6 +95,13 @@
             <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Dao/UserDao.java</file>
             <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/View/DeleteEventView.java</file>
 >>>>>>> origin/forgotpassword
+=======
+            <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/Database/Database.java</file>
+            <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/Dao/User.java</file>
+            <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/Dao/UserDao.java</file>
+            <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/View/AdminEditEvent.java</file>
+            <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/Model/Login.java</file>
+>>>>>>> Dashboard
         </group>
     </open-files>
 </project-private>
