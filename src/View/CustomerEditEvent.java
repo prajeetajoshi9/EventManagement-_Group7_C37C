@@ -52,6 +52,7 @@ public class CustomerEditEvent extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        Return = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         EventText = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
@@ -76,9 +77,8 @@ public class CustomerEditEvent extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
+        SetPriceButton = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
 
         jLabel7.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel7.setText("Description:");
@@ -93,6 +93,15 @@ public class CustomerEditEvent extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
         jLabel2.setText("Edit Event");
 
+        Return.setBackground(new java.awt.Color(37, 78, 201));
+        Return.setForeground(new java.awt.Color(255, 255, 255));
+        Return.setText("Return to Homepage");
+        Return.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ReturnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -101,7 +110,9 @@ public class CustomerEditEvent extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(331, 331, 331)
                 .addComponent(jLabel2)
-                .addContainerGap(381, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 239, Short.MAX_VALUE)
+                .addComponent(Return)
+                .addGap(24, 24, 24))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,6 +120,10 @@ public class CustomerEditEvent extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addComponent(jLabel2))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Return, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 918, -1));
@@ -272,7 +287,6 @@ public class CustomerEditEvent extends javax.swing.JFrame {
         jLabel15.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel15.setText("Set  Ticket Price: ");
         getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 480, -1, -1));
-        getContentPane().add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 190, 250, 40));
 
         jScrollPane1.setViewportView(jTextPane1);
 
@@ -376,80 +390,11 @@ public class CustomerEditEvent extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_BudgetTextFocusLost
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void ReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReturnActionPerformed
         // TODO add your handling code here:
-        try {
-            // Create controller and handle the update
-            CustomerEditEventController controller = new CustomerEditEventController(this);
-            
-            // The controller will handle the update through the updateEvent() method
-            // which is called when the button is clicked
-            
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error updating event: " + e.getMessage());
-            e.printStackTrace();
-        }
-    }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // Open CustomerEventViewer to view event details
-        String eventIdStr = JOptionPane.showInputDialog(this, "Enter Event ID to view:");
         
-        if (eventIdStr != null && !eventIdStr.trim().isEmpty()) {
-            try {
-                int eventId = Integer.parseInt(eventIdStr.trim());
-                
-                // Open CustomerEventViewer with the specific event ID
-                CustomerEventViewer viewer = new CustomerEventViewer(eventId);
-                viewer.setVisible(true);
-                viewer.setLocationRelativeTo(null); // center on screen
-                
-            } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(this, "Please enter a valid Event ID (number).");
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(this, "Error opening event viewer: " + e.getMessage());
-                e.printStackTrace();
-            }
-        }
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-                                                
-    CreateEvent createEvent = new CreateEvent(); // Replace with your CreateEvent class name
-    createEvent.setVisible(true);
-    this.dispose(); // Or this.setVisible(false);
-
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-          JComboBox comboBox = (JComboBox) evt.getSource();
-    String selectedItem = (String) comboBox.getSelectedItem();
-
-    // Default party palace
-    String eventPlace = "";
-
-    eventPlace = switch (selectedItem) {
-            case "Wedding Ceremony" -> "Solti Grand Party Palace, Kalanki";
-            case "Birthday Bash" -> "Rudra Banquet & Events, Banasthali";
-            case "Corporate Meetup" -> "Utsav Banquet, Tripureshwor";
-            case "Engagement Party" -> "Royal Empire Party Palace, Baneshwor";
-            case "Farewell Program" -> "Durbar Banquet, Lazimpat";
-            case "Anniversary Celebration" -> "Subha Griha Banquet, Chabahil";
-            case "Graduation Party" -> "Golden Palace Banquet, Gwarko";
-            case "Baby Shower" -> "Paradise Party Venue, Koteshwor";
-            case "Reception" -> "Everest Party Palace, Gongabu";
-            case "Cultural Program" -> "Dream Garden Banquet, Bhaktapur";
-            default -> "Venue to be announced";
-        };
-
-    System.out.println("Selected Event: " + selectedItem);
-    System.out.println("Event Place: " + eventPlace);
-
-    JOptionPane.showMessageDialog(null, "You selected: " + selectedItem +
-                                          "\nEvent Place: " + eventPlace);
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_ReturnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -491,6 +436,8 @@ public class CustomerEditEvent extends javax.swing.JFrame {
     private javax.swing.JTextField DescriptionText;
     private javax.swing.JTextField EventText;
     private javax.swing.JTextField GuestText;
+    private javax.swing.JButton Return;
+    private javax.swing.JButton SetPriceButton;
     private javax.swing.JComboBox<String> TimeText;
     private javax.swing.JTextField TypeText;
     private javax.swing.ButtonGroup buttonGroup1;

@@ -59,7 +59,7 @@ public class CreateEvent extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        Return = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -107,13 +107,12 @@ public class CreateEvent extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
         jLabel2.setText("Create Events");
 
-        jToggleButton1.setBackground(new java.awt.Color(0, 0, 255));
-        jToggleButton1.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
-        jToggleButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jToggleButton1.setText("Return to Homepage");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        Return.setBackground(new java.awt.Color(37, 78, 201));
+        Return.setForeground(new java.awt.Color(255, 255, 255));
+        Return.setText("Return to Homepage");
+        Return.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                ReturnActionPerformed(evt);
             }
         });
 
@@ -123,20 +122,21 @@ public class CreateEvent extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(260, 260, 260)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 256, Short.MAX_VALUE)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(198, 198, 198)
-                .addComponent(jToggleButton1))
+                .addGap(233, 233, 233)
+                .addComponent(Return)
+                .addGap(53, 53, 53))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jToggleButton1))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Return, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 919, -1));
@@ -472,7 +472,12 @@ public class CreateEvent extends javax.swing.JFrame {
        privacy = "Private";
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
-    
+    private void ReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReturnActionPerformed
+        // TODO add your handling code here:
+
+        
+    }//GEN-LAST:event_ReturnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -511,6 +516,10 @@ public class CreateEvent extends javax.swing.JFrame {
     private javax.swing.JTextField BudgetText;
     private javax.swing.JTextField DescriptionText;
     private javax.swing.JTextField EventText;
+    private javax.swing.JTextField GuestText;
+    private javax.swing.JButton Return;
+    private javax.swing.JButton SetPriceButton;
+    private javax.swing.JComboBox<String> TimeText;
     private javax.swing.JTextField TypeText;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup10;
