@@ -1,6 +1,10 @@
 /build/
+<<<<<<< HEAD
 .DS_Store
 
 *.class
 
 *.log
+=======
+/dist/
+>>>>>>> Customer-dashboard
