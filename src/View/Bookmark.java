@@ -4,6 +4,8 @@
  */
 package View;
 
+import java.awt.Color;
+
 /**
  *
  * @author Asus Zenbook

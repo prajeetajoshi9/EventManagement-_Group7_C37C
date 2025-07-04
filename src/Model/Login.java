@@ -24,4 +24,8 @@ public class Login {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String getemail() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

@@ -486,4 +486,4 @@ public class AdminPersonalInfo extends javax.swing.JFrame {
     private javax.swing.JTextField lastname;
     private javax.swing.JButton savebutton;
     // End of variables declaration//GEN-END:variables
-}
+} 

@@ -19,4 +19,8 @@ public class JDateChooser {
         throw new UnsupportedOperationException("Unimplemented method 'setDate'");
     }
 
+    public void setDateFormatString(String yyyyMMdd) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
 }
