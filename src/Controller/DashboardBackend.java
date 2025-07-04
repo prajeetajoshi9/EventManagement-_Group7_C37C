@@ -27,7 +27,8 @@ public class DashboardBackend {
     // Handle Create Event
     public void openCreateEvent(javax.swing.JFrame currentFrame) {
         System.out.println("Opening Create Event");
-        CreateEvent createEvent = new CreateEvent();
+        CreateEvent controller = null;
+        CreateEvent createEvent = new CreateEvent(controller);
         createEvent.setVisible(true);
         currentFrame.dispose();
     }

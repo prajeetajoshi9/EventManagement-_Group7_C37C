@@ -4,7 +4,11 @@
  */
 package View;
 
+import java.awt.Color;
+import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 
 /**
@@ -13,11 +17,19 @@ import javax.swing.JOptionPane;
  */
 public class CreateEvent extends javax.swing.JFrame {
 
+    private AbstractButton jRadioButton2;
+    private String privacy;
+
     /**
      * Creates new form CreateEvent
+     * @param controller
      */
-    public CreateEvent() {
+    public CreateEvent(CreateEvent controller) {
         initComponents();
+    }
+
+    CreateEvent() {
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     /**
@@ -37,6 +49,13 @@ public class CreateEvent extends javax.swing.JFrame {
         buttonGroup6 = new javax.swing.ButtonGroup();
         buttonGroup7 = new javax.swing.ButtonGroup();
         buttonGroup8 = new javax.swing.ButtonGroup();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        buttonGroup9 = new javax.swing.ButtonGroup();
+        buttonGroup10 = new javax.swing.ButtonGroup();
+        jLabel13 = new javax.swing.JLabel();
+        buttonGroup11 = new javax.swing.ButtonGroup();
+        buttonGroup12 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -56,20 +75,29 @@ public class CreateEvent extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        javax.swing.JRadioButton jRadioButton1 = new javax.swing.JRadioButton();
+        javax.swing.JRadioButton jRadioButton2 = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextPane2 = new javax.swing.JTextPane();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jLabel15 = new javax.swing.JLabel();
+        jComboBox4 = new javax.swing.JComboBox<>();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+
+        jMenuItem1.setText("jMenuItem1");
+
+        jRadioButton3.setText("jRadioButton3");
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/create.png"))); // NOI18N
+        jLabel13.setText("jLabel13");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -79,6 +107,9 @@ public class CreateEvent extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
         jLabel2.setText("Create Events");
 
+        jToggleButton1.setBackground(new java.awt.Color(0, 0, 255));
+        jToggleButton1.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jToggleButton1.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButton1.setText("Return to Homepage");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,30 +123,23 @@ public class CreateEvent extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jToggleButton1)
-                .addGap(54, 54, 54))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(349, 349, 349)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(402, Short.MAX_VALUE)))
+                .addGap(260, 260, 260)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(198, 198, 198)
+                .addComponent(jToggleButton1))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addComponent(jToggleButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(29, 29, 29)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(30, Short.MAX_VALUE)))
+                .addComponent(jToggleButton1))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 919, -1));
 
         jLabel3.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel3.setText("Event Title:");
@@ -127,22 +151,20 @@ public class CreateEvent extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel5.setText("Time:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 247, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 240, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel6.setText("Description:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 292, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel7.setText("Number of Guests:");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 389, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel8.setText("Budget:");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 440, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 461, -1, -1));
 
-        EventText.setForeground(new java.awt.Color(224, 224, 224));
-        EventText.setText("Provide name for the event (e.g. Happy Halloween)");
         EventText.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 EventTextFocusGained(evt);
@@ -156,75 +178,62 @@ public class CreateEvent extends javax.swing.JFrame {
                 EventTextActionPerformed(evt);
             }
         });
+        getContentPane().add(EventText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 124, 569, 40));
 
-        TypeText.setForeground(new java.awt.Color(224, 224, 224));
-        TypeText.setText("Choose Type");
+        TypeText.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                TypeTextFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                TypeTextFocusLost(evt);
+            }
+        });
         TypeText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TypeTextActionPerformed(evt);
             }
         });
+        getContentPane().add(TypeText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 182, 242, 40));
+        getContentPane().add(DescriptionText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 292, 569, 59));
+        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 383, 246, 40));
+        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 455, 246, 40));
 
-        DescriptionText.setForeground(new java.awt.Color(224, 224, 224));
-        DescriptionText.setText("Provide short description of event");
-        DescriptionText.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                DescriptionTextFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                DescriptionTextFocusLost(evt);
-            }
-        });
-        getContentPane().add(DescriptionText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 298, 569, 50));
-
-        GuestText.setForeground(new java.awt.Color(224, 224, 224));
-        GuestText.setText("Provide total attendees");
-        GuestText.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                GuestTextFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                GuestTextFocusLost(evt);
-            }
-        });
-        GuestText.addActionListener(new java.awt.event.ActionListener() {
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "\t•\tSolti Grand Party Palace, Kalanki", "\t•\tRudra Banquet & Events, Banasthali", "\t•\tUtsav Banquet, Tripureshwor", "\t•\tRoyal Empire Party Palace, Baneshwor", "\t•\tDurbar Banquet, Lazimpat", "\t•\tSubha Griha Banquet, Chabahil", "\t•\tGolden Palace Banquet, Gwarko", "\t•\tParadise Party Venue, Koteshwor", "\t•\tEverest Party Palace, Gongabu", "\t•\tDream Garden Banquet, Bhaktapur" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GuestTextActionPerformed(evt);
+                jComboBox1ActionPerformed(evt);
             }
         });
-        getContentPane().add(GuestText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, 246, 40));
-
-        BudgetText.setForeground(new java.awt.Color(224, 224, 224));
-        BudgetText.setText("NRs.");
-        BudgetText.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                BudgetTextFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                BudgetTextFocusLost(evt);
-            }
-        });
-        getContentPane().add(BudgetText, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 430, 246, 40));
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 370, 245, 40));
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(554, 383, 245, 40));
 
         jLabel9.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel9.setText("Date:");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(504, 194, -1, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(504, 182, -1, -1));
 
         jLabel10.setText("Venue:");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 370, -1, -1));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(502, 395, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel11.setText("Event Privacy: ");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 430, -1, -1));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(502, 457, -1, -1));
 
+        buttonGroup1.add(jRadioButton1);
         jRadioButton1.setText("Public");
-        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 430, -1, -1));
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(616, 455, -1, -1));
 
+        buttonGroup1.add(jRadioButton2);
         jRadioButton2.setText("Private");
-        getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 430, -1, -1));
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(701, 455, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(38, 78, 201));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -234,6 +243,7 @@ public class CreateEvent extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(488, 553, 100, 40));
 
         jButton2.setBackground(new java.awt.Color(38, 78, 201));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -243,6 +253,7 @@ public class CreateEvent extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(616, 553, 100, 40));
 
         jButton3.setBackground(new java.awt.Color(38, 78, 201));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
@@ -252,133 +263,42 @@ public class CreateEvent extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 554, 100, 40));
 
         jLabel12.setText("_");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(504, 252, 21, -1));
+        getContentPane().add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(553, 182, 246, 40));
 
-        jScrollPane1.setViewportView(jTextPane1);
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "6:00 AM", "7:00 AM", "8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM" }));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 242, 40));
 
-        jScrollPane2.setViewportView(jTextPane2);
+        jLabel15.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel15.setText("Set  Ticket Price: ");
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 500, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(449, 449, 449)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel10)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel11)
-                                        .addGap(26, 26, 26)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jRadioButton1)
-                                                .addGap(33, 33, 33)
-                                                .addComponent(jRadioButton2))))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(219, 219, 219)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(66, 66, 66)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(82, 82, 82))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                            .addComponent(jLabel7)
-                                            .addGap(25, 25, 25)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel8)
-                                            .addComponent(jLabel6))
-                                        .addGap(80, 80, 80)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(TypeText, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(32, 32, 32)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel9)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(28, 28, 28)
-                                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                    .addComponent(DescriptionText, javax.swing.GroupLayout.PREFERRED_SIZE, 569, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(126, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel5))
-                                .addGap(82, 82, 82)
-                                .addComponent(EventText, javax.swing.GroupLayout.PREFERRED_SIZE, 569, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(EventText, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel9)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(TypeText, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel4))
-                    .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel12)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6)
-                    .addComponent(DescriptionText, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
-                .addGap(59, 59, 59)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 57, Short.MAX_VALUE))
-        );
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "6:00 AM", "7:00 AM", "8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM" }));
+        jComboBox4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(553, 240, 246, 40));
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 490, 115, 42));
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/create.png"))); // NOI18N
+        jLabel14.setText("jLabel14");
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -3, 890, 620));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -405,24 +325,32 @@ public class CreateEvent extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        
+            // Navigate to CustomerEditEvent
+    CustomerEditEvent customerEditEvent = new CustomerEditEvent();
+    customerEditEvent.setVisible(true);
+    customerEditEvent.setLocationRelativeTo(null); // Optional: center the window
+    this.dispose(); // Optional: close the current window
     
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       String title = EventText.getText();
+
+    String title = EventText.getText();
     String type = TypeText.getText();
-    String time = TimeText.getSelectedItem().toString();
     java.util.Date date = jDateChooser1.getDate();
     String description = DescriptionText.getText();
     String guestStr = jTextField4.getText();
     String budgetStr = jTextField5.getText();
-    String venue = jComboBox1.getSelectedItem().toString();
-    String privacy = jRadioButton1.isSelected() ? "Public" : "Private";
+    
+    String venue = jComboBox1.getSelectedItem() != null ? jComboBox1.getSelectedItem().toString() : "";
+
+    // Validate privacy choice
+
 
     try {
         int guests = Integer.parseInt(guestStr);
         double budget = Double.parseDouble(budgetStr);
+        String time = "10:00 AM"; // Set a default time or add a time field in your UI
 
         boolean success = Controller.EventController.createEvent(
             title, type, time, date, description, guests, budget, venue, privacy
@@ -433,15 +361,10 @@ public class CreateEvent extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(this, "Failed to create event.");
         }
+
     } catch (NumberFormatException e) {
         JOptionPane.showMessageDialog(this, "Please enter valid numbers for guests and budget.");
     }
-    
-    ButtonGroup group = new ButtonGroup();
-group.add(jRadioButton1); // Public
-group.add(jRadioButton2); // Private
-
-     
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void TypeTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TypeTextActionPerformed
@@ -450,15 +373,17 @@ group.add(jRadioButton2); // Private
 
     private void EventTextFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_EventTextFocusGained
         // TODO add your handling code here:
-         if (EventText.getText().equals("Event Title")) {
-        EventText.setText("");
+         if (EventText.getText().equals("Provide name for the event (e.g. Happy Halloween)")){
+            EventText.setText("");
+            EventText.setForeground(Color.BLACK); 
     }
     }//GEN-LAST:event_EventTextFocusGained
 
     private void EventTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_EventTextFocusLost
         // TODO add your handling code here:
-           if (EventText.getText().trim().isEmpty()) {
-        EventText.setText("Event Title");
+         if(EventText.getText().isEmpty()){
+            EventText.setText("Provide name for the event (e.g. Happy Halloween)");
+            EventText.setForeground(new java.awt.Color(216,216,216));
     }
     }//GEN-LAST:event_EventTextFocusLost
 
@@ -466,106 +391,88 @@ group.add(jRadioButton2); // Private
         // TODO add your handling code here:
     }//GEN-LAST:event_EventTextActionPerformed
 
-    private void EventTextFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_EventTextFocusGained
+    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
         // TODO add your handling code here:
-        if (EventText.getText().equals("Provide name for the event (e.g. Happy Halloween)")){
-            EventText.setText("");
-            EventText.setForeground(Color.BLACK);
-       
-        }
-    }//GEN-LAST:event_EventTextFocusGained
-
-    private void EventTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_EventTextFocusLost
-        // TODO add your handling code here:
-        if(EventText.getText().isEmpty()){
-            EventText.setText("Provide name for the event (e.g. Happy Halloween)");
-            EventText.setForeground(new java.awt.Color(216,216,216));
+           String selectedTime = (String) jComboBox4.getSelectedItem();
+    if (selectedTime != null) {
+        JOptionPane.showMessageDialog(this, "Selected time: " + selectedTime);
         
-           
-        } 
-    }//GEN-LAST:event_EventTextFocusLost
+        // Or use it programmatically:
+        System.out.println("User selected: " + selectedTime);
+        
+        // You can store it or pass it to a model
+        // event.setTime(selectedTime);
+    }
+    }//GEN-LAST:event_jComboBox4ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+       JComboBox comboBox = (JComboBox) evt.getSource();
+    String selectedItem = (String) comboBox.getSelectedItem();
+
+    // Default party palace
+    String eventPlace = "";
+
+    eventPlace = switch (selectedItem) {
+            case "Wedding Ceremony" -> "Solti Grand Party Palace, Kalanki";
+            case "Birthday Bash" -> "Rudra Banquet & Events, Banasthali";
+            case "Corporate Meetup" -> "Utsav Banquet, Tripureshwor";
+            case "Engagement Party" -> "Royal Empire Party Palace, Baneshwor";
+            case "Farewell Program" -> "Durbar Banquet, Lazimpat";
+            case "Anniversary Celebration" -> "Subha Griha Banquet, Chabahil";
+            case "Graduation Party" -> "Golden Palace Banquet, Gwarko";
+            case "Baby Shower" -> "Paradise Party Venue, Koteshwor";
+            case "Reception" -> "Everest Party Palace, Gongabu";
+            case "Cultural Program" -> "Dream Garden Banquet, Bhaktapur";
+            default -> "Venue to be announced";
+        };
+
+    System.out.println("Selected Event: " + selectedItem);
+    System.out.println("Event Place: " + eventPlace);
+
+    JOptionPane.showMessageDialog(null, "You selected: " + selectedItem +
+                                          "\nEvent Place: " + eventPlace);
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+          // Get the selected time from the combo box
+    JComboBox comboBox = (JComboBox) evt.getSource();
+    String selectedTime = (String) comboBox.getSelectedItem();
+
+    // Display the selected time with AM/PM
+    System.out.println("Selected Time: " + selectedTime);
+
+    // Optional: show it in a dialog box
+    JOptionPane.showMessageDialog(null, "You selected time: " + selectedTime);
+    }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void TypeTextFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TypeTextFocusGained
         // TODO add your handling code here:
-        if ( TypeText.getText().equals("Choose Type")){
-             TypeText.setText("");
-             TypeText.setForeground(Color.BLACK);
        
-        }
-        
     }//GEN-LAST:event_TypeTextFocusGained
 
     private void TypeTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TypeTextFocusLost
         // TODO add your handling code here:
-        if( TypeText.getText().isEmpty()){
-             TypeText.setText("Choose Type");
-             TypeText.setForeground(new java.awt.Color(216,216,216));
-        
-           
-        } 
     }//GEN-LAST:event_TypeTextFocusLost
 
-    private void DescriptionTextFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DescriptionTextFocusGained
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
-        if (DescriptionText.getText().equals("Provide short description of event")){
-            DescriptionText.setText("");
-            DescriptionText.setForeground(Color.BLACK);
-       
-        }
-    }//GEN-LAST:event_DescriptionTextFocusGained
-
-    private void DescriptionTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DescriptionTextFocusLost
-        // TODO add your handling code here:
-        if(DescriptionText.getText().isEmpty()){
-            DescriptionText.setText("Provide short description of event");
-            DescriptionText.setForeground(new java.awt.Color(216,216,216));
+        privacy = "Public";
         
-           
-        } 
-    }//GEN-LAST:event_DescriptionTextFocusLost
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
 
-    private void GuestTextFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_GuestTextFocusGained
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         // TODO add your handling code here:
-        if (GuestText.getText().equals("Provide total attendees")){
-            GuestText.setText("");
-            GuestText.setForeground(Color.BLACK);
-       
-        }
-    }//GEN-LAST:event_GuestTextFocusGained
+       // hide when Private
+       privacy = "Private";
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
 
-    private void GuestTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_GuestTextFocusLost
-        // TODO add your handling code here:
-        if(GuestText.getText().isEmpty()){
-            GuestText.setText("Provide total attendees");
-            GuestText.setForeground(new java.awt.Color(216,216,216));
-        
-           
-        } 
-    }//GEN-LAST:event_GuestTextFocusLost
-
-    private void BudgetTextFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_BudgetTextFocusGained
-        // TODO add your handling code here:
-        if (BudgetText.getText().equals("NRs.")){
-            BudgetText.setText("");
-            BudgetText.setForeground(Color.BLACK);
-       
-        }
-    }//GEN-LAST:event_BudgetTextFocusGained
-
-    private void BudgetTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_BudgetTextFocusLost
-        // TODO add your handling code here:
-        if(BudgetText.getText().isEmpty()){
-            BudgetText.setText("NRs.");
-            BudgetText.setForeground(new java.awt.Color(216,216,216));
-        
-           
-        } 
-    }//GEN-LAST:event_BudgetTextFocusLost
-
-    private void GuestTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuestTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_GuestTextActionPerformed
-
+    
     /**
      * @param args the command line arguments
      */
@@ -595,7 +502,8 @@ group.add(jRadioButton2); // Private
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new CreateEvent().setVisible(true);
+            CreateEvent controller = null;
+            new CreateEvent(controller).setVisible(true);
         });
     }
 
@@ -605,6 +513,9 @@ group.add(jRadioButton2); // Private
     private javax.swing.JTextField EventText;
     private javax.swing.JTextField TypeText;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup10;
+    private javax.swing.ButtonGroup buttonGroup11;
+    private javax.swing.ButtonGroup buttonGroup12;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.ButtonGroup buttonGroup4;
@@ -612,18 +523,21 @@ group.add(jRadioButton2); // Private
     private javax.swing.ButtonGroup buttonGroup6;
     private javax.swing.ButtonGroup buttonGroup7;
     private javax.swing.ButtonGroup buttonGroup8;
+    private javax.swing.ButtonGroup buttonGroup9;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox4;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -632,26 +546,46 @@ group.add(jRadioButton2); // Private
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextPane jTextPane1;
-    private javax.swing.JTextPane jTextPane2;
     private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
-
-    private static class TimeText {
+    /*
+    private static class TimeText {*/
         
 
-        private static Object getSelectedItem() {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
+        private Object selectedItem; // Add this field if not already present
 
-        public TimeText() {
+public Object getSelectedItem() {
+    return selectedItem;
+}
+
+public void setSelectedItem(Object item) {
+    this.selectedItem = item;
+}
+
+    private static class jRadioButton2 {
+
+
+        public jRadioButton2() {
         }
     }
+
+public class TimeComboBoxModel extends DefaultComboBoxModel<String> {
+    public TimeComboBoxModel() {
+        super(new String[] { "6:00 AM", "7:00 AM", "8:00 AM", "9:00 AM", "10:00 AM", 
+                             "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM" });
+        
+        
+    }
+    
 }
+
+        
+    }
+    
+

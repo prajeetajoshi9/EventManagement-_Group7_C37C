@@ -3,16 +3,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package eventmanagementsystemproject;
+
 import View.Registration_form;
-import Controller.SignupController;
+import View.CreateEventForm;
+import Controller.CreateEventController;
 
 public class EventManagementSystemProject {
-     
+
     public static void main(String[] args) {
-        
-        Registration_form SignUppForm = new Registration_form();                 
-        SignupController controller = new SignupController(SignUppForm);  
-        controller.open(); 
-        }
+        // Display Registration Form
+        Registration_form signUpForm = new Registration_form();                 
+        signUpForm.setVisible(true); // Shows the form window
+
+        // (Optional) If you want to directly use CreateEventController:
+        // CreateEventForm createEventForm = new CreateEventForm();
+        // CreateEventController controller = new CreateEventController(createEventForm);
+        // controller.open();
     }
- 
+} 

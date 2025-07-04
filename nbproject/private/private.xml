@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/View/AdminDashboard.java</file>
             <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/View/AdminPersonalInfo.java</file>
 =======
@@ -102,6 +103,12 @@
             <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/View/AdminEditEvent.java</file>
             <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/Model/Login.java</file>
 >>>>>>> Dashboard
+=======
+            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/View/Customerdashboard.java</file>
+            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/View/CustomerEventViewer.java</file>
+            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/View/Bookmark.java</file>
+            <file>file:/Users/sumitshah/Developer/Java%20Group%20Project/EventManagement-_Group7_C37C%206.13.43%E2%80%AFPM/src/Dao/User.java</file>
+>>>>>>> Customer-dashboard
         </group>
     </open-files>
 </project-private>

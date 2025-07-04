@@ -8,9 +8,10 @@ package View;
  *
  * @author sumitshah
  */
-class TimeText {
- public Object getSelectedItem() {
-        throw new UnsupportedOperationException("Not supported yet.");
+class txtEventId {
+
+    static String getText() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
- 
+    
 }

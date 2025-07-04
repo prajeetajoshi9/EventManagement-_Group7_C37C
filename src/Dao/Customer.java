@@ -41,6 +41,10 @@ public class Customer {
         this.address = address;
     }
 
+    public Customer(String name, String email) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     // Getters and Setters
     public String getFirstName() { return firstName; }
     public void setFirstName(String firstName) { this.firstName = firstName; }

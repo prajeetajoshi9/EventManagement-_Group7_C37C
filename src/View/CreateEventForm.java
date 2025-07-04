@@ -4,12 +4,10 @@
  */
 package View;
 
-import java.awt.Color;
-
 /**
  *
  * @author sumitshah
  */
-public class Bookmark {
+public class CreateEventForm {
     
 }
