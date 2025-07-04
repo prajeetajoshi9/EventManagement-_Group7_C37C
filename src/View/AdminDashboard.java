@@ -58,28 +58,9 @@ public class AdminDashboard extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Hamro Events  ");
-
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 411, 46));
 
-        ViewEvent.setText("       View Event Status");
-        getContentPane().add(ViewEvent, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 210, 175, 40));
-
-        EditEvent.setText("         Edit Event Status");
-        getContentPane().add(EditEvent, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 280, 175, 40));
-
-        jTextField4.setText("       Booked Ticket List");
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 340, 175, 40));
-
-        PersonalInformation.setText("    Personal Information");
-        PersonalInformation.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PersonalInformationActionPerformed(evt);
-            }
-        });
-        getContentPane().add(PersonalInformation, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 175, 40));
-
         jPanel1.setBackground(new java.awt.Color(248, 245, 221));
-
 
         Home.setText("Home");
 
@@ -280,13 +261,10 @@ public class AdminDashboard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AboutUs;
     private javax.swing.JLabel ContactUs;
-
     private javax.swing.JLabel CustomerReview;
-    private javax.swing.JTextField EditEvent;
     private javax.swing.JLabel Events;
     private javax.swing.JLabel Home;
     private javax.swing.JLabel More;
-
     private javax.swing.JLabel Ourteam;
     private javax.swing.JLabel PrivacyPolicy;
     private javax.swing.JLabel Services;
@@ -303,7 +281,5 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField4;
->>>>>>> 42677776bb8236ebb00786cdd487edc07dbbfc12
     // End of variables declaration//GEN-END:variables
 }
