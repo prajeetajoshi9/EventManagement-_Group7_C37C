@@ -5,7 +5,7 @@
 package Dao;
 
 import Database.MySqlConnection;
-import model.Login;
+import Model.Login;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.logging.Logger;

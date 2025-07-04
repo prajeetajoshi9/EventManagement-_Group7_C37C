@@ -4,7 +4,6 @@
  */
 package View;
 
-import Database.MySqlConnection;
 import Model.TicketBooking;
 
 /**

@@ -1,10 +1,14 @@
+
 package Dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import Model.Login;
+
 import Database.MySqlConnection;
+import java.sql.SQLException;
+
 
 public class User {
 
@@ -33,3 +37,4 @@ public class User {
         return null;
     }
 }
+    

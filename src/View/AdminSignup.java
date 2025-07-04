@@ -207,7 +207,7 @@ public AdminSignup() {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jsignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jsignupActionPerformed
-       new Controller.SignupController(this); // call controller to handle signup logic
+//       new Controller.SignupController(this); // call controller to handle signup logic
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jsignupActionPerformed

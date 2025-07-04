@@ -1,37 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package model;
-
-import Controller.logincontroller;
-
-/**
- *
- * @author User
- */
-public class Login {
-    
-    private String email;
-    private String password;
-    public Login(String email,  String password){
-        this.email = email;
-        this.password = password;
-    }
-    /**
-     * @return the email
-     */
-    
-
-    /**
-     * @return the password
-     */
-
 package Model;
 
 public class Login {
     private String username;
     private String password;
+    private String email;
 
     public String getUsername() {
         return username;
@@ -55,7 +27,7 @@ public class Login {
         return email;
     }
 
-    public void setUsername(String email) {
+    public void setUserEmail(String email) {
         this.email = email;
     }
 

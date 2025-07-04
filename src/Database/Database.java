@@ -4,10 +4,7 @@
  */
 package Database;
 import java.sql.*;
-/**
- *
- * @author prajeetajoshi
- */
+
 public interface Database { 
     Connection openConnection();
     void closeConnection(Connection conn);

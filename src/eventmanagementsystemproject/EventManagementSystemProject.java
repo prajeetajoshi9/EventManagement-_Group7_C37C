@@ -3,19 +3,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package eventmanagementsystemproject;
-import Controller.CreateEventController;
+//import Controller.CreateEventController;
 import Controller.DBBookingsController;
 import View.Registration_form;
 import Controller.SignupController;
 import Controller.SignupController;
 import Database.Database;
 import Database.MySqlConnection;
-import View.BookTicketList;
+//import View.BookTicketList;
 import View.Bookmark;
 import View.CreateEvent;
 import View.DBBookTicket;
 import View.Registration_form;
-import controller.TicketBookingController;
+//import controller.TicketBookingController;
 
 public class EventManagementSystemProject {
    void open(){

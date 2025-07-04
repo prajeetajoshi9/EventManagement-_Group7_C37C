@@ -13,6 +13,7 @@
 import Dao.User;
 import Model.Login;
 import View.AdminDashboard;
+import View.Customer_Login;
 import View.LoginAdmin;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,6 +26,10 @@ public class LoginController {
     public LoginController(LoginAdmin userView) {
         this.userView = userView;
         userView.addLoginUserListener(new AddUserListener());
+    }
+
+    LoginController(Customer_Login loginView) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public void open() {

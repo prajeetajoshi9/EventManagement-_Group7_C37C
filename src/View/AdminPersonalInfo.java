@@ -4,7 +4,7 @@
  */
 package View;
 
-import Controller.UserController;
+//import Controller.UserController;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 
@@ -268,9 +268,9 @@ public class AdminPersonalInfo extends javax.swing.JFrame {
         String admin_address = address.getText().trim();
         String id_number = idnum.getText().trim();
 
-        UserController controller = new UserController();
-    String result = controller.register(f_name, s_name, email, admin_username, contact_number, admin_id, admin_address, id_number);
-    JOptionPane.showMessageDialog(this, result);
+//        UserController controller = new UserController();
+//    String result = controller.register(f_name, s_name, email, admin_username, contact_number, admin_id, admin_address, id_number);
+//    JOptionPane.showMessageDialog(this, result);
     }//GEN-LAST:event_savebuttonActionPerformed
 
     private void firstnameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_firstnameFocusGained

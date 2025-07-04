@@ -19,8 +19,8 @@ public class UserModel {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     
 
-    public int getId() {
-        return id;
+//    public int getId() {
+//        return id;
     }
 
     public void setId(Integer id) {
@@ -92,6 +92,10 @@ public class UserModel {
         this.email = email;
         this.password = password;
         this.confirm_password = confirm_password;
+    }
+
+    public String getFirst_name() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }

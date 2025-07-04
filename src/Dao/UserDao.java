@@ -3,8 +3,9 @@ package Dao;
 import Model.OTP;
 import Model.User;
 import Database.MySqlConnection;
+import Model.UserModel;
 import java.sql.SQLException;
-
+import java.sql.PreparedStatement;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -12,6 +13,10 @@ import java.util.logging.Logger;
 public class UserDao {
 
     MySqlConnection mysql = new MySqlConnection();
+
+    public UserDao() {
+        
+    }
 
     public boolean generateOTP(OTP otp) {
         Connection conn = mysql.openConnection();
@@ -72,7 +77,18 @@ public class UserDao {
          return false;
     }
      
-    
+    /**
+     *
+     * @param f_name
+     * @param s_name
+     * @param email
+     * @param admin_username
+     * @param phone_number
+     * @param admin_id
+     * @param admin_address
+     * @param id_number
+     * @return
+     */
     public boolean registerUser(String f_name, String s_name, String email, String admin_username, String phone_number, String admin_id, String admin_address, String id_number) {
         Connection conn = mysql.openConnection();
         try {
@@ -136,8 +152,10 @@ public class UserDao {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    public boolean registerUser(String f_name, String s_name, String email, String admin_username, String contact_number, String admin_id, String admin_address, String id_number) {
-        Connection conn = db.openConnection();
+    public boolean registerAdminUser(String f_name, String s_name, String email, String admin_username, String contact_number, String admin_id, String admin_address, String id_number) {
+         MySqlConnection mysql = new MySqlConnection();
+        Connection conn = mysql.openConnection();
+        
         try {
             String sql = "INSERT INTO admin_details(first_name, last_name, email, admin_username, contact_number, admin_id, admin_address, id_number) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement ps = conn.prepareStatement(sql);
@@ -156,7 +174,7 @@ public class UserDao {
             System.out.println(e);
             return false;
         } finally {
-            db.closeConnection(conn);
+            mysql.closeConnection(conn);
         }
     }
     
@@ -179,5 +197,13 @@ public boolean isAdminIdExists(String adminId) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
+    public boolean checkUser(UserModel usermodel) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 
+    public UserDao(UserModel usermodel) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    
 } 

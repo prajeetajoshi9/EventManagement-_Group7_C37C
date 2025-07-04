@@ -3,55 +3,38 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Controller/DeleteEventController.java</file>
-            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/View/DeleteEventView.java</file>
-            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Controller/ForgotPasswordController.java</file>
-            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Dao/EventDao.java</file>
-            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Dao/Login.java</file>
-            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/View/LoginAdmin.java</file>
-            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Dao/User.java</file>
-            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Database/Database.java</file>
-            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Database/MySqlConnection.java</file>
-            <file>file:/C:/Users/Rashmi%20Jha/OneDrive/Desktop/Event%20Management/EventManagement-_Group7_C37C/src/Model/Event.java</file>
-            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Model/TicketBooking.java</file>
-            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Controller/TicketBookingController.java</file>
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/Customer_Login.java</file>
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Database/MySqlConnection.java</file>
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Dao/User.java</file>
-            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/Ticket.java</file>
-            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Controller/UserController.java</file>
-            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/BookTicketList.java</file>
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/Registration_form.java</file>
-            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/LoginOrSignup.java</file>
-            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/FirstPage.java</file>
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/CustomerEditEvent.java</file>
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/CreateEvent.java</file>
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Model/UserModel.java</file>
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Model/UserData.java</file>
-            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Model/CreateEvent.java</file>
-            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Dao/EventDAO.java</file>
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Controller/CreateEventController.java</file>
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Database/Database.java</file>
-            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Model/CreateEventModel.java</file>
-            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Dao/LoginDao.java</file>
-            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/Bookmark.java</file>
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/494574320_597322936170871_3710706709161285347_n.png</file>
-            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/494574320_597322936170871_3710706709161285347_n_1.png</file>
-            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Dao/UserDao.java</file>
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Controller/SignupController.java</file>
-            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Model/Event.java</file>
-            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Dao/TicketBookingDAO.java</file>
-            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/TicketSummaryPage.java</file>
-            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/summaryArea.java</file>
-            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/DBBookTicket.java</file>
-            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Dao/BookingData.java</file>
-            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Controller/DBBookingsController.java</file>
-            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Model/DBBookTicketModel.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Dao/UserDao.java</file>
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/Screenshot%202025-05-31%20181800.png</file>
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/Screenshot%202025-05-31%20182511.png</file>
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/Screenshot%202025-05-31%20182812%20(1).png</file>
-            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/AdminPersonalInfo.java</file>
             <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/494573151_1108922724588971_1172695635556325806_n.jpg</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/AdminDashboard.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Controller/LoginController.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Model/Login.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Controller/EmailUtil.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/DeleteEventView.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/AdminPersonalInfo.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/Ticket.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/ChatGPT%20Image%20May%2024,%202025,%2011_51_35%20AM.png</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/AdminSignup.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Dao/LoginDao.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Dao/TicketBookingDAO.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Controller/TicketBookingController.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/ResetPassword.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Controller/ForgotPasswordController.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/CustomerEditEvent.png</file>
         </group>
     </open-files>
 </project-private>
