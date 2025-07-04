@@ -1,3 +1,4 @@
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -15,12 +16,12 @@ import java.sql.*;
  */
 public class MySqlConnection implements Database {  
 
-    @Override
+   
     public Connection openConnection() {
         try{
                 String username ="root";
                 String password ="12345678";
-                String database ="File"; 
+                String database ="admin"; 
                 Connection connection;
                 connection = DriverManager.getConnection(
                 "jdbc:mysql://127.0.0.1:3306/" + database,username,password 

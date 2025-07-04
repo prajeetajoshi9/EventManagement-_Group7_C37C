@@ -2,14 +2,6 @@
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
-<<<<<<< HEAD
-    <Component class="javax.swing.JLabel" name="jLabel13">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/create.png"/>
-        </Property>
-      </Properties>
-=======
     <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
     </Component>
     <Component class="javax.swing.ButtonGroup" name="buttonGroup2">
@@ -25,7 +17,6 @@
     <Component class="javax.swing.ButtonGroup" name="buttonGroup7">
     </Component>
     <Component class="javax.swing.ButtonGroup" name="buttonGroup8">
->>>>>>> Customer-dashboard
     </Component>
   </NonVisualComponents>
   <Properties>
@@ -51,10 +42,6 @@
     <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,-127,0,0,3,-104"/>
   </AuxValues>
 
-<<<<<<< HEAD
-  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
-    <Property name="useNullLayout" type="boolean" value="false"/>
-=======
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
@@ -212,7 +199,6 @@
           </Group>
       </Group>
     </DimensionLayout>
->>>>>>> Customer-dashboard
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JPanel" name="jPanel1">
@@ -232,11 +218,6 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Component id="jLabel1" min="-2" pref="89" max="-2" attributes="0"/>
-<<<<<<< HEAD
-                  <EmptySpace min="-2" pref="271" max="-2" attributes="0"/>
-                  <Component id="jLabel2" min="-2" pref="168" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="421" max="32767" attributes="0"/>
-=======
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="jToggleButton1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
@@ -247,19 +228,12 @@
                       <Component id="jLabel2" min="-2" pref="168" max="-2" attributes="0"/>
                       <EmptySpace pref="402" max="32767" attributes="0"/>
                   </Group>
->>>>>>> Customer-dashboard
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="jLabel1" alignment="0" pref="100" max="32767" attributes="0"/>
-<<<<<<< HEAD
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jLabel2" min="-2" pref="41" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-=======
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                   <Component id="jToggleButton1" min="-2" max="-2" attributes="0"/>
@@ -271,7 +245,6 @@
                       <Component id="jLabel2" min="-2" pref="41" max="-2" attributes="0"/>
                       <EmptySpace pref="30" max="32767" attributes="0"/>
                   </Group>
->>>>>>> Customer-dashboard
               </Group>
           </Group>
         </DimensionLayout>
@@ -391,17 +364,8 @@
       <Events>
         <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="EventTextFocusGained"/>
         <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="EventTextFocusLost"/>
-<<<<<<< HEAD
-      </Events>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="230" y="124" width="569" height="40"/>
-        </Constraint>
-      </Constraints>
-=======
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EventTextActionPerformed"/>
       </Events>
->>>>>>> Customer-dashboard
     </Component>
     <Component class="javax.swing.JTextField" name="TypeText">
       <Properties>
@@ -411,19 +375,8 @@
         <Property name="text" type="java.lang.String" value="Choose Type"/>
       </Properties>
       <Events>
-<<<<<<< HEAD
-        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="TypeTextFocusGained"/>
-        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="TypeTextFocusLost"/>
-      </Events>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="230" y="182" width="242" height="40"/>
-        </Constraint>
-      </Constraints>
-=======
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TypeTextActionPerformed"/>
       </Events>
->>>>>>> Customer-dashboard
     </Component>
     <Component class="javax.swing.JTextField" name="DescriptionText">
       <Properties>
@@ -510,52 +463,6 @@
         </Constraint>
       </Constraints>
     </Component>
-<<<<<<< HEAD
-    <Component class="javax.swing.JComboBox" name="jComboBox2">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
-          </StringArray>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox2ActionPerformed"/>
-      </Events>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-      </AuxValues>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="553" y="182" width="246" height="40"/>
-        </Constraint>
-      </Constraints>
-    </Component>
-    <Component class="javax.swing.JComboBox" name="jComboBox3">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
-          </StringArray>
-        </Property>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-      </AuxValues>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="553" y="240" width="246" height="40"/>
-        </Constraint>
-      </Constraints>
-    </Component>
-=======
->>>>>>> Customer-dashboard
     <Component class="javax.swing.JLabel" name="jLabel10">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -582,29 +489,6 @@
         </Constraint>
       </Constraints>
     </Component>
-<<<<<<< HEAD
-    <Component class="javax.swing.JComboBox" name="TimeText">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
-          </StringArray>
-        </Property>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-      </AuxValues>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="230" y="240" width="242" height="40"/>
-        </Constraint>
-      </Constraints>
-    </Component>
-=======
->>>>>>> Customer-dashboard
     <Component class="javax.swing.JRadioButton" name="jRadioButton1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Public"/>
@@ -635,17 +519,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Cancel"/>
       </Properties>
-<<<<<<< HEAD
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="437" y="547" width="100" height="40"/>
-        </Constraint>
-      </Constraints>
-=======
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
       </Events>
->>>>>>> Customer-dashboard
     </Component>
     <Component class="javax.swing.JButton" name="jButton2">
       <Properties>
@@ -657,17 +533,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Edit"/>
       </Properties>
-<<<<<<< HEAD
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="615" y="547" width="100" height="40"/>
-        </Constraint>
-      </Constraints>
-=======
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
       </Events>
->>>>>>> Customer-dashboard
     </Component>
     <Component class="javax.swing.JButton" name="jButton3">
       <Properties>
@@ -679,17 +547,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Confirm"/>
       </Properties>
-<<<<<<< HEAD
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="271" y="547" width="100" height="40"/>
-        </Constraint>
-      </Constraints>
-=======
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
       </Events>
->>>>>>> Customer-dashboard
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel12">
       <Properties>
