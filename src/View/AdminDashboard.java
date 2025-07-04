@@ -48,6 +48,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         jButtonView = new javax.swing.JButton();
         jButtonEdit = new javax.swing.JButton();
         jButtonBook = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screenshot 2025-05-22 at 20.23.59.png"))); // NOI18N
         jLabel3.setToolTipText("");
@@ -200,6 +201,10 @@ public class AdminDashboard extends javax.swing.JFrame {
         jButtonBook.setText("Booked Ticket List");
         getContentPane().add(jButtonBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 300, 180, 40));
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screenshot 2025-05-22 at 20.23.59.png"))); // NOI18N
+        jLabel4.setText("jLabel4");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 830, 480));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -277,6 +282,7 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
