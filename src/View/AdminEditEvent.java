@@ -204,7 +204,7 @@ public class AdminEditEvent extends javax.swing.JFrame {
         }
 
         int eventId = (Integer) value;
-        new AdminViewEventDetails(eventId).setVisible(true);
+        new AdminViewEvent(eventId).setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**

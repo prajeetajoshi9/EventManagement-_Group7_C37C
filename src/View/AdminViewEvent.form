@@ -156,7 +156,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Helvetica Neue" size="36" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Edit Event Status"/>
+            <Property name="text" type="java.lang.String" value="View Event Status"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">

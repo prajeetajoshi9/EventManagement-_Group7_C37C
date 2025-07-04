@@ -15,13 +15,17 @@ public class AdminViewEvent extends javax.swing.JFrame {
     /**
      * Creates new form AdminViewEvent
      */
-    public AdminViewEvent() {
+    public AdminViewEvent(int eventId) {
         initComponents();
     }
 
-    private AdminViewEvent(int eventId) {
+    AdminViewEvent() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
+    
+
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -75,7 +79,7 @@ public class AdminViewEvent extends javax.swing.JFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 1, 36)); // NOI18N
-        jLabel2.setText("Edit Event Status");
+        jLabel2.setText("View Event Status");
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Screenshot 2025-05-22 at 20.45.48.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -244,7 +248,8 @@ public class AdminViewEvent extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AdminViewEvent().setVisible(true);
+                int eventId = 0;
+                new AdminViewEvent(eventId).setVisible(true);
             }
         });
     }

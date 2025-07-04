@@ -193,6 +193,11 @@ public class AdminDashboard extends javax.swing.JFrame {
         getContentPane().add(jButtonPersonalInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 170, 180, 40));
 
         jButtonView.setText("       View Event Status");
+        jButtonView.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonViewActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButtonView, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 370, 180, 40));
 
         jButtonEdit.setText("         Edit Event Status");
@@ -238,7 +243,13 @@ public class AdminDashboard extends javax.swing.JFrame {
            new AdminEditEvent().setVisible(true); 
         this.dispose(); 
     }//GEN-LAST:event_jButtonEditActionPerformed
-    
+
+    private void jButtonViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonViewActionPerformed
+        // TODO add your handling code here:
+        new AdminViewEvent().setVisible(true); 
+        this.dispose(); 
+    }//GEN-LAST:event_jButtonViewActionPerformed
+
     /**
      * @param args the command line arguments
      */
