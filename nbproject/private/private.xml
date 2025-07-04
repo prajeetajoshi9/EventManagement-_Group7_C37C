@@ -3,12 +3,38 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/View/AdminDashboard.java</file>
             <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/View/AdminPersonalInfo.java</file>
             <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/Controller/UserController.java</file>
             <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/Dao/UserDao.java</file>
             <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/Database/Database.java</file>
             <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/Database/MySqlConnection.java</file>
+=======
+<<<<<<< HEAD
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/Bookmark.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/Customerdashboard.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/AdminPersonalInfo.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/Customer_Login.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/Screenshot%202025-05-31%20181800.png</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/Screenshot%202025-05-31%20182511.png</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/Screenshot%202025-05-31%20182812%20(1).png</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/494574320_597322936170871_3710706709161285347_n.png</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/494573151_1108922724588971_1172695635556325806_n.jpg</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Controller/SignupController.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Model/Login.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Database/MySqlConnection.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/eventmanagementsystemproject/EventManagementSystemProject.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Dao/User.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Dao/UserDao.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Database/Database.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Controller/UserController.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/Controller/logincontroller.java</file>
+            <file>file:/C:/Users/Asus%20Zenbook/Documents/NetBeansProjects/EventManagement-_Group7_C37C/src/View/Registration_form.java</file>
+=======
+            <file>file:/Users/prajeetajoshi/NetBeansProjects/EventManagementSystemProject/src/View/CreateEvent.java</file>
+>>>>>>> c9ba1214272a4ff36654d35046790f22b457d3c7
+>>>>>>> 42677776bb8236ebb00786cdd487edc07dbbfc12
         </group>
     </open-files>
 </project-private>

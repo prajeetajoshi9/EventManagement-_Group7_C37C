@@ -219,7 +219,9 @@ public class AdminPersonalInfo extends javax.swing.JFrame {
         getContentPane().add(adminusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 200, 210, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bng.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 93, 980, 590));
+
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 93, 980, 570));
+
 
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 980, 580));
